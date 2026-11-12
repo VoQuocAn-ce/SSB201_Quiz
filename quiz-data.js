@@ -1274,5 +1274,32 @@ const QUIZ_CATALOG = [
     description: "Làm trọn bộ 50 câu hỏi Quiz 4 về Crisis Plan, Bypassing, Sound Bites, Language Styles & Face Strategies.",
     icon: "🌷",
     questions: QUIZ_4_QUESTIONS
+  },
+  {
+    id: "quiz-seb1",
+    title: "SSB201 - Quiz SEB 1",
+    shortTitle: "Quiz SEB 1",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB1 (Câu 1 – 50)",
+    description: "Bộ đề SEB 1 (SU 2025) về Intercultural Etiquette, Global Mindset, Negative News, Crisis Plan & Netiquette.",
+    icon: "🧁",
+    questions: QUIZ_SEB1_QUESTIONS
+  },
+  {
+    id: "quiz-seb2",
+    title: "SSB201 - Quiz SEB 2",
+    shortTitle: "Quiz SEB 2",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB2 (Câu 1 – 50)",
+    description: "Bộ đề SEB 2 (SU 2025) gồm Subcultures, Dimensions of Culture, Cultural Intelligence, Globalization & Crisis Plan.",
+    icon: "🪷",
+    questions: QUIZ_SEB2_QUESTIONS
+  },
+  {
+    id: "quiz-seb3",
+    title: "SSB201 - Quiz SEB 3",
+    shortTitle: "Quiz SEB 3",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB3 (Câu 1 – 50)",
+    description: "Bộ đề SEB 3 (Q1 SU 2025) về FIRO, Johari Window, Rhetoric, Design Thinking, Toulmin Model & Writing Process.",
+    icon: "🍡",
+    questions: QUIZ_SEB3_QUESTIONS
   }
 ];
