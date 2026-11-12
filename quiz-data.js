@@ -1301,5 +1301,41 @@ const QUIZ_CATALOG = [
     description: "Bộ đề SEB 3 (Q1 SU 2025) về FIRO, Johari Window, Rhetoric, Design Thinking, Toulmin Model & Writing Process.",
     icon: "🍡",
     questions: QUIZ_SEB3_QUESTIONS
+  },
+  {
+    id: "quiz5-full",
+    title: "SSB201 - Quiz 5",
+    shortTitle: "Quiz 5",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz5 (Q1 – Q50)",
+    description: "Bộ đề Final Exam SP 2025 về Self-Concept, Perception, Verbal/Nonverbal, Culture Dimensions, Negative News & Speeches.",
+    icon: "🌸",
+    questions: QUIZ_5_QUESTIONS
+  },
+  {
+    id: "quiz6-full",
+    title: "SSB201 - Quiz 6",
+    shortTitle: "Quiz 6",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz6 (Q1 – Q50)",
+    description: "Bộ đề Final Exam FA 2024 về Communication Models, Writing Habits, Toulmin Strategy, Conflict & Gift Giving.",
+    icon: "🌺",
+    questions: QUIZ_6_QUESTIONS
+  },
+  {
+    id: "quiz7-full",
+    title: "SSB201 - Quiz 7",
+    shortTitle: "Quiz 7",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz7 (Q1 – Q50)",
+    description: "Bộ đề Re-exam SU 2024 về Gestalt Principles, Design Thinking, Business Attire, FIRO, GASCAP/T & Phone Etiquette.",
+    icon: "🎀",
+    questions: QUIZ_7_QUESTIONS
+  },
+  {
+    id: "quiz8-full",
+    title: "SSB201 - Quiz 8",
+    shortTitle: "Quiz 8",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz8 (Q1 – Q50)",
+    description: "Bộ đề Final Exam SU 2024 về Demeanor, Semantic Triangle, Frontstage Culture, HMW Statements, VoIP & Handshakes.",
+    icon: "🍰",
+    questions: QUIZ_8_QUESTIONS
   }
 ];
