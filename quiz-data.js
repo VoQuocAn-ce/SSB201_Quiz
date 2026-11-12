@@ -1241,29 +1241,11 @@ const QUIZ_1_QUESTIONS = [
 const QUIZ_CATALOG = [
   {
     id: "quiz1-full",
-    title: "SSB201 - Quiz 1 (Full 50 câu)",
-    shortTitle: "Quiz 1 - Tổng hợp Full",
+    title: "SSB201 - Quiz 1",
+    shortTitle: "Quiz 1",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz1 (Q1 – Q50)",
     description: "Làm trọn bộ 50 câu hỏi SSB201 bằng tiếng Anh kèm gợi ý và giải thích chi tiết từng đáp án đúng/sai bằng tiếng Việt.",
     icon: "🌸",
     questions: QUIZ_1_QUESTIONS
-  },
-  {
-    id: "quiz1-part1",
-    title: "SSB201 - Quiz 1: Phần 1 (Câu 1 – 25)",
-    shortTitle: "Quiz 1 - Phần 1",
-    subtitle: "25 câu hỏi đầu tiên từ thư mục Quiz1",
-    description: "Luyện tập nhanh 25 câu đầu về Perception, Self-esteem, Design Thinking, Intercultural & Negative News.",
-    icon: "🎀",
-    questions: QUIZ_1_QUESTIONS.slice(0, 25)
-  },
-  {
-    id: "quiz1-part2",
-    title: "SSB201 - Quiz 1: Phần 2 (Câu 26 – 50)",
-    shortTitle: "Quiz 1 - Phần 2",
-    subtitle: "25 câu hỏi tiếp theo từ thư mục Quiz1",
-    description: "Ôn tập 25 câu sau về Globalization, Etiquette, Soundbites, Transitions, Toulmin Strategy & Conflict.",
-    icon: "🍓",
-    questions: QUIZ_1_QUESTIONS.slice(25, 50)
   }
 ];
