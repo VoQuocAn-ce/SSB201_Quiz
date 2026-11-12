@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SSB201 Quiz - Cute Pink Study Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cute floating pastel decorations -->
+  <div class="bg-decorations" aria-hidden="true">
+    <svg class="float-item float-1" viewBox="0 0 64 64" fill="none">
+      <path d="M32 10C35 20 44 29 54 32C44 35 35 44 32 54C29 44 20 35 10 32C20 29 29 20 32 10Z" fill="#FFF7FA" />
+    </svg>
+    <svg class="float-item float-2" viewBox="0 0 64 64" fill="none">
+      <path d="M32 53C32 53 10 39.5 10 23.5C10 16.5 15.5 11 22 11C26.4 11 30.2 13.4 32 17C33.8 13.4 37.6 11 42 11C48.5 11 54 16.5 54 23.5C54 39.5 32 53 32 53Z" fill="#FFE6EE" />
+    </svg>
+    <svg class="float-item float-3" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="20" r="9" fill="#FFF7FA" />
+      <circle cx="43" cy="28" r="9" fill="#FFF7FA" />
+      <circle cx="39" cy="41" r="9" fill="#FFF7FA" />
+      <circle cx="25" cy="41" r="9" fill="#FFF7FA" />
+      <circle cx="21" cy="28" r="9" fill="#FFF7FA" />
+      <circle cx="32" cy="32" r="7" fill="#FFD1E0" />
+    </svg>
+    <svg class="float-item float-4" viewBox="0 0 64 64" fill="none">
+      <path d="M32 10C35 20 44 29 54 32C44 35 35 44 32 54C29 44 20 35 10 32C20 29 29 20 32 10Z" fill="#FFF7FA" />
+    </svg>
+    <svg class="float-item float-5" viewBox="0 0 64 64" fill="none">
+      <path d="M32 53C32 53 10 39.5 10 23.5C10 16.5 15.5 11 22 11C26.4 11 30.2 13.4 32 17C33.8 13.4 37.6 11 42 11C48.5 11 54 16.5 54 23.5C54 39.5 32 53 32 53Z" fill="#FFF7FA" />
+    </svg>
+    <svg class="float-item float-6" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="20" r="9" fill="#FFE6EE" />
+      <circle cx="43" cy="28" r="9" fill="#FFE6EE" />
+      <circle cx="39" cy="41" r="9" fill="#FFE6EE" />
+      <circle cx="25" cy="41" r="9" fill="#FFE6EE" />
+      <circle cx="21" cy="28" r="9" fill="#FFE6EE" />
+      <circle cx="32" cy="32" r="7" fill="#F9B4C9" />
+    </svg>
+  </div>
+
+  <div class="app-shell">
+    <!-- Top Header -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand-area">
+          <div class="brand-badge" id="brandBadge">SSB</div>
+          <div class="brand-text">
+            <h1 id="headerTitle">SSB201 - Cute Quiz Studio</h1>
+            <p id="headerSubtitle">Chọn bài Quiz để bắt đầu ôn tập cùng gợi ý &amp; giải thích chi tiết</p>
+          </div>
+        </div>
+        <div class="topbar-actions hidden" id="quizTopActions">
+          <button type="button" class="btn-pill" id="btnBackHome">
+            <span>🏠</span>
+            <span>Tất cả bài Quiz</span>
+          </button>
+          <button type="button" class="btn-pill btn-pill-primary" id="btnOpenNav">
+            <span>☰</span>
+            <span id="navButtonText">Câu 1/50</span>
+          </button>
+        </div>
+      </div>
+      <div class="progress-track hidden" id="progressTrack">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <!-- HOME / QUIZ SELECTOR VIEW -->
+      <section id="homeView">
+        <div class="hero-banner">
+          <div class="hero-copy">
+            <div class="hero-tag">🌸 SSB201 • Business Communication</div>
+            <h2>Chào bạn đến với góc ôn Quiz SSB201!</h2>
+            <p>
+              Toàn bộ câu hỏi và đáp án được giữ nguyên tiếng Anh chuẩn đề thi. Khi chọn xong, hệ thống sẽ
+              hiển thị <strong>giải thích chi tiết bằng tiếng Việt</strong> cho cả đáp án đúng lẫn từng đáp án sai,
+              kèm nút <strong>💡 Gợi ý</strong> bất cứ lúc nào bạn cần!
+            </p>
+          </div>
+          <div class="hero-mascot" aria-hidden="true">
+            <svg width="78" height="78" viewBox="0 0 100 100" fill="none">
+              <!-- Cute pastel bunny mascot -->
+              <ellipse cx="36" cy="24" rx="9" ry="20" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
+              <ellipse cx="36" cy="24" rx="4.5" ry="12" fill="#F7C2D1" />
+              <ellipse cx="64" cy="24" rx="9" ry="20" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
+              <ellipse cx="64" cy="24" rx="4.5" ry="12" fill="#F7C2D1" />
+              <circle cx="50" cy="56" r="27" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
+              <!-- Blush -->
+              <ellipse cx="34" cy="60" rx="5.5" ry="3.5" fill="#FFB6C9" />
+              <ellipse cx="66" cy="60" rx="5.5" ry="3.5" fill="#FFB6C9" />
+              <!-- Eyes -->
+              <circle cx="40" cy="53" r="3.2" fill="#3B1F2B" />
+              <circle cx="39" cy="51.8" r="1.1" fill="#FFFFFF" />
+              <circle cx="60" cy="53" r="3.2" fill="#3B1F2B" />
+              <circle cx="59" cy="51.8" r="1.1" fill="#FFFFFF" />
+              <!-- Nose & smile -->
+              <ellipse cx="50" cy="57.5" rx="2.5" ry="1.8" fill="#E66C93" />
+              <path d="M46 61.5C47.5 63.5 49.5 63.5 50 61.5C50.5 63.5 52.5 63.5 54 61.5" stroke="#3B1F2B" stroke-width="2" stroke-linecap="round" />
+              <!-- Little pink ribbon -->
+              <path d="M58 34L66 30L64 38L58 34Z" fill="#F07CA2" />
+              <path d="M58 34L52 28L51 36L58 34Z" fill="#F07CA2" />
+              <circle cx="58" cy="34" r="2.6" fill="#D85C84" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="home-controls">
+          <div class="section-title">
+            <span>🎀</span>
+            <span>Danh sách bài Quiz</span>
+          </div>
+          <div class="toggle-group">
+            <label class="cute-toggle">
+              <input type="checkbox" id="toggleShuffleQuestions" />
+              <span>🔀 Xáo trộn câu hỏi</span>
+            </label>
+            <label class="cute-toggle">
+              <input type="checkbox" id="toggleShuffleOptions" />
+              <span>🎲 Xáo trộn đáp án</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="quiz-grid" id="quizGrid"></div>
+      </section>
+
+      <!-- ACTIVE QUIZ VIEW -->
+      <section id="quizView" class="hidden">
+        <div class="quiz-stage">
+          <div class="question-meta">
+            <div class="question-meta-left">
+              <span class="q-counter" id="qCounter">CÂU HỎI 1 / 50</span>
+              <span class="topic-pill" id="qTopic">🌸 Topic</span>
+            </div>
+            <button type="button" class="btn-hint" id="btnToggleHint">
+              <span>💡</span>
+              <span>Gợi ý</span>
+            </button>
+          </div>
+
+          <div class="hint-box hidden" id="hintBox">
+            <span>💡</span>
+            <div id="hintText"></div>
+          </div>
+
+          <div class="question-text" id="questionText"></div>
+
+          <div class="options-list" id="optionsList"></div>
+
+          <div class="quiz-footer">
+            <button type="button" class="btn-nav" id="btnPrev">
+              <span>‹</span>
+              <span>Quay lại</span>
+            </button>
+
+            <div class="score-dots" aria-live="polite">
+              <span class="dot-item">
+                <span class="dot dot-green"></span>
+                <span id="liveCorrect">0 đúng</span>
+              </span>
+              <span class="dot-item">
+                <span class="dot dot-red"></span>
+                <span id="liveWrong">0 sai</span>
+              </span>
+            </div>
+
+            <button type="button" class="btn-nav btn-nav-next" id="btnNext">
+              <span id="btnNextLabel">Tiếp theo</span>
+              <span>›</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY VIEW -->
+      <section id="summaryView" class="hidden">
+        <div class="summary-card">
+          <div class="summary-emoji" id="summaryEmoji">🎉</div>
+          <h2 id="summaryTitle">Hoàn thành bài Quiz!</h2>
+          <p class="summary-subtitle" id="summarySubtitle"></p>
+
+          <div class="summary-metrics">
+            <div class="metric-box">
+              <div class="metric-value" id="metricPercent">0%</div>
+              <div class="metric-label">Tỷ lệ chính xác</div>
+            </div>
+            <div class="metric-box ok">
+              <div class="metric-value" id="metricCorrect">0</div>
+              <div class="metric-label">Câu đúng</div>
+            </div>
+            <div class="metric-box err">
+              <div class="metric-value" id="metricWrong">0</div>
+              <div class="metric-label">Câu sai</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-value" id="metricUnanswered">0</div>
+              <div class="metric-label">Chưa trả lời</div>
+            </div>
+          </div>
+
+          <div class="summary-actions">
+            <button type="button" class="btn-pill btn-pill-primary hidden" id="btnRetryWrong">
+              <span>🩹</span>
+              <span>Làm lại các câu sai</span>
+            </button>
+            <button type="button" class="btn-pill" id="btnReviewAll">
+              <span>👀</span>
+              <span>Xem lại câu hỏi</span>
+            </button>
+            <button type="button" class="btn-pill" id="btnRestartQuiz">
+              <span>🔁</span>
+              <span>Làm lại từ đầu</span>
+            </button>
+            <button type="button" class="btn-pill" id="btnSummaryHome">
+              <span>🏠</span>
+              <span>Chọn Quiz khác</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-note">
+      🌸 SSB201 Cute Pink Quiz Studio • Chúc bạn ôn tập thật tốt và đạt điểm cao! 🌸
+    </footer>
+  </div>
+
+  <!-- QUESTION NAVIGATOR MODAL -->
+  <div class="modal-backdrop hidden" id="navModal" role="dialog" aria-modal="true" aria-labelledby="navModalTitle">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="navModalTitle">🌸 Danh sách câu hỏi</h3>
+        <button type="button" class="btn-close" id="btnCloseNav" aria-label="Đóng">✕</button>
+      </div>
+      <div class="nav-legend">
+        <span class="legend-chip">
+          <span class="legend-box" style="background: #FFFFFF; border: 1.5px solid #F2CBD6;"></span>
+          <span>Chưa làm</span>
+        </span>
+        <span class="legend-chip">
+          <span class="legend-box" style="background: #D1FAE5; border: 1.5px solid #34D399;"></span>
+          <span>Đúng</span>
+        </span>
+        <span class="legend-chip">
+          <span class="legend-box" style="background: #FFE4E6; border: 1.5px solid #F43F5E;"></span>
+          <span>Sai</span>
+        </span>
+      </div>
+      <div class="nav-grid" id="navGrid"></div>
+    </div>
+  </div>
+
+  <script src="quiz-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
