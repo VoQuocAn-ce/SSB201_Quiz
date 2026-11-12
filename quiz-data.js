@@ -1244,8 +1244,35 @@ const QUIZ_CATALOG = [
     title: "SSB201 - Quiz 1",
     shortTitle: "Quiz 1",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz1 (Q1 – Q50)",
-    description: "Làm trọn bộ 50 câu hỏi SSB201 bằng tiếng Anh kèm gợi ý và giải thích chi tiết từng đáp án đúng/sai bằng tiếng Việt.",
+    description: "Làm trọn bộ 50 câu hỏi Quiz 1 bằng tiếng Anh kèm gợi ý và giải thích chi tiết từng đáp án đúng/sai bằng tiếng Việt.",
     icon: "🌸",
     questions: QUIZ_1_QUESTIONS
+  },
+  {
+    id: "quiz2-full",
+    title: "SSB201 - Quiz 2",
+    shortTitle: "Quiz 2",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz2 (Q1 – Q50)",
+    description: "Làm trọn bộ 50 câu hỏi Quiz 2 về Gestalt, Empathy Map, Intercultural Taboos, Pathos, FIRO & Self-reflection.",
+    icon: "🎀",
+    questions: QUIZ_2_QUESTIONS
+  },
+  {
+    id: "quiz3-full",
+    title: "SSB201 - Quiz 3",
+    shortTitle: "Quiz 3",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz3 (Q1 – Q50)",
+    description: "Làm trọn bộ 50 câu hỏi Quiz 3 về Design Thinking, Cultural Synergy, Semantic Triangle, GASCAP/T & Conflict.",
+    icon: "🍓",
+    questions: QUIZ_3_QUESTIONS
+  },
+  {
+    id: "quiz4-full",
+    title: "SSB201 - Quiz 4",
+    shortTitle: "Quiz 4",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz4 (Q1 – Q50)",
+    description: "Làm trọn bộ 50 câu hỏi Quiz 4 về Crisis Plan, Bypassing, Sound Bites, Language Styles & Face Strategies.",
+    icon: "🌷",
+    questions: QUIZ_4_QUESTIONS
   }
 ];

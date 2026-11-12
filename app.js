@@ -57,11 +57,18 @@
   function loadStore() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (!Array.isArray(parsed.wrongQuestionKeys)) {
+          const legacy = Array.isArray(parsed.wrongQuestionIds) ? parsed.wrongQuestionIds : [];
+          parsed.wrongQuestionKeys = legacy.map((id) => `quiz1-full:${id}`);
+        }
+        return parsed;
+      }
     } catch (_) {
       // Ignore malformed storage
     }
-    return { sessions: {}, wrongQuestionIds: [] };
+    return { sessions: {}, wrongQuestionKeys: [] };
   }
 
   function saveStore() {
@@ -81,8 +88,15 @@
     return copy;
   }
 
-  function prepareQuestions(rawQuestions, shuffleQ, shuffleOpt) {
+  function findOriginalQuestion(sourceQuizId, qId) {
+    const quiz = QUIZ_CATALOG.find((c) => c.id === sourceQuizId);
+    if (!quiz) return null;
+    return quiz.questions.find((orig) => orig.id === qId) || null;
+  }
+
+  function prepareQuestions(rawQuestions, shuffleQ, shuffleOpt, defaultQuizId) {
     let items = rawQuestions.map((q) => {
+      const sourceQuizId = q.sourceQuizId || defaultQuizId;
       const indexedOptions = q.options.map((opt, idx) => ({
         ...opt,
         isCorrect: q.correctIndices.includes(idx)
@@ -90,6 +104,8 @@
       const finalOptions = shuffleOpt ? shuffleArray(indexedOptions) : indexedOptions;
       return {
         id: q.id,
+        sourceQuizId,
+        uniqueKey: `${sourceQuizId}:${q.id}`,
         topic: q.topic,
         question: q.question,
         hint: q.hint,
@@ -144,15 +160,22 @@
 
     // Build list of available quizzes + optional wrong-answer review card
     const cards = [...QUIZ_CATALOG];
-    const wrongIds = Array.isArray(store.wrongQuestionIds) ? store.wrongQuestionIds : [];
-    const wrongQuestions = QUIZ_1_QUESTIONS.filter((q) => wrongIds.includes(q.id));
+    const wrongKeys = Array.isArray(store.wrongQuestionKeys) ? store.wrongQuestionKeys : [];
+    const wrongQuestions = [];
+    wrongKeys.forEach((key) => {
+      const [quizId, qIdStr] = String(key).split(":");
+      const orig = findOriginalQuestion(quizId, Number(qIdStr));
+      if (orig) {
+        wrongQuestions.push({ ...orig, sourceQuizId: quizId });
+      }
+    });
 
     if (wrongQuestions.length > 0) {
       cards.push({
-        id: "quiz1-wrong-bank",
+        id: "quiz-wrong-bank",
         title: "Ôn lại các câu từng làm sai",
-        subtitle: `${wrongQuestions.length} câu bạn từng chọn nhầm trong Quiz 1`,
-        description: "Tập trung luyện lại những câu bạn đã làm sai trước đó cho đến khi nắm chắc hoàn toàn.",
+        subtitle: `${wrongQuestions.length} câu bạn từng chọn nhầm`,
+        description: "Tập trung luyện lại những câu bạn đã làm sai trong các bài Quiz trước đó cho đến khi nắm chắc hoàn toàn.",
         icon: "🩹",
         questions: wrongQuestions,
         isWrongReview: true
@@ -230,7 +253,8 @@
     const prepared = prepareQuestions(
       catalogItem.questions,
       toggleShuffleQuestions.checked,
-      toggleShuffleOptions.checked
+      toggleShuffleOptions.checked,
+      catalogItem.id
     );
 
     activeQuiz = {
@@ -374,16 +398,17 @@
     const q = activeQuiz.questions[idx];
     const picked = q.options[optIdx];
 
-    // Track wrong question IDs globally for the "Ôn lại các câu sai" feature
-    const wrongSet = new Set(store.wrongQuestionIds || []);
+    // Track wrong question keys globally across all quizzes for the "Ôn lại các câu sai" feature
+    const wrongKey = q.uniqueKey || `${q.sourceQuizId || activeQuiz.id}:${q.id}`;
+    const wrongSet = new Set(store.wrongQuestionKeys || []);
     if (picked && picked.isCorrect) {
-      wrongSet.delete(q.id);
+      wrongSet.delete(wrongKey);
     } else {
-      wrongSet.add(q.id);
+      wrongSet.add(wrongKey);
     }
-    store.wrongQuestionIds = Array.from(wrongSet);
+    store.wrongQuestionKeys = Array.from(wrongSet);
 
-    if (activeQuiz.id !== "quiz1-wrong-bank" && activeQuiz.id !== "retry-session") {
+    if (activeQuiz.id !== "quiz-wrong-bank" && activeQuiz.id !== "retry-session") {
       store.sessions[activeQuiz.id] = activeQuiz;
     }
     saveStore();
@@ -474,7 +499,7 @@
     if (!activeQuiz) return;
     const idx = activeQuiz.currentIndex;
     activeQuiz.hintsShown[idx] = !activeQuiz.hintsShown[idx];
-    if (activeQuiz.id !== "quiz1-wrong-bank" && activeQuiz.id !== "retry-session") {
+    if (activeQuiz.id !== "quiz-wrong-bank" && activeQuiz.id !== "retry-session") {
       store.sessions[activeQuiz.id] = activeQuiz;
       saveStore();
     }
@@ -484,7 +509,7 @@
   btnPrev.addEventListener("click", () => {
     if (!activeQuiz || activeQuiz.currentIndex <= 0) return;
     activeQuiz.currentIndex--;
-    if (activeQuiz.id !== "quiz1-wrong-bank" && activeQuiz.id !== "retry-session") {
+    if (activeQuiz.id !== "quiz-wrong-bank" && activeQuiz.id !== "retry-session") {
       store.sessions[activeQuiz.id] = activeQuiz;
       saveStore();
     }
@@ -495,7 +520,7 @@
     if (!activeQuiz) return;
     if (activeQuiz.currentIndex < activeQuiz.questions.length - 1) {
       activeQuiz.currentIndex++;
-      if (activeQuiz.id !== "quiz1-wrong-bank" && activeQuiz.id !== "retry-session") {
+      if (activeQuiz.id !== "quiz-wrong-bank" && activeQuiz.id !== "retry-session") {
         store.sessions[activeQuiz.id] = activeQuiz;
         saveStore();
       }
@@ -527,7 +552,13 @@
       startNewQuiz(catalogMatch);
     } else {
       // Restart current wrong-question session
-      const raw = activeQuiz.questions.map((q) => QUIZ_1_QUESTIONS.find((orig) => orig.id === q.id)).filter(Boolean);
+      const raw = activeQuiz.questions
+        .map((q) => {
+          const srcId = q.sourceQuizId || activeQuiz.id;
+          const orig = findOriginalQuestion(srcId, q.id);
+          return orig ? { ...orig, sourceQuizId: srcId } : null;
+        })
+        .filter(Boolean);
       startNewQuiz({
         id: "retry-session",
         title: "Ôn lại câu hỏi",
@@ -540,14 +571,18 @@
 
   btnRetryWrong.addEventListener("click", () => {
     if (!activeQuiz) return;
-    const wrongOriginalIds = activeQuiz.questions
+    const wrongQuestions = activeQuiz.questions
       .filter((q, idx) => {
         const chosen = activeQuiz.answers[idx];
         return typeof chosen === "number" && (!q.options[chosen] || !q.options[chosen].isCorrect);
       })
-      .map((q) => q.id);
+      .map((q) => {
+        const srcId = q.sourceQuizId || activeQuiz.id;
+        const orig = findOriginalQuestion(srcId, q.id);
+        return orig ? { ...orig, sourceQuizId: srcId } : null;
+      })
+      .filter(Boolean);
 
-    const wrongQuestions = QUIZ_1_QUESTIONS.filter((q) => wrongOriginalIds.includes(q.id));
     if (wrongQuestions.length === 0) return;
 
     startNewQuiz({
