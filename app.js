@@ -277,6 +277,9 @@
     }
 
     openQuizView();
+    if (window.CuteMascot) {
+      window.CuteMascot.reactStart();
+    }
   }
 
   function resumeQuiz(quizId) {
@@ -417,6 +420,14 @@
     }
     saveStore();
     renderQuestion();
+
+    if (window.CuteMascot && picked) {
+      if (picked.isCorrect) {
+        window.CuteMascot.reactCorrect();
+      } else {
+        window.CuteMascot.reactWrong();
+      }
+    }
   }
 
   function openSummary() {
@@ -446,6 +457,10 @@
 
     btnRetryWrong.classList.toggle("hidden", stats.wrong === 0);
     showView("summary");
+
+    if (window.CuteMascot) {
+      window.CuteMascot.reactSummary(pct);
+    }
   }
 
   function openNavModal() {
@@ -508,6 +523,10 @@
       saveStore();
     }
     renderQuestion();
+
+    if (activeQuiz.hintsShown[idx] && window.CuteMascot) {
+      window.CuteMascot.reactHint();
+    }
   });
 
   btnPrev.addEventListener("click", () => {

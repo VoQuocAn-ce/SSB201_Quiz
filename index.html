@@ -114,29 +114,7 @@
             </p>
           </div>
           <div class="hero-mascot" aria-hidden="true">
-            <svg width="78" height="78" viewBox="0 0 100 100" fill="none">
-              <!-- Cute pastel bunny mascot -->
-              <ellipse cx="36" cy="24" rx="9" ry="20" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
-              <ellipse cx="36" cy="24" rx="4.5" ry="12" fill="#F7C2D1" />
-              <ellipse cx="64" cy="24" rx="9" ry="20" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
-              <ellipse cx="64" cy="24" rx="4.5" ry="12" fill="#F7C2D1" />
-              <circle cx="50" cy="56" r="27" fill="#FFFFFF" stroke="#E49EB2" stroke-width="2.5" />
-              <!-- Blush -->
-              <ellipse cx="34" cy="60" rx="5.5" ry="3.5" fill="#FFB6C9" />
-              <ellipse cx="66" cy="60" rx="5.5" ry="3.5" fill="#FFB6C9" />
-              <!-- Eyes -->
-              <circle cx="40" cy="53" r="3.2" fill="#3B1F2B" />
-              <circle cx="39" cy="51.8" r="1.1" fill="#FFFFFF" />
-              <circle cx="60" cy="53" r="3.2" fill="#3B1F2B" />
-              <circle cx="59" cy="51.8" r="1.1" fill="#FFFFFF" />
-              <!-- Nose & smile -->
-              <ellipse cx="50" cy="57.5" rx="2.5" ry="1.8" fill="#E66C93" />
-              <path d="M46 61.5C47.5 63.5 49.5 63.5 50 61.5C50.5 63.5 52.5 63.5 54 61.5" stroke="#3B1F2B" stroke-width="2" stroke-linecap="round" />
-              <!-- Little pink ribbon -->
-              <path d="M58 34L66 30L64 38L58 34Z" fill="#F07CA2" />
-              <path d="M58 34L52 28L51 36L58 34Z" fill="#F07CA2" />
-              <circle cx="58" cy="34" r="2.6" fill="#D85C84" />
-            </svg>
+            <img src="mascot-rabbit.png" alt="Bé Thỏ SSB" class="hero-mascot-img" />
           </div>
         </div>
 
@@ -286,6 +264,48 @@
     </div>
   </div>
 
+  <!-- CUTE MASCOT COMPANION WIDGET (Bé Thỏ Mochi) -->
+  <aside class="cute-mascot-container" id="cuteMascotContainer" aria-label="Linh vật Bé Thỏ cổ vũ học tập">
+    <!-- Speech Bubble -->
+    <div class="mascot-speech-bubble" id="mascotSpeechBubble" role="status" aria-live="polite">
+      <div class="mascot-speech-header">
+        <div class="mascot-tag">
+          <span class="mascot-tag-icon">🎀</span>
+          <span class="mascot-tag-name">Bé Thỏ Mochi</span>
+          <span class="mascot-sparkle-dot"></span>
+        </div>
+        <div class="mascot-header-btns">
+          <button type="button" class="mascot-mini-btn" id="btnMascotRefresh" title="Đổi câu nói mới" aria-label="Đổi câu nói mới">🔄</button>
+          <button type="button" class="mascot-mini-btn" id="btnMascotCloseBubble" title="Ẩn hộp thoại" aria-label="Ẩn hộp thoại">✕</button>
+        </div>
+      </div>
+      <div class="mascot-speech-body" id="mascotSpeechText">
+        Hân ơi cố lên! Một hai! Một hai! 🍓
+      </div>
+      <div class="mascot-bubble-tail" aria-hidden="true"></div>
+    </div>
+
+    <!-- Floating Particles Container -->
+    <div class="mascot-particles-layer" id="mascotParticlesLayer" aria-hidden="true"></div>
+
+    <!-- Mascot Avatar Wrapper & Controls -->
+    <div class="mascot-avatar-wrap" id="mascotAvatarWrap" title="Nhấp vào bé Thỏ để nhận tim và lời chúc nè! 💖">
+      <button type="button" class="mascot-btn-minimize" id="btnMascotMinimize" title="Thu nhỏ bé Thỏ" aria-label="Thu nhỏ bé Thỏ">−</button>
+      
+      <div class="mascot-figure" id="mascotFigure">
+        <div class="mascot-ground-shadow-div" aria-hidden="true"></div>
+        <img src="mascot-rabbit.png" class="mascot-character-img" alt="Bé Thỏ Mochi Cổ Vũ" />
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mascot Collapsed Trigger Button -->
+  <button type="button" class="mascot-collapsed-pill hidden" id="mascotCollapsedPill" title="Gọi Bé Thỏ Mochi">
+    <img src="mascot-rabbit.png" class="pill-bunny-thumb" alt="" />
+    <span class="pill-text">Bé Thỏ cổ vũ</span>
+    <span class="pill-sparkle">✨</span>
+  </button>
+
   <script src="quiz2-data.js"></script>
   <script src="quiz3-data.js"></script>
   <script src="quiz4-data.js"></script>
@@ -307,6 +327,7 @@
   <script src="quiz16-data.js"></script>
   <script src="quiz17-data.js"></script>
   <script src="quiz-data.js"></script>
+  <script src="mascot.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
