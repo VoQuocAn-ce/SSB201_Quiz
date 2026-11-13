@@ -627,6 +627,22 @@
     }
   });
 
+  // Cute Marquee Pause/Resume Toggle
+  const cuteMarqueeBar = document.getElementById("cuteMarqueeBar");
+  const btnToggleMarquee = document.getElementById("btnToggleMarquee");
+  const marqueeToggleIcon = document.getElementById("marqueeToggleIcon");
+
+  if (btnToggleMarquee && cuteMarqueeBar && marqueeToggleIcon) {
+    btnToggleMarquee.addEventListener("click", () => {
+      const isPaused = cuteMarqueeBar.classList.toggle("is-paused");
+      marqueeToggleIcon.textContent = isPaused ? "▶️" : "⏸️";
+      btnToggleMarquee.setAttribute(
+        "title",
+        isPaused ? "Chạy tiếp dòng chữ" : "Tạm dừng dòng chữ"
+      );
+    });
+  }
+
   // Initial render
   showView("home");
 })();
