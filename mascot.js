@@ -9,7 +9,7 @@
   // Danh mục lời thoại phong phú, dễ thương & tràn đầy năng lượng
   const QUOTES = {
     idle: [
-      "Có công mài, có ngày nên kim   ヾ(・ω・*)ノ🍓",
+      "Có công mài, có ngày nên kim🍓",
     ],
     correct: [
       "Tuyệt đỉnh! Chuẩn không cần chỉnh luôn nè! 🎉✨",
