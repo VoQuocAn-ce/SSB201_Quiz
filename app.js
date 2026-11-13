@@ -95,18 +95,22 @@
   }
 
   function prepareQuestions(rawQuestions, shuffleQ, shuffleOpt, defaultQuizId) {
-    let items = rawQuestions.map((q) => {
+    let items = rawQuestions.map((q, qIdx) => {
       const sourceQuizId = q.sourceQuizId || defaultQuizId;
+      const qId = q.id !== undefined ? q.id : (qIdx + 1);
+      const correctList = Array.isArray(q.correctIndices)
+        ? q.correctIndices
+        : (typeof q.correctAnswer === "number" ? [q.correctAnswer] : []);
       const indexedOptions = q.options.map((opt, idx) => ({
         ...opt,
-        isCorrect: q.correctIndices.includes(idx)
+        isCorrect: correctList.includes(idx)
       }));
       const finalOptions = shuffleOpt ? shuffleArray(indexedOptions) : indexedOptions;
       return {
-        id: q.id,
+        id: qId,
         sourceQuizId,
-        uniqueKey: `${sourceQuizId}:${q.id}`,
-        topic: q.topic,
+        uniqueKey: `${sourceQuizId}:${qId}`,
+        topic: q.topic || "SSB201 Core Knowledge",
         question: q.question,
         hint: q.hint,
         options: finalOptions

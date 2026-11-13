@@ -1337,5 +1337,97 @@ const QUIZ_CATALOG = [
     description: "Bộ đề Final Exam SU 2024 về Demeanor, Semantic Triangle, Frontstage Culture, HMW Statements, VoIP & Handshakes.",
     icon: "🍰",
     questions: QUIZ_8_QUESTIONS
+  },
+  {
+    id: "quiz9-full",
+    title: "SSB201 - Quiz 9",
+    shortTitle: "Quiz 9",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz9 (Q1 – Q50)",
+    description: "Bộ đề Final Exam SU 2024 về Self-esteem, Perception, Business Etiquette, GASCAP/T & Design Thinking.",
+    icon: "🍧",
+    questions: QUIZ_9_QUESTIONS
+  },
+  {
+    id: "quiz10-full",
+    title: "SSB201 - Quiz 10",
+    shortTitle: "Quiz 10",
+    subtitle: "48 câu hỏi trắc nghiệm từ thư mục Quiz10 (Q1 – Q48)",
+    description: "Bộ đề Final Exam SP 2024 về Communication Principles, Nonverbal, Rhetoric & Intercultural Dynamics.",
+    icon: "🍮",
+    questions: QUIZ_10_QUESTIONS
+  },
+  {
+    id: "quiz11-full",
+    title: "SSB201 - Quiz 11",
+    shortTitle: "Quiz 11",
+    subtitle: "29 câu hỏi trắc nghiệm từ thư mục Quiz11 (Q1 – Q29)",
+    description: "Bộ đề Retake FA 2023 về Gestalt, Verbal Communication, Toulmin Model & Cross-cultural Relations.",
+    icon: "🍭",
+    questions: QUIZ_11_QUESTIONS
+  },
+  {
+    id: "quiz12-full",
+    title: "SSB201 - Quiz 12",
+    shortTitle: "Quiz 12",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz12 (Q1 – Q50)",
+    description: "Bộ đề Final Exam FA 2023 về Perception, Toulmin Model, Negative News, Conflict Styles & Meeting Formats.",
+    icon: "🍬",
+    questions: QUIZ_12_QUESTIONS
+  },
+  {
+    id: "quiz13-full",
+    title: "SSB201 - Quiz 13",
+    shortTitle: "Quiz 13",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz13 (Q1 – Q50)",
+    description: "Bộ đề ôn tập Quiz 13 về Design Thinking, Intercultural Communication, Negative News & Argumentation.",
+    icon: "🍫",
+    questions: QUIZ_13_QUESTIONS
+  },
+  {
+    id: "quiz14-full",
+    title: "SSB201 - Quiz 14",
+    shortTitle: "Quiz 14",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz14 (Q1 – Q50)",
+    description: "Bộ đề ôn tập Quiz 14 về Paradigms, Intercultural Etiquette, Toulmin Strategy & Crisis Management.",
+    icon: "🍯",
+    questions: QUIZ_14_QUESTIONS
+  },
+  {
+    id: "quiz15-full",
+    title: "SSB201 - Quiz 15",
+    shortTitle: "Quiz 15",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz15 (Q1 – Q50)",
+    description: "Bộ đề ôn tập Quiz 15 về Intercultural Communication, Toulmin Model, Perception & Writing Strategies.",
+    icon: "🍓",
+    questions: QUIZ_15_QUESTIONS
+  },
+  {
+    id: "quiz16-full",
+    title: "SSB201 - Quiz 16",
+    shortTitle: "Quiz 16",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz16 (Q1 – Q50)",
+    description: "Bộ đề ôn tập Quiz 16 về GASCAP/T, Nonverbal Cues, Gestalt Rules & Workplace Communication.",
+    icon: "🌷",
+    questions: QUIZ_16_QUESTIONS
+  },
+  {
+    id: "quiz17-full",
+    title: "SSB201 - Quiz 17",
+    shortTitle: "Quiz 17",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz17 (Q1 – Q50)",
+    description: "Bộ đề ôn tập Quiz 17 về World Culture, Design Thinking, Outlining, Rhetoric & Communication Flow.",
+    icon: "✨",
+    questions: QUIZ_17_QUESTIONS
+  },
+  {
+    id: "quiz-seb4",
+    title: "SSB201 - Quiz SEB 4",
+    shortTitle: "Quiz SEB 4",
+    subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB4 (Câu 1 – 50)",
+    description: "Bộ đề SEB 4 về Schutz Needs, Cultural Intelligence, Netiquette, Conflict Resolution & Crisis Plan.",
+    icon: "🪷",
+    questions: QUIZ_SEB4_QUESTIONS
   }
 ];
+
+window.QUIZ_CATALOG = QUIZ_CATALOG;
