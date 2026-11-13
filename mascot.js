@@ -62,6 +62,11 @@
   let btnRefresh, btnCloseBubble, btnMinimize;
   let idleTimer = null;
   let currentMoodTimeout = null;
+  let bubbleAutoDismissTimer = null;
+
+  function isMobile() {
+    return window.innerWidth <= 820;
+  }
 
   function getRandomItem(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -114,8 +119,8 @@
     startIdleTimer();
   }
 
-  function say(text, animationClass = null, duration = 6500) {
-    if (!speechText || !bubble) return;
+  function say(text, animationClass = null, duration = 4200) {
+    if (isMobile() || !speechText || !bubble) return;
 
     // Show bubble
     bubble.classList.remove("hidden", "bubble-pop-out");
@@ -136,11 +141,18 @@
       }, 1200);
     }
 
+    // Auto-dismiss bubble after duration so it doesn't linger or block the screen
+    if (bubbleAutoDismissTimer) clearTimeout(bubbleAutoDismissTimer);
+    bubbleAutoDismissTimer = setTimeout(() => {
+      hideBubble();
+    }, duration);
+
     // Reset idle timer
     resetIdleTimer();
   }
 
   function hideBubble() {
+    if (bubbleAutoDismissTimer) clearTimeout(bubbleAutoDismissTimer);
     if (!bubble) return;
     bubble.classList.remove("bubble-pop-in");
     bubble.classList.add("bubble-pop-out");
@@ -214,10 +226,10 @@
 
   function startIdleTimer() {
     idleTimer = setInterval(() => {
-      // Don't auto-speak if container is hidden or minimized
-      if (container?.classList.contains("hidden")) return;
+      // Don't auto-speak if on mobile, hidden, or minimized
+      if (isMobile() || container?.classList.contains("hidden")) return;
       say(getRandomItem(QUOTES.idle));
-    }, 24000);
+    }, 45000);
   }
 
   // Public API for quiz integration
@@ -225,19 +237,24 @@
     init,
     say,
     reactCorrect() {
+      if (isMobile()) return;
       spawnParticles(6);
       say(getRandomItem(QUOTES.correct), "mascot-celebrate");
     },
     reactWrong() {
+      if (isMobile()) return;
       say(getRandomItem(QUOTES.wrong), "mascot-comfort");
     },
     reactHint() {
+      if (isMobile()) return;
       say(getRandomItem(QUOTES.hint), "mascot-wiggle");
     },
     reactStart() {
+      if (isMobile()) return;
       say(getRandomItem(QUOTES.start), "mascot-celebrate");
     },
     reactSummary(percent) {
+      if (isMobile()) return;
       spawnParticles(8);
       if (percent >= 85) {
         say(getRandomItem(QUOTES.summary_high), "mascot-celebrate");
