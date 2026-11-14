@@ -477,16 +477,16 @@ const QUIZ_2_QUESTIONS = [
     id: 20,
     topic: "Communication & Stress",
     question: "Pagers and other wireless devices have contributed to stress in the communication process.",
-    hint: "Các thiết bị liên lạc không dây khiến con người luôn trong trạng thái phải phản hồi mọi lúc mọi nơi, làm tăng áp lực trong quá trình giao tiếp.",
-    correctIndices: [0],
+    hint: "Đáp án chính thức của bài thi cho câu này là False.",
+    correctIndices: [1],
     options: [
       {
         text: "True",
-        explanation: "Đúng (True)! Giáo trình nêu rõ máy nhắn tin (pagers) và thiết bị không dây tuy tiện lợi nhưng làm tăng áp lực và căng thẳng vì kỳ vọng phản hồi tức thì."
+        explanation: "Lưu ý: Mặc dù thiết bị không dây tạo áp lực kết nối, nhưng theo đáp án chuẩn bài thi được tính điểm, câu này chọn False."
       },
       {
         text: "False",
-        explanation: "Sai vì thực tế thiết bị không dây đã góp phần tạo thêm căng thẳng trong quy trình giao tiếp hiện đại."
+        explanation: "Chính xác! Đáp án chuẩn của câu hỏi này theo đề thi là False."
       }
     ]
   },
@@ -707,24 +707,24 @@ const QUIZ_2_QUESTIONS = [
     id: 30,
     topic: "Media Interviews",
     question: "What are the Interview Preparation Factors for media interviews?",
-    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông trong giáo trình McLean: Chủ đề (Topic), Địa điểm (Location), Định dạng (Format) và Bối cảnh (Background).",
-    correctIndices: [0],
+    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông theo Bảng Table 15.1 giáo trình Scott McLean: Topic, Time, Format, và Background.",
+    correctIndices: [1],
     options: [
       {
         text: "Topic, Location, Format, and Background",
-        explanation: "Theo bảng Interview Preparation Factors trong giáo trình McLean, 4 yếu tố cần chuẩn bị gồm: Topic (Chủ đề), Location (Địa điểm), Format (Hình thức/Định dạng) và Background (Bối cảnh/Thông tin nền)."
+        explanation: "Sai vì yếu tố thứ hai trong khung chuẩn giáo trình là Time (thời lượng/thời gian), không phải Location."
       },
       {
         text: "Topic, Time, Format, and Background",
-        explanation: "Sai vì yếu tố thứ hai trong khung chuẩn là Location (địa điểm), không phải Time."
+        explanation: "Chính xác! Theo Bảng Table 15.1 (Interview Preparation Factors) trang 342 giáo trình Scott McLean, 4 yếu tố chuẩn bị phỏng vấn truyền thông gồm: Topic (Chủ đề), Time (Thời lượng/Thời gian), Format (Hình thức/Định dạng) và Background (Bối cảnh/Thông tin nền)."
       },
       {
         text: "Topic, Location, Interviewers, and Background",
-        explanation: "Sai vì yếu tố thứ ba là Format (định dạng phỏng vấn), không phải Interviewers."
+        explanation: "Sai vì yếu tố thứ hai là Time và thứ ba là Format (định dạng phỏng vấn), không phải Location hay Interviewers."
       },
       {
         text: "Topic, Location, Format, and Time",
-        explanation: "Sai vì yếu tố thứ tư là Background (bối cảnh), không phải Time."
+        explanation: "Sai vì yếu tố thứ hai là Time và thứ tư là Background (bối cảnh), không phải Location."
       }
     ]
   },

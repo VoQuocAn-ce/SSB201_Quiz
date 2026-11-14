@@ -528,16 +528,16 @@ const QUIZ_5_QUESTIONS = [
     id: 22,
     topic: "Communication & Stress",
     question: "Pagers and other wireless devices have contributed to stress in the communication process.",
-    hint: "Việc luôn phải kết nối 24/7 qua điện thoại, máy nhắn tin và thiết bị không dây làm tăng áp lực phản hồi tức thì.",
-    correctIndices: [0],
+    hint: "Đáp án chính thức của bài thi cho câu này là False.",
+    correctIndices: [1],
     options: [
       {
         text: "True",
-        explanation: "Chính xác! Trong sách McLean Chương 1, việc máy nhắn tin và thiết bị không dây khiến người lao động luôn trong trạng thái sẵn sàng phản hồi liên tục đã làm gia tăng căng thẳng trong giao tiếp."
+        explanation: "Lưu ý: Mặc dù thiết bị không dây tạo áp lực kết nối, nhưng theo đáp án chuẩn bài thi được tính điểm, câu này chọn False."
       },
       {
         text: "False",
-        explanation: "Vì sao sai: Giáo trình khẳng định điều này là Đúng vì ranh giới thời gian làm việc – nghỉ ngơi bị xóa nhòa."
+        explanation: "Chính xác! Đáp án chuẩn của câu hỏi này theo đề thi là False."
       }
     ]
   },

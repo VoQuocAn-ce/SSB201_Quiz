@@ -512,10 +512,10 @@ const QUIZ_9_QUESTIONS = [
     id: 40,
     topic: "Media Interviews",
     question: "What are the Interview Preparation Factors for media interviews?",
-    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông: Chủ đề, Địa điểm, Định dạng và Bối cảnh/thông tin nền.",
+    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông theo giáo trình Scott McLean: Chủ đề (Topic), Thời gian (Time), Định dạng (Format) và Bối cảnh (Background).",
     correctIndices: [0],
     options: [
-      { text: "Topic, Location, Format, and Background", explanation: "Chính xác! 4 yếu tố chuẩn bị phỏng vấn truyền thông (Interview Preparation Factors) gồm: Topic (chủ đề), Location (địa điểm), Format (định dạng chương trình), và Background (bối cảnh thông tin người phỏng vấn và chủ đề)." },
+      { text: "Topic, Time, Format, and Background", explanation: "Chính xác! 4 yếu tố chuẩn bị phỏng vấn truyền thông (Interview Preparation Factors) theo Bảng Table 15.1 trang 342 giáo trình Scott McLean gồm: Topic (chủ đề), Time (thời lượng/thời gian), Format (định dạng phỏng vấn), và Background (bối cảnh/thông tin nền)." },
       { text: "Time, Budget, Audience, and Speaker", explanation: "Vì sao sai: Không phải bộ 4 yếu tố chuẩn bị media interview." },
       { text: "Questions, Answers, Rehearsal, and Outfit", explanation: "Vì sao sai: Đây là các hoạt động luyện tập cá nhân." },
       { text: "Channel, Sender, Receiver, and Noise", explanation: "Vì sao sai: Đây là các yếu tố trong mô hình giao tiếp cơ bản." }

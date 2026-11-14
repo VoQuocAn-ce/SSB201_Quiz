@@ -783,24 +783,24 @@ const QUIZ_4_QUESTIONS = [
     id: 34,
     topic: "Media Interviews",
     question: "What are the Interview Preparation Factors for media interviews?",
-    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông: Topic, Location, Format, và Background.",
-    correctIndices: [0],
+    hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông theo Bảng Table 15.1 giáo trình Scott McLean: Topic, Time, Format, và Background.",
+    correctIndices: [1],
     options: [
       {
         text: "Topic, Location, Format, and Background",
-        explanation: "4 yếu tố chuẩn bị phỏng vấn truyền thông theo giáo trình gồm: Chủ đề (Topic), Địa điểm (Location), Định dạng (Format) và Thông tin nền/Bối cảnh (Background)."
+        explanation: "Sai vì yếu tố thứ hai trong khung chuẩn giáo trình là Time (thời lượng/thời gian), không phải Location."
       },
       {
         text: "Topic, Time, Format, and Background",
-        explanation: "Thiếu Location và thay sai bằng Time."
+        explanation: "Chính xác! Theo Bảng Table 15.1 (Interview Preparation Factors) trang 342 giáo trình Scott McLean, 4 yếu tố chuẩn bị phỏng vấn truyền thông gồm: Topic (Chủ đề), Time (Thời lượng/Thời gian), Format (Hình thức/Định dạng) và Background (Bối cảnh/Thông tin nền)."
       },
       {
         text: "Topic, Location, Interviewers, and Background",
-        explanation: "Thiếu Format và thay sai bằng Interviewers."
+        explanation: "Thiếu Format và thay sai bằng Interviewers, đồng thời Location sai so với Time."
       },
       {
         text: "Topic, Location, Format, and Time",
-        explanation: "Thiếu Background và thay sai bằng Time."
+        explanation: "Thiếu Background và thay sai vị trí so với khung chuẩn."
       }
     ]
   },

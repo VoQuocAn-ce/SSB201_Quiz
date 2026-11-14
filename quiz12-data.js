@@ -576,11 +576,11 @@ const QUIZ_12_QUESTIONS = [
     id: 45,
     topic: "Communication Technology & Stress",
     question: "Pagers and other wireless devices have contributed to stress in the communication process.",
-    hint: "Các thiết bị không dây và máy nhắn tin khiến con người luôn trong trạng thái bị kết nối 24/7, gây gia tăng căng thẳng.",
-    correctIndices: [0],
+    hint: "Đáp án chính thức của bài thi cho câu này là False.",
+    correctIndices: [1],
     options: [
-      { text: "True", explanation: "Chính xác! Máy nhắn tin (pagers), điện thoại thông minh và thiết bị không dây liên tục kết nối làm mờ ranh giới giữa công việc và đời sống riêng, gây nên tình trạng quá tải thông tin và căng thẳng (stress) trong quá trình giao tiếp." },
-      { text: "False", explanation: "Vì sao sai: Đây là thực tế đã được nhiều nghiên cứu tâm lý học giao tiếp chứng minh." }
+      { text: "True", explanation: "Lưu ý: Mặc dù thiết bị không dây tạo áp lực kết nối, nhưng theo đáp án chuẩn bài thi được tính điểm, câu này chọn False." },
+      { text: "False", explanation: "Chính xác! Đáp án chuẩn của câu hỏi này theo đề thi là False." }
     ]
   },
   {
