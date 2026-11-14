@@ -1,1362 +1,1321 @@
-// QUIZ_16_QUESTIONS Data - 50 questions
+/**
+ * SSB201 - Quiz 16 Data File
+ * 50 câu hỏi trắc nghiệm tiếng Anh từ thư mục Quiz16 (Q1 – Q50)
+ * Kèm gợi ý và giải thích chi tiết đáp án đúng/sai bằng tiếng Việt.
+ */
+
 const QUIZ_16_QUESTIONS = [
   {
     "id": 1,
-    "topic": "Effective Communication & Argumentation",
-    "question": "The “G” in Effective Argumentation Strategies: GASCAP/T means ............ (Fulkerson, 1996).",
-    "hint": "GASCAP/T: G = Generalization, A = Analogy, S = Sign, C = Cause, A = Authority, P = Principle, T = Testimony.",
+    "topic": "Effective Argumentation",
+    "question": "The “G” in Effective Argumentation Strategies: GASCAP/T means .......... (Fulkerson, 1996).",
+    "hint": "Chữ cái G trong mô hình GASCAP/T đại diện cho Generalization (suy rộng / khái quát hóa từ các trường hợp cụ thể).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "Great",
-        "explanation": "Vì sao sai: GASCAP/T không có chữ viết tắt nào là Great."
+        "explanation": "Sai vì mô hình GASCAP/T không có thành tố Great."
       },
       {
         "text": "Generalization",
-        "explanation": "Chính xác! G trong GASCAP/T là Generalization (khái quát hóa: đưa ra kết luận dựa trên các bằng chứng cụ thể)."
+        "explanation": "Chính xác! Chữ G trong mô hình GASCAP/T của Richard Fulkerson (1996) đại diện cho Generalization (lập luận bằng suy rộng / khái quát hóa từ các mẫu quan sát cụ thể)."
       },
       {
         "text": "General",
-        "explanation": "Vì sao sai: Từ chuẩn xác theo Fulkerson (1996) là Generalization."
+        "explanation": "Sai vì từ đúng trong mô hình học thuật phải là danh từ Generalization."
       }
     ]
   },
   {
     "id": 2,
-    "topic": "Effective Communication & Argumentation",
-    "question": "During the Design Thinking Process, .................. is getting ideas and exploration out of your head and into the physical world",
-    "hint": "Biến ý tưởng trong đầu thành mô hình vật lý/thực tế.",
+    "topic": "Design Thinking Process",
+    "question": "During the Design Thinking Process , .................. is getting ideas and exploration out of your head and into the physical world",
+    "hint": "Bước biến ý tưởng trong suy nghĩ thành sản phẩm hoặc mô hình thực tế hữu hình là Prototyping (tạo mẫu).",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
-        "text": "Empathize",
-        "explanation": "Vì sao sai: Empathize là giai đoạn thấu cảm, tìm hiểu nhu cầu người dùng."
+        "text": "Defining",
+        "explanation": "Sai vì Defining là giai đoạn tổng hợp thông tin để xác định và đóng khung vấn đề cốt lõi."
       },
       {
-        "text": "Ideate",
-        "explanation": "Vì sao sai: Ideate là giai đoạn phát sinh nhiều ý tưởng trên giấy/trong suy nghĩ."
+        "text": "Empathizing",
+        "explanation": "Sai vì Empathizing là giai đoạn thấu cảm, quan sát và phỏng vấn người dùng."
       },
       {
         "text": "Prototyping",
-        "explanation": "Chính xác! Prototyping (tạo mẫu) là bước biến các ý tưởng và thử nghiệm từ suy nghĩ ra thế giới thực tế dưới dạng sản phẩm/vật thể mẫu."
+        "explanation": "Chính xác! Prototyping (tạo mẫu) trong Design Thinking là giai đoạn đưa các ý tưởng và sự khám phá từ trong đầu ra thế giới vật lý để người dùng có thể trải nghiệm và đóng góp ý kiến."
       },
       {
-        "text": "Define",
-        "explanation": "Vì sao sai: Define là giai đoạn xác định tuyên bố vấn đề (problem statement)."
+        "text": "Testing",
+        "explanation": "Sai vì Testing là bước đưa mẫu thử cho người dùng tương tác để thu thập phản hồi đánh giá."
       }
     ]
   },
   {
     "id": 3,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Language & Meaning",
     "question": "......... is an occupation-specific language used by people in a given profession.",
-    "hint": "Thuật ngữ chuyên ngành dùng trong một nghề nghiệp cụ thể.",
+    "hint": "Ngôn ngữ chuyên môn dùng riêng trong một ngành nghề cụ thể là Jargon (thuật ngữ chuyên ngành).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "Cliché",
-        "explanation": "Vì sao sai: Cliché là cụm từ sáo rỗng, rập khuôn."
+        "explanation": "Sai vì cliché là câu nói hoặc cụm từ sáo rỗng, dùng quá nhiều nên mất đi ý nghĩa."
       },
       {
         "text": "Jargon",
-        "explanation": "Chính xác! Jargon (thuật ngữ chuyên ngành) là ngôn ngữ riêng biệt được sử dụng bởi những người cùng ngành nghề."
+        "explanation": "Chính xác! Jargon (thuật ngữ chuyên ngành) là ngôn ngữ riêng biệt được sử dụng bởi những người cùng làm việc trong một lĩnh vực hoặc ngành nghề chuyên môn nhất định."
       },
       {
         "text": "Slang",
-        "explanation": "Vì sao sai: Slang là tiếng lóng của một nhóm văn hóa/xã hội, không chỉ riêng ngành nghề."
+        "explanation": "Sai vì slang là tiếng lóng của đời sống xã hội thường nhật, không phải ngôn ngữ nghề nghiệp."
       },
       {
         "text": "Racist language",
-        "explanation": "Vì sao sai: Racist language là ngôn từ phân biệt chủng tộc."
+        "explanation": "Sai vì racist language là ngôn từ mang tính phân biệt và xúc phạm chủng tộc."
       }
     ]
   },
   {
     "id": 4,
-    "topic": "Effective Communication & Argumentation",
-    "question": "“If you were born female, then your view of the world may be different from that of a male, and may be similar to that of many other females. Being female means that you share this “femaleness” trait with roughly half the world’s population.” Here is an example of .............................",
-    "hint": "Đặc điểm như giới tính, độ tuổi, học vấn, thu nhập là demographic traits.",
+    "topic": "Audience Analysis",
+    "question": "“If you were born female, then your view of the world may be different from that of a male, and may be similar to that of many other females. Being female means that you share this “femaleness” trait with roughly half the world’s population.”\nHere is an example of .............................",
+    "hint": "Giới tính là một trong những đặc điểm nhân khẩu học (demographic traits) tiêu biểu khi phân tích đối tượng giao tiếp.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "demographic traits",
-        "explanation": "Chính xác! Giới tính (nam/nữ) là đặc điểm nhân khẩu học (demographic traits) cơ bản của người nghe/đối tượng."
+        "explanation": "Chính xác! Giới tính (nam/nữ) cùng với độ tuổi, học vấn, nghề nghiệp là những ví dụ điển hình của demographic traits (đặc điểm nhân khẩu học)."
       },
       {
         "text": "individual differences",
-        "explanation": "Vì sao sai: Sự khác biệt cá nhân nói về từng người cụ thể, còn giới tính nữ được chia sẻ bởi nửa dân số."
+        "explanation": "Sai vì câu văn nhấn mạnh đặc điểm chung chia sẻ với một nửa dân số thế giới chứ không phải sự khác biệt của từng cá nhân riêng lẻ."
       },
       {
         "text": "perceptions",
-        "explanation": "Vì sao sai: Nhận thức là cách tiếp nhận thông tin, câu này miêu tả một đặc trưng nhân khẩu học."
+        "explanation": "Sai vì perceptions là quá trình nhận thức/cảm nhận, không phải phân loại nhóm đối tượng này."
       }
     ]
   },
   {
     "id": 5,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Marketing Communication",
     "question": "“Just do it!” of Nike is a ..............",
-    "hint": "Khẩu hiệu thương hiệu ngắn gọn gắn liền với công ty.",
+    "hint": "Khẩu hiệu ngắn gọn mang tính nhận diện thương hiệu của Nike là một slogan.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "quotes",
-        "explanation": "Vì sao sai: Quote là câu trích dẫn lời ai đó."
+        "explanation": "Sai vì quotes là câu trích dẫn phát biểu của một nhân vật."
       },
       {
         "text": "zingers",
-        "explanation": "Vì sao sai: Zinger là câu nói đối đáp nhanh, bất ngờ."
+        "explanation": "Sai vì zingers là câu nói đùa châm biếm nhanh, thông minh."
       },
       {
         "text": "soundbites",
-        "explanation": "Vì sao sai: Soundbite là đoạn phát biểu ngắn gọn được trích dẫn trên truyền thông."
+        "explanation": "Sai vì soundbites là mẩu phát biểu ngắn trích đăng trên tin tức/truyền thông."
       },
       {
         "text": "slogan",
-        "explanation": "Chính xác! 'Just do it!' là slogan (khẩu hiệu nhận diện thương hiệu) kinh điển của Nike."
+        "explanation": "Chính xác! “Just do it!” là slogan (khẩu hiệu quảng cáo/thương hiệu) nổi tiếng toàn cầu của tập đoàn Nike."
       }
     ]
   },
   {
     "id": 6,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Public Speaking",
     "question": "“Speech to entertain” means",
-    "hint": "Bài nói đem lại sự thích thú, giải trí (amuse) nhẹ nhàng.",
+    "hint": "Bài phát biểu giải trí nhằm đem lại sự hài hước, vui tươi nhẹ nhàng cho khán giả.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "to increase the audience’s knowledge, teach about a topic or issue, and share your expertise.",
-        "explanation": "Vì sao sai: Đây là Speech to inform (thuyết trình cung cấp thông tin)."
+        "explanation": "Sai vì đây là mục tiêu của Speech to inform (bài phát biểu cung cấp thông tin)."
       },
       {
         "text": "to show the audience how to use, operate, or do something.",
-        "explanation": "Vì sao sai: Đây là Speech to demonstrate (thuyết trình thao diễn/hướng dẫn)."
+        "explanation": "Sai vì đây là mục tiêu của Speech to demonstrate (bài phát biểu minh họa thao tác)."
       },
       {
         "text": "to influence the audience by presenting arguments intended to change attitudes, beliefs, or values.",
-        "explanation": "Vì sao sai: Đây là Speech to persuade (thuyết trình thuyết phục)."
+        "explanation": "Sai vì đây là mục tiêu của Speech to persuade (bài phát biểu thuyết phục)."
       },
       {
         "text": "to amuse the audience by engaging them in a relatively light-hearted speech that may have a serious point or goal.",
-        "explanation": "Chính xác! Speech to entertain (thuyết trình giải trí) nhằm mục đích làm khán giả thích thú, giải trí thông qua bài nói nhẹ nhàng nhưng vẫn có thể mang thông điệp ý nghĩa."
+        "explanation": "Chính xác! Speech to entertain (phát biểu giải trí) là bài phát biểu mang lại tiếng cười và niềm vui cho người nghe thông qua một cách tiếp cận nhẹ nhàng, hóm hỉnh."
       }
     ]
   },
   {
     "id": 7,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communication Contexts",
     "question": "......................communication normally involves two people, and can range from intimate and very personal to formal and impersonal.",
-    "hint": "Giao tiếp giữa 2 cá nhân.",
+    "hint": "Giao tiếp giữa hai người với nhau gọi là giao tiếp liên cá nhân (interpersonal communication).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "Group",
-        "explanation": "Vì sao sai: Giao tiếp nhóm thường gồm từ 3 đến 8 người."
+        "explanation": "Sai vì Group communication là giao tiếp trong một nhóm từ 3 đến 8 người trở lên."
       },
       {
         "text": "Interpersonal",
-        "explanation": "Chính xác! Giao tiếp liên cá nhân (Interpersonal communication) diễn ra giữa 2 người, từ thân mật đến trang trọng."
+        "explanation": "Chính xác! Interpersonal communication (giao tiếp liên cá nhân) thường diễn ra giữa hai người, với mức độ dao động từ thân mật riêng tư đến trang trọng nghi thức."
       },
       {
         "text": "Mass",
-        "explanation": "Vì sao sai: Giao tiếp đại chúng gửi thông điệp tới số đông công chúng."
+        "explanation": "Sai vì Mass communication là giao tiếp đại chúng qua các phương tiện truyền thông đến số lượng lớn khán giả."
       },
       {
         "text": "Intrapersonal",
-        "explanation": "Vì sao sai: Giao tiếp nội tâm diễn ra bên trong chính một người."
+        "explanation": "Sai vì Intrapersonal communication là giao tiếp nội tâm diễn ra bên trong tâm trí của một cá nhân."
       }
     ]
   },
   {
     "id": 8,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Public Speaking",
     "question": "“Speech to demonstrate” means",
-    "hint": "Thao diễn, hướng dẫn khán giả cách dùng hoặc làm thứ gì đó.",
+    "hint": "Phát biểu thị phạm/hướng dẫn (demonstrate) là chỉ cho khán giả cách thức vận hành hoặc thực hiện một việc gì đó.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "increase the audience’s knowledge, teach about a topic or issue, and share your expertise",
-        "explanation": "Vì sao sai: Đây là Speech to inform."
+        "explanation": "Sai vì đây là định nghĩa của Speech to inform."
       },
       {
         "text": "show the audience how to use, operate, or do something.",
-        "explanation": "Chính xác! Speech to demonstrate (bài nói thị phạm/thao diễn) chỉ dẫn cách sử dụng, vận hành hoặc làm một điều gì đó."
+        "explanation": "Chính xác! Speech to demonstrate (bài nói minh họa/thị phạm) chỉ dẫn cho khán giả cách làm, cách vận hành hoặc cách thao tác một việc cụ thể."
       },
       {
         "text": "influence the audience by presenting arguments intended to change attitudes, beliefs, or values.",
-        "explanation": "Vì sao sai: Đây là Speech to persuade."
+        "explanation": "Sai vì đây là định nghĩa của Speech to persuade."
       },
       {
         "text": "amuse the audience by engaging them in a relatively light-hearted speech that may have a serious point or goal.",
-        "explanation": "Vì sao sai: Đây là Speech to entertain."
+        "explanation": "Sai vì đây là định nghĩa của Speech to entertain."
       }
     ]
   },
   {
     "id": 9,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communication Technology",
     "question": "With the availability of VoIP, both audio and visual images are available to the conversation participants. True or False?",
-    "hint": "VoIP qua Internet ngày nay truyền tải cả âm thanh lẫn hình ảnh video.",
+    "hint": "Các ứng dụng thoại VoIP ngày nay (như Skype, Zoom, Teams) đều tích hợp sẵn cả âm thanh lẫn hình ảnh video trực tiếp.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "True",
-        "explanation": "Chính xác! Công nghệ VoIP hiện đại (Voice over IP) kết hợp gọi thoại và video/hình ảnh trực tiếp cho người tham gia hội thoại."
+        "explanation": "Chính xác! Nhờ sự phát triển của công nghệ VoIP (Voice over Internet Protocol), các cuộc hội thoại trực tuyến ngày nay đều cung cấp cả tín hiệu âm thanh và hình ảnh video trực tiếp cho người tham gia."
       },
       {
         "text": "False",
-        "explanation": "Vì sao sai: VoIP ngày nay tích hợp đầy đủ âm thanh và hình ảnh."
+        "explanation": "Sai vì VoIP hiện đại hỗ trợ đầy đủ cả truyền dẫn âm thanh và hình ảnh hình thức video call."
       }
     ]
   },
   {
     "id": 10,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Travel Etiquette",
     "question": "Travel etiquette also involves courteous treatment of airline personnel. Flight attendants should also be treated ________________",
-    "hint": "Đối xử lịch sự và luôn tôn trọng tiếp viên hàng không.",
+    "hint": "Quy tắc lịch sự khi đi lại đòi hỏi sự tôn trọng (with respect) đối với đội ngũ tiếp viên hàng không.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
-        "text": "like servants",
-        "explanation": "Vì sao sai: Đây là thái độ thiếu tôn trọng nghiêm trọng."
+        "text": "with a hug",
+        "explanation": "Sai vì ôm tiếp viên hàng không là hành vi không phù hợp trong chuẩn mực giao tiếp nơi công cộng."
       },
       {
-        "text": "strictly as subordinates",
-        "explanation": "Vì sao sai: Tiếp viên hàng không là nhân sự chuyên nghiệp, không phải cấp dưới của hành khách."
+        "text": "with a kiss",
+        "explanation": "Sai vì hôn nhân sự hàng không là hành vi khiếm nhã, vi phạm ranh giới cá nhân."
       },
       {
-        "text": "casually and informally",
-        "explanation": "Vì sao sai: Cần giữ phép lịch sự đúng mực."
+        "text": "with a tip",
+        "explanation": "Sai vì tiếp viên hàng không là nhân sự chuyên nghiệp, không nhận tiền boa (tipping) trong quy tắc hàng không."
       },
       {
         "text": "with respect",
-        "explanation": "Chính xác! Tiếp viên hàng không và nhân sự hàng không luôn phải được đối xử với sự tôn trọng (with respect)."
+        "explanation": "Chính xác! Phép lịch thiệp khi đi lại đòi hỏi hành khách luôn phải đối xử với các tiếp viên và nhân viên hàng không với sự tôn trọng (with respect)."
       }
     ]
   },
   {
     "id": 11,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Business Messages",
     "question": "The ________ is often associated with a message where the audience values brevity and the message needs to be concise.",
-    "hint": "Tiếp cận trực tiếp đi thẳng vào vấn đề khi đối phương cần thông tin ngắn gọn.",
+    "hint": "Cách tiếp cận đi thẳng vào điểm chính (direct approach) rất phù hợp khi người đọc đề cao sự ngắn gọn, súc tích.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "indirect approach",
-        "explanation": "Vì sao sai: Gián tiếp mở đầu bằng bối cảnh hoặc lý do trước, kém ngắn gọn hơn."
+        "explanation": "Sai vì phương pháp tiếp cận gián tiếp đưa phần giải thích trước, làm thông điệp dài hơn."
       },
       {
         "text": "direct approach",
-        "explanation": "Chính xác! Phương pháp tiếp cận trực tiếp (direct approach) đưa ý chính lên đầu, phù hợp khi người nhận coi trọng sự ngắn gọn, súc tích."
+        "explanation": "Chính xác! The direct approach (cách tiếp cận trực tiếp) đưa kết luận hoặc thông điệp chính lên đầu bài, rất phù hợp khi người nhận coi trọng tính ngắn gọn (brevity) và thông điệp cần súc tích."
       },
       {
-        "text": "persuasive approach",
-        "explanation": "Vì sao sai: Không phải thuật ngữ tương phản trực tiếp/gián tiếp về độ ngắn gọn."
+        "text": "negative approach",
+        "explanation": "Sai vì không có phương pháp tổ chức cấu trúc mang tên negative approach."
       },
       {
-        "text": "analytical approach",
-        "explanation": "Vì sao sai: Phương pháp phân tích thường dài và chi tiết."
+        "text": "positive approach",
+        "explanation": "Sai vì phong cách tích cực không phải tên chiến lược tổ chức cấu trúc gắn với tính ngắn gọn."
       }
     ]
   },
   {
     "id": 12,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Intercultural Communication",
     "question": "On meeting someone for the first time, U.S. persons engage in chitchat which is ...................",
-    "hint": "Chuyện phiếm, trò chuyện xã giao nhẹ nhàng.",
+    "hint": "Chitchat là những mẩu trò chuyện xã giao nhẹ nhàng, cởi mở (small talk or light conversation).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "instant message",
-        "explanation": "Vì sao sai: Tin nhắn tức thời là hình thức nhắn tin số."
+        "explanation": "Sai vì chitchat trong văn cảnh gặp mặt trực tiếp là trò chuyện xã giao bằng lời nói."
       },
       {
         "text": "small talk or light conversation",
-        "explanation": "Chính xác! Chitchat trong văn hóa Mỹ là những câu chuyện xã giao ngắn gọn, nhẹ nhàng (small talk) về thời tiết, thể thao..."
+        "explanation": "Chính xác! Khi mới gặp ai đó lần đầu, người Mỹ thường bắt đầu bằng chitchat, tức là những mẩu chuyện xã giao nhẹ nhàng (small talk or light conversation) để tạo sự thoải mái."
       },
       {
         "text": "small talk but important conversation",
-        "explanation": "Vì sao sai: Chitchat là cuộc trò chuyện mang tính xã giao nhẹ nhàng, không đi sâu vào chuyện trọng đại."
+        "explanation": "Sai vì chitchat chủ yếu là chuyện thời tiết, đi lại thường nhật, không đi sâu vào việc hệ trọng ngay lúc đầu."
       },
       {
         "text": "social media",
-        "explanation": "Vì sao sai: Mạng xã hội là kênh giao tiếp."
+        "explanation": "Sai vì social media là mạng xã hội."
       }
     ]
   },
   {
     "id": 13,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Interpersonal Communication",
     "question": "The concept of a self-fulfilling prophecy, in which someone’s behavior comes to match and mirror others’ expectations, is not new.",
-    "hint": "Khái niệm kỳ vọng định hình hành vi là khái niệm lâu đời.",
+    "hint": "Khái niệm lời tiên tri tự ứng nghiệm (hành vi của một người dần khớp với kỳ vọng của người khác) là một hiện tượng tâm lý đã được biết đến từ lâu.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "True",
-        "explanation": "Chính xác! Tiên tri tự hoàn thành (self-fulfilling prophecy) là khái niệm đã tồn tại lâu đời trong tâm lý học và giao tiếp."
+        "explanation": "Chính xác! Khái niệm Self-fulfilling prophecy (tiên tri tự ứng nghiệm) đã được nghiên cứu từ lâu trong tâm lý học và truyền thông, mô tả hiện tượng khi kỳ vọng của người khác thúc đẩy một người hành động đúng theo khuôn mẫu kỳ vọng đó."
       },
       {
         "text": "False",
-        "explanation": "Vì sao sai: Khái niệm này không hề mới mà đã được nghiên cứu từ lâu."
+        "explanation": "Sai vì nhận định trong câu là hoàn toàn chính xác (hiện tượng này không hề mới)."
       }
     ]
   },
   {
     "id": 14,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Workplace Culture",
     "question": "Office customs and practices include .............................",
-    "hint": "Thông lệ văn phòng liên quan đến giờ giấc, nghỉ trưa, mức độ trang trọng và tuyển dụng.",
+    "hint": "Tập quán văn phòng gồm giờ làm việc, giờ nghỉ trưa, mức độ nghi thức trang trọng và quy trình tuyển dụng/sa thải.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
-        "text": "dress codes and religious beliefs only.",
-        "explanation": "Vì sao sai: Quá hạn hẹp và niềm tin tôn giáo là phạm trù cá nhân."
+        "text": "typical hours of work, friend and family members, dinner times, degree of formality, and hiring/firing.",
+        "explanation": "Sai vì bạn bè và giờ ăn tối gia đình không thuộc tập quán văn phòng công ty."
       },
       {
-        "text": "international trade agreements.",
-        "explanation": "Vì sao sai: Đây là hiệp ước thương mại quốc tế, không phải văn hóa văn phòng."
+        "text": "typical days off, friend and family members, holidays, degree of formality, and hiring/firing.",
+        "explanation": "Sai vì bạn bè và người thân là đời sống cá nhân riêng tư."
       },
       {
         "text": "typical hours of work, lunch and break times, degree of formality, and hiring/firing.",
-        "explanation": "Chính xác! Phong tục và thông lệ văn phòng bao gồm giờ làm việc, giờ ăn trưa/nghỉ ngơi, mức độ trang trọng và quy trình tuyển dụng/sa thải."
+        "explanation": "Chính xác! Theo giáo trình, phong tục và tập quán văn phòng (Office customs and practices) bao gồm: giờ làm việc chuẩn (typical hours of work), giờ ăn trưa và giải lao (lunch and break times), mức độ trang trọng (degree of formality), và cách thức tuyển dụng/sa thải (hiring/firing)."
       },
       {
-        "text": "personal travel preferences.",
-        "explanation": "Vì sao sai: Đây là sở thích cá nhân."
+        "text": "typical days off, friend and family members, hobbies and likes, degree of education, and hiring/firing.",
+        "explanation": "Sai vì sở thích cá nhân và người thân gia đình không nằm trong định nghĩa này."
       }
     ]
   },
   {
     "id": 15,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "International Business Etiquette",
     "question": "Why should we avoid giving perfume or wine as gifts to the French people?",
-    "hint": "Đó là đặc sản quốc gia của họ, rất khó để người ngoài chọn đúng gu chuẩn.",
+    "hint": "Nước hoa và rượu vang là hai sản phẩm đặc sản niềm tự hào của người Pháp, họ có gu thưởng thức rất cao và kỹ tính.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Because those are their specialties.",
-        "explanation": "Chính xác! Nước hoa và rượu vang là đặc sản niềm tự hào của Pháp; tặng chúng có thể bị xem là tự phụ hoặc không am hiểu gu của họ."
+        "explanation": "Chính xác! Nước hoa và rượu vang là đặc sản và niềm tự hào dân tộc của người Pháp; người Pháp có kiến thức chuyên sâu và gu thưởng thức rất khắt khe về các sản phẩm này nên việc tặng chúng dễ bị coi là thiếu tinh tế."
       },
       {
-        "text": "Because they are allergic to scents.",
-        "explanation": "Vì sao sai: Không phải lý do văn hóa."
+        "text": "Because those are expensive.",
+        "explanation": "Sai vì giá trị đắt đỏ không phải là lý do văn hóa kiêng kỵ ở đây."
       },
       {
-        "text": "Because wine is considered illegal as a gift.",
-        "explanation": "Vì sao sai: Hoàn toàn không vi phạm pháp luật."
+        "text": "Because those are not expensive.",
+        "explanation": "Sai vì nước hoa và rượu vang Pháp cao cấp có giá trị rất cao."
       },
       {
-        "text": "Because French people do not drink wine.",
-        "explanation": "Vì sao sai: Nước Pháp nổi tiếng thế giới về thưởng thức rượu vang."
+        "text": "Because those are what they do not like.",
+        "explanation": "Sai vì người Pháp rất yêu thích rượu vang và nước hoa của họ."
       }
     ]
   },
   {
     "id": 16,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communicator Responsibilities",
     "question": "As the business communicator’s first responsibility, preparation includes: ________________",
-    "hint": "Tổ chức tốt, rõ ràng, ngắn gọn và đúng giờ.",
+    "hint": "Trách nhiệm chuẩn bị của người làm giao tiếp kinh doanh bao gồm 4 yếu tố: Tổ chức, Rõ ràng, Súc tích và Đúng giờ.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
-        "text": "spontaneity, humor, and casualness",
-        "explanation": "Vì sao sai: Đây không phải các yếu tố chuẩn bị chuyên nghiệp cơ bản."
+        "text": "organization, well-dressing, and being polite and humble",
+        "explanation": "Sai vì trang phục đẹp hay nhún nhường không nằm trong bộ tiêu chí học thuật của khâu chuẩn bị thông điệp này."
       },
       {
         "text": "organization, clarity, and being concise and punctual",
-        "explanation": "Chính xác! Sự chuẩn bị của người giao tiếp kinh doanh gồm: tổ chức cấu trúc tốt, rõ ràng, súc tích và đúng giờ."
+        "explanation": "Chính xác! Trách nhiệm chuẩn bị đầu tiên của người làm truyền thông kinh doanh bao gồm: Organization (tổ chức khoa học), Clarity (rõ ràng), Concise (ngắn gọn/súc tích), và Punctual (đúng giờ)."
       },
       {
-        "text": "lengthy explanations and complex jargon",
-        "explanation": "Vì sao sai: Ngược lại với nguyên tắc giao tiếp hiệu quả."
+        "text": "clarity, well-dressing, and being polite and punctual",
+        "explanation": "Sai vì thiếu yếu tố tổ chức (organization) và tính súc tích (concise)."
       },
       {
-        "text": "avoiding feedback and questions",
-        "explanation": "Vì sao sai: Giao tiếp tốt luôn cần đón nhận phản hồi."
+        "text": "organization, clarity, and being humble and punctual",
+        "explanation": "Sai vì tiêu chí đúng là tính súc tích (concise), không phải khiêm tốn (humble)."
       }
     ]
   },
   {
     "id": 17,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Cultural Models",
     "question": "The cultural information that you are willing to share with outsiders is considered _______________.",
-    "hint": "Văn hóa 'tiền đài' mở ra cho mọi người thấy so với 'hậu trường'.",
+    "hint": "Những nét văn hóa sẵn sàng chia sẻ công khai với người ngoài thuộc về văn hóa tiền đài (frontstage culture).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
-        "text": "backstage culture",
-        "explanation": "Vì sao sai: Backstage culture là những giá trị, quy tắc ngầm ẩn sâu bên trong nội bộ văn hóa."
+        "text": "culture symbol",
+        "explanation": "Sai vì biểu tượng văn hóa là hình ảnh biểu trưng đại diện."
       },
       {
         "text": "frontstage culture",
-        "explanation": "Chính xác! Frontstage culture là những nét văn hóa biểu hiện bên ngoài mà mọi người sẵn sàng thể hiện và chia sẻ với người ngoài."
+        "explanation": "Chính xác! Frontstage culture (văn hóa tiền đài / sân khấu trước) bao gồm những thông tin, phong tục văn hóa mà các thành viên trong nhóm sẵn lòng phô diễn và chia sẻ rộng rãi cho người bên ngoài."
       },
       {
-        "text": "deep culture",
-        "explanation": "Vì sao sai: Deep culture nằm sâu dưới bề mặt."
+        "text": "stereotype",
+        "explanation": "Sai vì stereotype là khuôn mẫu định kiến."
       },
       {
-        "text": "private culture",
-        "explanation": "Vì sao sai: Không phải thuật ngữ học thuật đối lập."
+        "text": "backstage culture",
+        "explanation": "Sai vì backstage culture (văn hóa hậu trường) là những giá trị, quy tắc ngầm chỉ lưu hành kín đáo trong nội bộ."
       }
     ]
   },
   {
     "id": 18,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Business Meetings",
     "question": "What is NOT a strategy for effective meetings?",
-    "hint": "Cuộc họp chuyên nghiệp không yêu cầu phải phát quà cho tất cả mọi người.",
+    "hint": "Cuộc họp kinh doanh chuyên nghiệp không yêu cầu phải tặng quà cho tất cả mọi người.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
-        "text": "Send out an agenda in advance.",
-        "explanation": "Vì sao sai: Đây là chiến lược rất tốt cho cuộc họp hiệu quả."
+        "text": "Communicate your respect and appreciation for everyone’s time and effort.",
+        "explanation": "Sai vì bày tỏ sự tôn trọng và cảm kích thời gian của người tham gia là chiến lược rất tốt."
       },
       {
-        "text": "Start and end on time.",
-        "explanation": "Vì sao sai: Đúng giờ là chiến lược cơ bản của cuộc họp thành công."
+        "text": "Clearly communicate the time, date, and location or means of contact for the next meeting.",
+        "explanation": "Sai vì thông báo rõ thời gian và địa điểm phiên họp kế tiếp là thực hành chuẩn."
       },
       {
         "text": "Make sure all participants have giveaways when the meeting ends.",
-        "explanation": "Chính xác! Tặng quà lưu niệm (giveaways) không phải là chiến lược cốt lõi để cuộc họp diễn ra hiệu quả."
+        "explanation": "Chính xác! Việc phát quà tặng (giveaways) cho người tham dự khi cuộc họp kết thúc KHÔNG phải là một chiến lược bắt buộc hoặc cần thiết để cuộc họp đạt hiệu quả."
       },
       {
-        "text": "Keep participants focused and on task.",
-        "explanation": "Vì sao sai: Giúp người họp tập trung là nhiệm vụ quan trọng."
+        "text": "Make sure notes taken at the meeting are legible and can be converted to minutes for distribution later.",
+        "explanation": "Sai vì ghi chép biên bản cuộc họp (minutes) rõ ràng là yếu tố cực kỳ quan trọng."
       }
     ]
   },
   {
     "id": 19,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Interpersonal Strategies",
     "question": "________________ involve(s) messages or statements that take away from the respect, integrity, or credibility of a person.",
-    "hint": "Chiến lược làm suy giảm thể diện/uy tín.",
+    "hint": "Chiến lược làm suy giảm thể diện, nhân phẩm hoặc uy tín của người khác gọi là Face-detracting strategies.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "Face-saving strategies",
-        "explanation": "Vì sao sai: Chiến lược giữ thể diện nhằm bảo vệ uy tín đối phương."
+        "explanation": "Sai vì đây là chiến lược giữ gìn thể diện và lòng tự trọng cho người khác."
       },
       {
-        "text": "Empathic listening",
-        "explanation": "Vì sao sai: Lắng nghe thấu cảm thể hiện sự tôn trọng."
+        "text": "Avoidance strategy",
+        "explanation": "Sai vì đây là chiến lược né tránh xung đột."
       },
       {
         "text": "Face-detracting strategies",
-        "explanation": "Chính xác! Chiến lược hạ bệ thể diện (face-detracting strategies) là lời nói/thông điệp làm tổn hại danh dự, sự tôn trọng và uy tín của ai đó."
+        "explanation": "Chính xác! Face-detracting strategies (chiến lược hạ thấp thể diện) là các phát ngôn hoặc hành vi làm tổn hại đến sự tôn trọng, phẩm giá hoặc uy tín của một cá nhân."
       },
       {
-        "text": "Constructive feedback",
-        "explanation": "Vì sao sai: Góp ý mang tính xây dựng nhằm phát triển chứ không phải hạ thấp đối phương."
+        "text": "Supportive communication",
+        "explanation": "Sai vì đây là giao tiếp mang tính nâng đỡ, hỗ trợ."
       }
     ]
   },
   {
     "id": 20,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Transitional Devices",
     "question": "...............illustrates a connection between a point and an example or examples. You may find visual aids work well with this type of transition.",
-    "hint": "Chuyển ý bằng cách đưa ra ví dụ cụ thể.",
+    "hint": "Chuyển ý bằng cách minh họa ví dụ kết nối luận điểm với hình ảnh minh họa là Transition by example.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
-        "text": "A transition by cause and effect",
-        "explanation": "Vì sao sai: Chuyển ý nhân quả kết nối nguyên nhân và hệ quả."
+        "text": "A clarification transition",
+        "explanation": "Sai vì chuyển ý làm rõ dùng để diễn giải một khái niệm trừu tượng."
       },
       {
-        "text": "A transition by chronology",
-        "explanation": "Vì sao sai: Chuyển ý thời gian kết nối theo thứ tự thời gian."
+        "text": "A place transition",
+        "explanation": "Sai vì chuyển ý nơi chốn dùng để định vị không gian."
       },
       {
-        "text": "A transition by place",
-        "explanation": "Vì sao sai: Chuyển ý không gian kết nối theo vị trí địa lý."
+        "text": "A transition by cause and effect or result",
+        "explanation": "Sai vì chuyển ý nhân quả dùng để nối nguyên nhân với kết quả."
       },
       {
         "text": "A transition by example",
-        "explanation": "Chính xác! Chuyển tiếp bằng ví dụ (transition by example) minh họa mối liên kết giữa một luận điểm và ví dụ minh họa cụ thể, thường đi kèm hình ảnh/slide trực quan."
+        "explanation": "Chính xác! A transition by example (chuyển ý bằng ví dụ) tạo liên kết trực quan giữa luận điểm và các trường hợp ví dụ cụ thể, rất thích hợp khi kết hợp cùng giáo cụ trực quan (visual aids)."
       }
     ]
   },
   {
     "id": 21,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Intrapersonal Communication",
     "question": "________________ is a trait that allows us to adapt and change to our context or environment, to accept or reject messages, to examine our concept of ourselves and choose to improve.",
-    "hint": "Khả năng tự soi chiếu bản thân để sửa đổi và tiến bộ.",
+    "hint": "Khả năng tự suy ngẫm / tự soi chiếu (self-reflection) giúp con người thích ứng, kiểm tra bản thân và tự hoàn thiện.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "Self-talk",
-        "explanation": "Vì sao sai: Tự trò chuyện là quá trình suy nghĩ thầm trong đầu."
+        "explanation": "Sai vì self-talk là việc tự đối thoại trong suy nghĩ."
       },
       {
         "text": "Self-evaluation",
-        "explanation": "Vì sao sai: Tự đánh giá là chấm điểm bản thân."
+        "explanation": "Sai vì self-evaluation chỉ tập trung vào việc cho điểm hay đánh giá kết quả công việc."
       },
       {
         "text": "Self-concept",
-        "explanation": "Vì sao sai: Nhận thức về bản thân là những gì ta tin về chính mình."
+        "explanation": "Sai vì self-concept là khái niệm tổng thể về bản thân."
       },
       {
         "text": "Self-reflection",
-        "explanation": "Chính xác! Tự phản tỉnh (Self-reflection) là phẩm chất cho phép con người thích ứng, kiểm tra khái niệm bản thân và lựa chọn hoàn thiện hơn."
+        "explanation": "Chính xác! Self-reflection (sự tự soi chiếu/tự suy ngẫm) là phẩm chất cho phép ta thích ứng với môi trường, chọn lọc thông điệp, nhìn nhận lại khái niệm bản thân và đưa ra quyết định cải thiện."
       }
     ]
   },
   {
     "id": 22,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Speech Organization",
     "question": "A(n)............ is a framework that organizes main ideas and subordinate ideas in a hierarchical series of roman numerals and alphabetical letters.",
-    "hint": "Dàn ý phân cấp theo chữ số La Mã và chữ cái.",
+    "hint": "Khung sắp xếp ý chính và ý phụ theo chữ số La Mã (I, II) và chữ cái (A, B) là Outline (dàn ý).",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Outline",
-        "explanation": "Chính xác! Dàn ý (Outline) tổ chức các luận điểm chính và phụ theo hệ thống phân cấp số La Mã (I, II, III) và chữ cái (A, B, C)."
+        "explanation": "Chính xác! An outline (dàn ý) là khung cấu trúc phân cấp sắp xếp các ý chính và luận điểm phụ theo các chữ số La Mã (I, II, III...) và chữ cái (A, B, C...)."
       },
       {
         "text": "Schedule",
-        "explanation": "Vì sao sai: Lịch trình là phân bổ thời gian thực hiện công việc."
+        "explanation": "Sai vì schedule là lịch trình thời gian."
       },
       {
         "text": "Timeline",
-        "explanation": "Vì sao sai: Dòng thời gian biểu diễn sự kiện theo thứ tự ngày tháng."
+        "explanation": "Sai vì timeline là trục thời gian theo niên đại sự kiện."
       },
       {
         "text": "Report",
-        "explanation": "Vì sao sai: Báo cáo là văn bản trình bày kết quả đầy đủ."
+        "explanation": "Sai vì report là văn bản báo cáo hoàn chỉnh."
       }
     ]
   },
   {
     "id": 23,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communication Definition",
     "question": ".........is an activity, skill and art that incorporates lessons learned across a wide spectrum of human knowledge.",
-    "hint": "Định nghĩa kinh điển trong nhập môn giao tiếp kinh doanh.",
+    "hint": "Giao tiếp là hoạt động, kỹ năng và nghệ thuật kết tinh các bài học từ đa dạng lĩnh vực tri thức nhân loại.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Communication",
-        "explanation": "Chính xác! Giao tiếp (Communication) vừa là một hoạt động, một kỹ năng vừa là một môn nghệ thuật kết hợp tri thức từ nhiều lĩnh vực nhân loại."
+        "explanation": "Chính xác! Theo sách giáo trình Scott McLean, Communication (Giao tiếp) vừa là hoạt động, vừa là kỹ năng và nghệ thuật tích lũy những bài học được học từ khắp các lĩnh vực tri thức của con người."
       },
       {
         "text": "Studying",
-        "explanation": "Vì sao sai: Học tập là quá trình thu nhận kiến thức."
+        "explanation": "Sai vì học tập không phản ánh đầy đủ định nghĩa này."
       },
       {
         "text": "Transferring",
-        "explanation": "Vì sao sai: Chuyển giao chỉ là hành động luân chuyển đơn thuần."
+        "explanation": "Sai vì chuyển giao chỉ là hành vi gửi tin một chiều."
       },
       {
         "text": "Understanding",
-        "explanation": "Vì sao sai: Thấu hiểu là kết quả hoặc mục tiêu của giao tiếp."
+        "explanation": "Sai vì thấu hiểu là kết quả nhận thức, không phải định nghĩa của hoạt động nghệ thuật toàn diện này."
       }
     ]
   },
   {
     "id": 24,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Design Thinking",
     "question": "..................... is the foundation of a human-centered design process.",
-    "hint": "Nền tảng của Design Thinking là thấu hiểu và đồng cảm với người dùng.",
+    "hint": "Nền tảng của quy trình thiết kế lấy con người làm trung tâm là sự thấu cảm (Empathy).",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Empathy",
-        "explanation": "Chính xác! Sự thấu cảm (Empathy) là nền tảng cốt lõi của quy trình thiết kế lấy con người làm trung tâm."
+        "explanation": "Chính xác! Trong Design Thinking (theo trường phái d.school Stanford), Empathy (sự thấu cảm) chính là nền tảng cốt lõi của quy trình thiết kế lấy con người làm trung tâm (human-centered design process)."
       },
       {
         "text": "Observe",
-        "explanation": "Vì sao sai: Quan sát chỉ là một kỹ thuật thuộc pha Thấu cảm."
+        "explanation": "Sai vì quan sát chỉ là một trong các kỹ thuật để đạt được sự thấu cảm."
       },
       {
         "text": "Engage",
-        "explanation": "Vì sao sai: Tương tác chỉ là một kỹ thuật nhỏ."
+        "explanation": "Sai vì tương tác là một kỹ thuật tiếp cận người dùng."
       },
       {
         "text": "Immerse",
-        "explanation": "Vì sao sai: Trải nghiệm thực tế cũng chỉ là kỹ thuật thuộc pha thấu cảm."
+        "explanation": "Sai vì nhập vai là phương pháp trải nghiệm thực tế để thấu cảm."
       }
     ]
   },
   {
     "id": 25,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Cultural Dimensions",
     "question": "The graphical representation of culture has three primary dimensions, which are ________________ (Borden, 1991, p. 171).",
-    "hint": "Ngôn ngữ, thực thể/vật chất và tâm lý.",
+    "hint": "3 chiều kích cơ bản của mô hình văn hóa Borden (1991) gồm: Ngôn ngữ, Vật chất và Tâm lý.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "language, belief, and value",
-        "explanation": "Vì sao sai: Không đúng bộ ba chiều kích không gian của Borden."
+        "explanation": "Sai vì niềm tin và giá trị thuộc về chiều kích tâm lý (psychological)."
       },
       {
         "text": "language, attitude, and value",
-        "explanation": "Vì sao sai: Đây là hệ thống thái độ giá trị, không phải mô hình Borden."
+        "explanation": "Sai vì thái độ và giá trị cùng thuộc khía cạnh tâm lý."
       },
       {
         "text": "language, physical, and psychological",
-        "explanation": "Chính xác! Theo Borden (1991), mô hình không gian của văn hóa có 3 chiều kích chính: Ngôn ngữ (language), Vật chất/thể chất (physical) và Tâm lý (psychological)."
+        "explanation": "Chính xác! Mô hình biểu diễn văn hóa của Borden (1991) bao gồm 3 chiều kích chính: Language (ngôn ngữ), Physical (vật chất/môi trường thực tế) và Psychological (tâm lý/nhận thức tinh thần)."
       },
       {
         "text": "attitude, belief, and value",
-        "explanation": "Vì sao sai: Không đúng theo mô hình Borden (1991)."
+        "explanation": "Sai vì thiếu chiều kích ngôn ngữ và vật chất."
       }
     ]
   },
   {
     "id": 26,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Writing Styles",
     "question": "............ is an informal, conversational style of writing. It differs from standard business English 109 in that it often makes use of colorful expressions, slang, and regional phrases.",
-    "hint": "Ngôn ngữ giao tiếp khẩu ngữ thân mật thường nhật.",
+    "hint": "Phong cách viết trò chuyện, thân mật thường dùng thành ngữ màu sắc và tiếng lóng là khẩu ngữ (colloquial language).",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Colloquial language",
-        "explanation": "Chính xác! Ngôn ngữ khẩu ngữ (Colloquial language) mang phong cách đàm thoại thân mật, dùng từ ngữ tượng hình, tiếng lóng và cụm từ địa phương."
+        "explanation": "Chính xác! Colloquial language (ngôn ngữ thông tục / khẩu ngữ) là phong cách đàm thoại thân mật trong văn viết, sử dụng nhiều cụm từ biểu cảm, tiếng lóng và ngữ điệu địa phương."
       },
       {
         "text": "Intrapersonal language",
-        "explanation": "Vì sao sai: Ngôn ngữ nội tâm không dùng để viết giao tiếp chung."
+        "explanation": "Sai vì đây là ngôn ngữ suy nghĩ nội tâm của một người."
       },
       {
         "text": "Internal communications",
-        "explanation": "Vì sao sai: Truyền thông nội bộ vẫn có thể rất trang trọng."
+        "explanation": "Sai vì đây là kênh truyền thông nội bộ của doanh nghiệp."
       },
       {
         "text": "External communications",
-        "explanation": "Vì sao sai: Truyền thông ra bên ngoài yêu cầu tính chuẩn mực cao."
+        "explanation": "Sai vì đây là truyền thông với đối tác và khách hàng bên ngoài."
       }
     ]
   },
   {
     "id": 27,
-    "topic": "Effective Communication & Argumentation",
-    "question": "“Keep silent while you let the other person “speak his piece.” If you are reading, make an effort to understand and digest the news without mental interruptions.” Here is an example of .....",
-    "hint": "Giữ im lặng cho đối phương trình bày trọn vẹn mà không chen ngang.",
+    "topic": "Listening & Negative News",
+    "question": "“Keep silent while you let the other person “speak his piece.” If you are reading, make an effort to understand and digest the news without mental interruptions.”\nHere is an example of .....",
+    "hint": "Để người khác nói hết ý mà không ngắt lời hay phán xét trong tâm trí là nguyên tắc 'don’t interrupt'.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "take turn",
-        "explanation": "Vì sao sai: Luân phiên lượt lời diễn ra khi cả hai bên trao đổi qua lại."
+        "explanation": "Sai vì thay phiên nói không nhấn mạnh việc giữ im lặng hoàn toàn để lắng nghe tin khó."
       },
       {
         "text": "don’t interrupt",
-        "explanation": "Chính xác! Giữ im lặng cho đối phương nói hết câu và đọc kỹ thông điệp mà không suy diễn cắt ngang chính là quy tắc 'Không ngắt lời' (don't interrupt)."
+        "explanation": "Chính xác! Giữ im lặng để đối phương trình bày trọn vẹn phần của họ mà không chen ngang bằng lời nói hay ý nghĩ là ví dụ của nguyên tắc 'don’t interrupt' (không ngắt lời) khi tiếp nhận tin tiêu cực."
       },
       {
         "text": "set aside a special time",
-        "explanation": "Vì sao sai: Dành thời gian riêng là việc hẹn thời gian cụ thể trước."
+        "explanation": "Sai vì đây là việc dành ra một khoảng thời gian riêng để thảo luận."
       }
     ]
   },
   {
     "id": 28,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Intercultural Chitchat",
     "question": "When engaging in chitchat with someone of another culture, if a person talk about his or her family, then you are expected to talk about.............",
-    "hint": "Đáp lại bằng sự tương hỗ cùng chủ đề gia đình.",
+    "hint": "Trong giao tiếp xã giao, khi đối phương cởi mở về gia đình họ thì ta đáp lại tương ứng bằng câu chuyện về gia đình mình.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "your family",
-        "explanation": "Chính xác! Trong nguyên tắc tương hỗ của trò chuyện xã giao (reciprocity), khi đối phương chia sẻ về gia đình họ, bạn cũng nên đáp lại bằng chia sẻ về gia đình bạn."
+        "explanation": "Chính xác! Theo quy tắc tương hỗ trong chitchat liên văn hóa, khi một người chia sẻ về gia đình của họ, ta được kỳ vọng sẽ đáp lại bằng cách nói về gia đình của chính mình (your family) để duy trì sự cân bằng và tin cậy."
       },
       {
         "text": "sports",
-        "explanation": "Vì sao sai: Đổi đề tài đột ngột có thể làm gián đoạn sự gắn kết."
+        "explanation": "Sai vì chuyển đề tài sang thể thao làm mất đi sự kết nối tương hỗ về câu chuyện gia đình."
       },
       {
         "text": "music",
-        "explanation": "Vì sao sai: Không phù hợp với nguyên tắc tương hỗ đề tài."
+        "explanation": "Sai vì âm nhạc không phải chủ đề phản hồi tương đương."
       },
       {
         "text": "politics",
-        "explanation": "Vì sao sai: Chính trị là chủ đề nhạy cảm cấm kỵ trong chitchat."
+        "explanation": "Sai vì chính trị là chủ đề dễ gây tranh cãi và chia rẽ, cần tránh trong xã giao ban đầu."
       }
     ]
   },
   {
     "id": 29,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Design Thinking",
     "question": "To empathize, we immerse, which means ........",
-    "hint": "Đắm chìm vào hoàn cảnh thực tế để tự mình trải nghiệm như người dùng.",
+    "hint": "Nhập vai / đắm mình (immerse) nghĩa là tự mình đích thân trải nghiệm những gì người dùng trải nghiệm.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "the foundation of a human-centered design process",
-        "explanation": "Vì sao sai: Đây là định nghĩa của bản thân Empathy."
+        "explanation": "Sai vì đây là định nghĩa chung của giai đoạn Empathy."
       },
       {
         "text": "we view users and their behavior in the context of their lives",
-        "explanation": "Vì sao sai: Đây là Observe (quan sát)."
+        "explanation": "Sai vì đây là định nghĩa của hoạt động Observe (quan sát)."
       },
       {
         "text": "we interact with and interview users through both scheduled and short intercept encounters",
-        "explanation": "Vì sao sai: Đây là Engage (tương tác/phỏng vấn)."
+        "explanation": "Sai vì đây là định nghĩa của hoạt động Engage (phỏng vấn/tương tác)."
       },
       {
         "text": "we experience what our user experiences",
-        "explanation": "Chính xác! Trải nghiệm sâu (Immerse) trong d.school có nghĩa là chính chúng ta đích thân trải nghiệm những gì người dùng trải nghiệm."
+        "explanation": "Chính xác! Trong Design Thinking, Immerse (nhập vai thực tế) có nghĩa là tự đặt mình vào hoàn cảnh và trực tiếp trải nghiệm những gì mà người dùng đang trải nghiệm."
       }
     ]
   },
   {
     "id": 30,
-    "topic": "Effective Communication & Argumentation",
-    "question": "............ govern meaning and word choice according to context and social custom.",
-    "hint": "Quy tắc dựa theo bối cảnh (context) và quy ước xã hội.",
+    "topic": "Language Rules",
+    "question": "......... govern meaning and word choice according to context and social custom.",
+    "hint": "Quy tắc quy định nghĩa và cách chọn từ theo hoàn cảnh ngữ cảnh và tập quán xã hội là Contextual rules.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "Syntactic rules",
-        "explanation": "Vì sao sai: Quy tắc cú pháp chi phối trật tự sắp xếp từ ngữ."
+        "explanation": "Sai vì quy tắc cú pháp chi phối trật tự sắp xếp từ trong câu."
       },
       {
         "text": "Semantic rules",
-        "explanation": "Vì sao sai: Quy tắc ngữ nghĩa chi phối nghĩa đen của từ."
+        "explanation": "Sai vì quy tắc ngữ nghĩa quy định mối quan hệ giữa từ ngữ và ý nghĩa độc lập với bối cảnh xã hội."
       },
       {
         "text": "Contextual rules",
-        "explanation": "Chính xác! Quy tắc ngữ cảnh (Contextual rules) chi phối ý nghĩa và cách lựa chọn từ ngữ phù hợp theo từng bối cảnh và tập tục xã hội."
+        "explanation": "Chính xác! Contextual rules (quy tắc ngữ cảnh) chi phối ý nghĩa và cách lựa chọn từ ngữ phù hợp với bối cảnh giao tiếp cụ thể và các quy ước xã hội."
       }
     ]
   },
   {
     "id": 31,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Cultural Communication",
     "question": "________________ is defined as communication between and among members of the same culture.",
-    "hint": "Giao tiếp giữa những người thuộc 'cùng một' văn hóa (tiền tố intra-).",
+    "hint": "Giao tiếp giữa các thành viên thuộc CÙNG một nền văn hóa mang tiền tố Intra- (nội văn hóa).",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "Business communication",
-        "explanation": "Vì sao sai: Giao tiếp kinh doanh diễn ra trong môi trường thương mại."
+        "explanation": "Sai vì giao tiếp kinh doanh là môi trường hoạt động nói chung."
       },
       {
         "text": "Intercultural communication",
-        "explanation": "Vì sao sai: Giao tiếp liên văn hóa diễn ra giữa những người thuộc các nền văn hóa khác nhau."
+        "explanation": "Sai vì giao tiếp liên văn hóa là giữa các thành viên từ những nền văn hóa khác nhau (inter-)."
       },
       {
         "text": "International communication",
-        "explanation": "Vì sao sai: Giao tiếp quốc tế diễn ra giữa các quốc gia."
+        "explanation": "Sai vì giao tiếp quốc tế diễn ra giữa các thực thể thuộc nhiều quốc gia."
       },
       {
         "text": "Intracultural communication",
-        "explanation": "Chính xác! Giao tiếp nội văn hóa (Intracultural communication) là giao tiếp giữa các thành viên trong cùng một nền văn hóa."
+        "explanation": "Chính xác! Intracultural communication (giao tiếp nội văn hóa) được định nghĩa là hoạt động giao tiếp giữa các thành viên cùng thuộc một nền văn hóa với nhau (intra-)."
       }
     ]
   },
   {
     "id": 32,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Cultural Taboos",
     "question": "In Arab countries, it is considered taboo to ask about the health of a man’s ____________.",
-    "hint": "Hỏi thăm người vợ của đàn ông Ả Rập là điều cấm kỵ.",
+    "hint": "Tại các quốc gia Ả Rập, hỏi thăm sức khỏe người vợ của đàn ông là điều tối kỵ.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "father",
-        "explanation": "Vì sao sai: Hỏi thăm sức khỏe của cha là cử chỉ được hoan nghênh."
+        "explanation": "Sai vì hỏi thăm người cha là điều bình thường và đáng kính."
       },
       {
         "text": "wife",
-        "explanation": "Chính xác! Tại các quốc gia Ả Rập, hỏi thăm sức khỏe vợ của một người đàn ông là điều cấm kỵ/khiếm nhã vì phụ nữ thuộc phạm trù gia đình riêng tư nghiêm ngặt."
+        "explanation": "Chính xác! Tại các quốc gia Ả Rập theo truyền thống Hồi giáo, việc hỏi thăm sức khỏe vợ (wife) của một người đàn ông là điều cấm kỵ (taboo) do các quy ước nghiêm ngặt về đời sống riêng tư của phụ nữ."
       },
       {
         "text": "mother",
-        "explanation": "Vì sao sai: Có thể hỏi thăm gia quyến chung nhưng kiêng kỵ trực tiếp người vợ."
+        "explanation": "Sai vì người mẹ lớn tuổi trong gia đình được tôn trọng."
       },
       {
         "text": "son",
-        "explanation": "Vì sao sai: Hỏi thăm con trai hoàn toàn bình thường."
+        "explanation": "Sai vì hỏi thăm con trai là bình thường."
       },
       {
         "text": "daughter",
-        "explanation": "Vì sao sai: Trọng tâm kiêng kỵ hàng đầu trong phong tục Ả Rập là người vợ."
+        "explanation": "Sai vì đối tượng cấm kỵ hàng đầu được nhấn mạnh trong giáo trình luôn là người vợ (wife)."
       }
     ]
   },
   {
     "id": 33,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Negative News Delivery",
     "question": "Which is NOT a goal when delivering negative news, in person or in written form?",
-    "hint": "Tin xấu không được xử lý cẩu thả hay bỏ mặc.",
+    "hint": "Thái độ không dành nhiều thời gian vì không làm được gì là sự vô trách nhiệm, hoàn toàn trái với mục tiêu truyền tin xấu.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "Maintain the relationship, even if a formal association is being terminated.",
-        "explanation": "Vì sao sai: Duy trì mối quan hệ tốt đẹp là mục tiêu quan trọng."
+        "explanation": "Sai vì duy trì mối quan hệ hòa nhã sau đó là một mục tiêu rất quan trọng."
       },
       {
         "text": "Reduce the anxiety associated with the negative news to increase comprehension.",
-        "explanation": "Vì sao sai: Giảm lo âu để người nhận dễ tiếp thu là mục tiêu hàng đầu."
+        "explanation": "Sai vì giảm nhẹ sự lo lắng để người nghe tiếp thu tốt hơn là mục tiêu đúng đắn."
       },
       {
         "text": "Achieve the designated business outcome.",
-        "explanation": "Vì sao sai: Đạt được kết quả kinh doanh đề ra là mục tiêu chính thức."
+        "explanation": "Sai vì đạt được kết quả kinh doanh đề ra là mục tiêu cốt lõi."
       },
       {
         "text": "Do not spend much time on it because we cannot do much about it.",
-        "explanation": "Chính xác! 'Không dành nhiều thời gian vì chẳng làm được gì' là quan điểm sai lầm; tin xấu luôn cần sự chuẩn bị kỹ lưỡng và cẩn trọng."
+        "explanation": "Chính xác! Phát biểu 'không dành nhiều thời gian vì không làm gì được' là thái độ thiếu chuyên nghiệp và KHÔNG phải là mục tiêu trong giao tiếp kinh doanh khi truyền tải tin tiêu cực."
       }
     ]
   },
   {
     "id": 34,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Group Norms & Rules",
     "question": "_________ are formed to clarify cloudy areas of norms.",
-    "hint": "Quy tắc bằng văn bản hoặc quy định rõ ràng giúp cụ thể hóa chuẩn mực chung.",
+    "hint": "Các quy tắc/nội quy (rules) được đặt ra để làm rõ những chuẩn mực còn chưa rõ ràng.",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "Beliefs",
-        "explanation": "Vì sao sai: Niềm tin là quan niệm cá nhân về sự thật."
+        "explanation": "Sai vì niềm tin là những điều ta tin là đúng đắn."
       },
       {
         "text": "Rules",
-        "explanation": "Chính xác! Quy tắc (Rules) được đặt ra để làm rõ những vùng mơ hồ, chưa rõ ràng của các chuẩn mực xã hội (norms)."
+        "explanation": "Chính xác! Rules (các quy tắc / nội quy) được thành lập nhằm làm rõ ràng và cụ thể hóa những vùng chuẩn mực (norms) còn mơ hồ, chưa được định hình rõ trong nhóm."
       },
       {
         "text": "Attitudes",
-        "explanation": "Vì sao sai: Thái độ là phản ứng yêu ghét."
+        "explanation": "Sai vì thái độ là phản ứng cảm xúc và nhận thức."
       },
       {
         "text": "Values",
-        "explanation": "Vì sao sai: Giá trị là thước đo đúng sai cốt lõi."
+        "explanation": "Sai vì giá trị là những chuẩn mực đạo đức cốt lõi."
       }
     ]
   },
   {
     "id": 35,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communication Models",
     "question": "Two Models of Communication include",
-    "hint": "Mô hình giao dịch (transactional) và mô hình kiến tạo (constructivist).",
+    "hint": "Hai mô hình giao tiếp cơ bản trong chương trình gồm Transactional process (mô hình giao dịch) và Constructivist model (mô hình kiến tạo).",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "transactional process + constructivist model",
-        "explanation": "Chính xác! Hai mô hình giao tiếp cơ bản được giảng dạy là: quy trình tương tác/giao dịch (transactional) và mô hình kiến tạo (constructivist)."
+        "explanation": "Chính xác! Hai mô hình giao tiếp kinh điển được giới thiệu trong giáo trình là Transactional Model (mô hình tiến trình giao dịch đồng thời) và Constructivist Model (mô hình kiến tạo ý nghĩa)."
       },
       {
         "text": "transactional process + informational model",
-        "explanation": "Vì sao sai: Không phải cặp mô hình học thuật chuẩn trong giáo trình McLean."
+        "explanation": "Sai vì không có mô hình informational model trong cặp phân loại này."
       },
       {
         "text": "constructivist model + informational model",
-        "explanation": "Vì sao sai: Thiếu mô hình tương tác."
+        "explanation": "Sai vì informational model không phải mô hình được giảng dạy theo cặp này."
       },
       {
         "text": "No correct answers",
-        "explanation": "Vì sao sai: Phương án đầu tiên là đáp án chính xác."
+        "explanation": "Sai vì phương án đầu tiên hoàn toàn chính xác."
       }
     ]
   },
   {
     "id": 36,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Design Thinking",
     "question": "............ is the mode during your design process in which you focus on idea generation.",
-    "hint": "Pha tập trung vào sáng tạo và đưa ra thật nhiều ý tưởng.",
+    "hint": "Giai đoạn tập trung sinh ra thật nhiều ý tưởng sáng tạo là Ideate.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Ideate",
-        "explanation": "Chính xác! Ideate (lên ý tưởng) là giai đoạn trong quy trình thiết kế tập trung toàn lực vào việc phát sinh ý tưởng (idea generation)."
+        "explanation": "Chính xác! Ideate (hình thành ý tưởng) là giai đoạn trong quy trình Design Thinking nơi người làm thiết kế tập trung toàn lực vào việc phát sinh ý tưởng và giải pháp sáng tạo."
       },
       {
         "text": "Empathize",
-        "explanation": "Vì sao sai: Thấu cảm tập trung tìm hiểu người dùng."
+        "explanation": "Sai vì thấu cảm là bước nghiên cứu và đồng cảm với nhu cầu của người dùng."
       },
       {
         "text": "Define",
-        "explanation": "Vì sao sai: Xác định tập trung vào việc đúc kết vấn đề cốt lõi."
+        "explanation": "Sai vì định nghĩa vấn đề là bước tổng hợp để xác định tuyên bố vấn đề."
       },
       {
         "text": "Test",
-        "explanation": "Vì sao sai: Kiểm thử tập trung đánh giá phản hồi từ người dùng."
+        "explanation": "Sai vì thử nghiệm là bước đưa mẫu thử cho người dùng kiểm chứng."
       }
     ]
   },
   {
     "id": 37,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Conflict Management",
     "question": "Which statement is NOT correct?",
-    "hint": "Không phải mọi cuộc xung đột lúc nào cũng giải quyết triệt để được.",
+    "hint": "Khẳng định rằng 'mọi xung đột luôn luôn có thể giải quyết được' là không chính xác trong thực tế.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "Conflict is not a sign of a poor relationship.",
-        "explanation": "Vì sao sai: Nhận định này đúng; xung đột là điều bình thường trong mọi mối quan hệ."
+        "explanation": "Sai vì đây là nhận định đúng (xung đột là tự nhiên, không nhất thiết là dấu hiệu của mối quan hệ tồi tệ)."
       },
       {
         "text": "Conflict cannot be avoided.",
-        "explanation": "Vì sao sai: Nhận định này đúng; xung đột là tất yếu không thể tránh khỏi."
+        "explanation": "Sai vì đây là nhận định đúng (xung đột là tất yếu và không thể tránh khỏi hoàn toàn)."
       },
       {
         "text": "Conflict can always be resolved.",
-        "explanation": "Chính xác! Nhận định 'Xung đột luôn luôn có thể giải quyết được' là SAI; có những xung đột chỉ có thể quản lý, xoa dịu hoặc chấp nhận chung sống chứ không thể giải quyết dứt điểm hoàn toàn."
+        "explanation": "Chính xác! Nhận định 'Xung đột luôn luôn có thể giải quyết được' là KHÔNG ĐÚNG, vì trên thực tế có những xung đột chỉ có thể quản lý hoặc học cách chung sống chứ không thể triệt tiêu hoàn toàn."
       },
       {
         "text": "Conflict is not always bad.",
-        "explanation": "Vì sao sai: Nhận định này đúng; xung đột có thể thúc đẩy sự đổi mới và thấu hiểu."
+        "explanation": "Sai vì đây là nhận định đúng (xung đột tích cực có thể đem lại động lực đổi mới và sáng tạo)."
       }
     ]
   },
   {
     "id": 38,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Marketing Communication",
     "question": "Phrases that express the goals, aims or nature of a product, service, person, or company are called ..............",
-    "hint": "Khẩu hiệu (slogan) của doanh nghiệp/sản phẩm.",
+    "hint": "Cụm từ thể hiện mục tiêu, bản chất của một sản phẩm hay công ty gọi là slogans.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "quotes",
-        "explanation": "Vì sao sai: Trích dẫn là câu nói của người khác."
+        "explanation": "Sai vì quotes là lời trích dẫn phát biểu của ai đó."
       },
       {
         "text": "zingers",
-        "explanation": "Vì sao sai: Zinger là câu vặn lại dí dỏm."
+        "explanation": "Sai vì zingers là câu đối đáp dí dỏm, châm biếm."
       },
       {
         "text": "soundbites",
-        "explanation": "Vì sao sai: Soundbite là câu nói ngắn gọn cho truyền hình/báo chí."
+        "explanation": "Sai vì soundbites là đoạn phát biểu ngắn trên báo chí."
       },
       {
         "text": "slogans",
-        "explanation": "Chính xác! Slogans (khẩu hiệu) là các cụm từ thể hiện mục tiêu, định hướng hoặc bản chất của sản phẩm, dịch vụ hoặc công ty."
+        "explanation": "Chính xác! Slogans (khẩu hiệu) là các cụm từ thể hiện mục tiêu, tôn chỉ hoặc bản chất đặc trưng của một sản phẩm, dịch vụ, con người hoặc doanh nghiệp."
       }
     ]
   },
   {
     "id": 39,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Transitional Devices",
     "question": "In communication, writing or talking, phrases like “The first item,” “The second item,” “Now we’ve got X and Y in hands; what else do we need? Our third item is,” are considered ____________ which help your audience keep track of progress as your message continues.",
-    "hint": "Đáp án chính xác theo đề thi là internal summaries.",
+    "hint": "Theo giáo trình Scott McLean, những cụm từ nhắc lại các mục đã có để tiếp tục tiến trình được định nghĩa là internal summaries.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "internal summaries",
-        "explanation": "Chính xác theo đáp án đề thi! Câu hỏi này theo đề thi chính thức chọn đáp án A: internal summaries."
+        "explanation": "Chính xác! Theo giáo trình Scott McLean, các cụm từ điểm lại các điểm đã qua ('The first item', 'The second item', 'Now we’ve got X and Y in hands...') giúp người nghe theo dõi tiến trình bài nói được xếp vào nhóm internal summaries (tóm lược nội bộ)."
       },
       {
         "text": "repetition",
-        "explanation": "Vì sao sai: Nhắc lại đơn thuần cùng một từ ngữ."
+        "explanation": "Sai vì phép lặp đơn thuần lặp lại một từ hoặc cụm từ cụ thể."
       },
       {
         "text": "signposts (or indicators)",
-        "explanation": "Lưu ý: Trong lý thuyết chuyển tiếp của McLean, các cụm từ này là ví dụ của signposts; tuy nhiên theo đáp án chính thức của bài thi, câu này chọn internal summaries."
+        "explanation": "Sai vì từ biển báo (signposts) thường là các từ nối ngắn gọn chỉ hướng như First, Next, Finally."
       },
       {
         "text": "foreshadowing",
-        "explanation": "Vì sao sai: Điềm báo trước thường dùng trong văn học."
+        "explanation": "Sai vì dự báo trước là việc gợi ý về nội dung sẽ xảy ra ở phần sau."
       }
     ]
   },
   {
     "id": 40,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Communication Barriers",
     "question": "Bypassing involves the misunderstanding that occurs when the receiver completely misses the source’s intended meaning.",
-    "hint": "Người nhận hiểu một nẻo hoàn toàn khác ý người nói.",
+    "hint": "Nói chệch / lệch nghĩa (bypassing) là sự hiểu lầm khi người nhận hoàn toàn bỏ lỡ hoặc hiểu sai ý định của người nói.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "True",
-        "explanation": "Chính xác! Hiện tượng Bypassing (lệch sóng/hiểu trệch ý) xảy ra khi người nhận hoàn toàn hiểu sai hoặc bỏ lỡ ý định thực sự của người gửi."
+        "explanation": "Chính xác! Bypassing là rào cản giao tiếp khi hai người dùng cùng một từ nhưng gán cho nó những ý nghĩa khác nhau, khiến người nghe hoàn toàn lệch khỏi ý định thực sự của người gửi."
       },
       {
         "text": "False",
-        "explanation": "Vì sao sai: Đây là định nghĩa chuẩn xác của hiện tượng Bypassing trong ngôn ngữ học giao tiếp."
+        "explanation": "Sai vì nhận định trên là định nghĩa chuẩn của hiện tượng bypassing."
       }
     ]
   },
   {
     "id": 41,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Media Interviews",
     "question": "The type of question that attempts to catch the speaker off guard is called ____________",
-    "hint": "Câu hỏi 'bắt thóp', gài bẫy (gotcha).",
+    "hint": "Câu hỏi mang tính chất gài bẫy, bắt thóp để người nói lúng túng gọi là “gotcha” question.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "“Wh-” question",
-        "explanation": "Vì sao sai: Câu hỏi Wh- là câu hỏi lấy thông tin chung."
+        "explanation": "Sai vì câu hỏi Wh- là dạng câu hỏi thông tin thông thường (What, Where...)."
       },
       {
         "text": "“H-” question",
-        "explanation": "Vì sao sai: Câu hỏi How là câu hỏi phương thức."
+        "explanation": "Sai vì câu hỏi bắt đầu bằng How là câu hỏi tìm hiểu cách thức."
       },
       {
         "text": "“gotcha” question",
-        "explanation": "Chính xác! 'Gotcha' question (câu hỏi gài bẫy) là dạng câu hỏi cố tình đánh úp khiến người nói mất cảnh giác hoặc lộ sơ hở."
+        "explanation": "Chính xác! “Gotcha” question (câu hỏi bắt thóp/gài bẫy) là loại câu hỏi được người phỏng vấn cố tình đưa ra để khiến người phát biểu bất ngờ, mất cảnh giác và bộc lộ mâu thuẫn."
       },
       {
         "text": "“killing” question",
-        "explanation": "Vì sao sai: Không phải thuật ngữ chuyên ngành chuẩn."
+        "explanation": "Sai vì đây không phải thuật ngữ giao tiếp học thuật."
       }
     ]
   },
   {
     "id": 42,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Sentence Types",
     "question": "Exclamatory sentence",
-    "hint": "Câu cảm thán thể hiện cảm xúc mạnh (strong emotion).",
+    "hint": "Câu cảm thán (exclamatory sentence) có chức năng bộc lộ một cảm xúc mạnh mẽ.",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "make a statement.",
-        "explanation": "Vì sao sai: Đây là Declarative sentence (câu trần thuật)."
+        "explanation": "Sai vì đưa ra một phát biểu/khẳng định là Declarative sentence (câu trần thuật)."
       },
       {
         "text": "ask a question.",
-        "explanation": "Vì sao sai: Đây là Interrogative sentence (câu nghi vấn)."
+        "explanation": "Sai vì đặt câu hỏi là Interrogative sentence (câu nghi vấn)."
       },
       {
         "text": "convey a command.",
-        "explanation": "Vì sao sai: Đây là Imperative sentence (câu mệnh lệnh)."
+        "explanation": "Sai vì đưa ra mệnh lệnh là Imperative sentence (câu cầu khiến)."
       },
       {
         "text": "express a strong emotion.",
-        "explanation": "Chính xác! Câu cảm thán (Exclamatory sentence) dùng để biểu lộ cảm xúc mạnh mẽ."
+        "explanation": "Chính xác! An exclamatory sentence (câu cảm thán) được dùng để bộc lộ một cảm xúc mạnh mẽ (express a strong emotion) và thường kết thúc bằng dấu chấm than."
       }
     ]
   },
   {
     "id": 43,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Travel Etiquette",
     "question": "“Insult tipping”, or ___________, shows a lack of respect and is inappropriate regardless of how poor the service.",
-    "hint": "Để lại một vài đồng xu lẻ mang tính sỉ nhục người phục vụ.",
+    "hint": "Tip sỉ nhục (insult tipping) là hành vi cố tình chỉ để lại vài đồng xu lẻ trên bàn nhằm thể hiện sự coi thường.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "leaving a few coins",
-        "explanation": "Chính xác! 'Insult tipping' là việc chỉ để lại vài đồng tiền lẻ xu lẻ, thể hiện sự xúc phạm và thiếu tôn trọng đối với người phục vụ."
+        "explanation": "Chính xác! “Insult tipping” (tiền tip sỉ nhục) đề cập đến hành vi cố tình chỉ để lại vài đồng xu lẻ (leaving a few coins) để bày tỏ thái độ khinh miệt người phục vụ, một hành vi luôn bị coi là thiếu tôn trọng."
       },
       {
         "text": "leaving an abundant tip",
-        "explanation": "Vì sao sai: Tiền boa hào phóng thể hiện sự hài lòng cao."
+        "explanation": "Sai vì để lại tiền tip hào phóng thể hiện sự đánh giá cao dịch vụ."
       },
       {
         "text": "leaving nothing",
-        "explanation": "Vì sao sai: Không boa có thể vì quên hoặc không hài lòng, nhưng cố tình để vài đồng xu lẻ mới gọi là insult tipping."
+        "explanation": "Sai vì không để lại tiền tip chỉ là biểu hiện không hài lòng, còn việc cố tình để lại vài xu lẻ mới được gọi là insult tipping."
       },
       {
         "text": "leaving",
-        "explanation": "Vì sao sai: Rời đi đơn thuần."
+        "explanation": "Sai vì chỉ rời đi không mang nghĩa của thuật ngữ này."
       }
     ]
   },
   {
     "id": 44,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Writing Practice",
     "question": "Targeted practice, which involves identifying your weak areas and specifically working to improve them, is especially valuable.",
-    "hint": "Tập trung sửa chữa điểm yếu mang lại kết quả tiến bộ vượt bậc.",
+    "hint": "Tập trung luyện tập đúng vào điểm yếu của mình là phương pháp học tập rất giá trị — Đúng hay Sai?",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "False",
-        "explanation": "Vì sao sai: Luyện tập có chủ đích vào điểm yếu mang lại hiệu quả vượt bậc."
+        "explanation": "Sai vì thực hành có chủ đích vào đúng điểm yếu là một trong những cách hiệu quả nhất để nâng cao kỹ năng."
       },
       {
         "text": "True",
-        "explanation": "Chính xác! Luyện tập có mục tiêu (targeted practice) tập trung khắc phục điểm yếu cá nhân là phương pháp phát triển kỹ năng vô cùng giá trị."
+        "explanation": "Chính xác (True)! Targeted practice (thực hành có mục tiêu) giúp nhận diện rõ những điểm còn yếu và tập trung cải thiện chúng, mang lại giá trị tiến bộ vượt bậc."
       }
     ]
   },
   {
     "id": 45,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Negative News Delivery",
     "question": "Which is NOT a goal when delivering negative news, in person or in written form?",
-    "hint": "Truyền tin xấu cần sự khéo léo, đồng cảm chứ không phải chỉ cộc lốc đi thẳng vào kết quả.",
+    "hint": "Đi thẳng vào vấn đề một cách cộc lốc/quá ngắn gọn không giải thích là điều tối kỵ khi truyền tin tiêu cực.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "Be clear and concise in order not to require additional clarification.",
-        "explanation": "Vì sao sai: Rõ ràng, súc tích là mục tiêu quan trọng."
+        "explanation": "Sai vì đây là mục tiêu chuẩn (rõ ràng, súc tích để không phải giải thích thêm)."
       },
       {
         "text": "Help the receiver understand and accept the news.",
-        "explanation": "Vì sao sai: Giúp người nhận hiểu và chấp nhận tin tức là mục tiêu cơ bản."
+        "explanation": "Sai vì đây là mục tiêu chuẩn (giúp người nhận thấu hiểu và chấp nhận tin tức)."
       },
       {
         "text": "Get straight to the point and keep it short.",
-        "explanation": "Chính xác! Khi đưa tin tiêu cực, đi thẳng tuột vào vấn đề quá cộc lốc, ngắn gọn mà không có đệm buffer và giải thích bối cảnh sẽ gây sốc và phản ứng tiêu cực."
+        "explanation": "Chính xác! 'Get straight to the point and keep it short' (nói thẳng cộc lốc và quá ngắn gọn) KHÔNG phải là mục tiêu đúng khi truyền tin tiêu cực, vì người nhận cần một lời giải thích thấu đáo và phần đệm giảm nhẹ cú sốc tâm lý."
       },
       {
         "text": "Maintain trust and respect for the business or organization and for the receiver.",
-        "explanation": "Vì sao sai: Giữ vững niềm tin và sự tôn trọng lẫn nhau là mục tiêu trọng yếu."
+        "explanation": "Sai vì duy trì niềm tin và sự tôn trọng đối với doanh nghiệp là mục tiêu cốt lõi."
       }
     ]
   },
   {
     "id": 46,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Language & Style",
     "question": "A .............. involves substituting an acceptable word for an offensive, controversial, or unacceptable one that conveys the same or similar meaning.",
-    "hint": "Nói giảm nói tránh (euphemism).",
+    "hint": "Cách nói giảm nói tránh để thay thế từ nhạy cảm bằng từ ngữ dễ chấp nhận hơn là Euphemism (uyển ngữ).",
     "correctIndices": [
       3
     ],
-    "correctAnswer": 3,
     "options": [
       {
         "text": "cliché",
-        "explanation": "Vì sao sai: Cliché là cụm từ rập khuôn, sáo rỗng."
+        "explanation": "Sai vì cliché là từ sáo rỗng."
       },
       {
         "text": "jargon",
-        "explanation": "Vì sao sai: Jargon là thuật ngữ chuyên ngành."
+        "explanation": "Sai vì jargon là thuật ngữ chuyên ngành."
       },
       {
         "text": "slang",
-        "explanation": "Vì sao sai: Slang là tiếng lóng."
+        "explanation": "Sai vì slang là tiếng lóng đời thường."
       },
       {
         "text": "euphemism",
-        "explanation": "Chính xác! Uyển ngữ / nói giảm nói tránh (euphemism) là cách thay thế từ ngữ thô thiển, nhạy cảm bằng từ ngữ lịch sự, dễ chấp nhận hơn."
+        "explanation": "Chính xác! A euphemism (uyển ngữ / nói giảm nói tránh) là việc dùng một từ ngữ lịch sự, hòa nhã để thay thế cho một từ nhạy cảm, gây sốc hoặc khiếm nhã nhưng vẫn giữ nguyên ý nghĩa."
       }
     ]
   },
   {
     "id": 47,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Cultural Values",
     "question": "......... means “ People value individual freedom and personal independence”.",
-    "hint": "Đề cao tự do và độc lập của từng cá nhân.",
+    "hint": "Nền văn hóa nơi con người đề cao quyền tự do và sự độc lập cá nhân là Individualistic Cultures.",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Individualistic Cultures",
-        "explanation": "Chính xác! Văn hóa chủ nghĩa cá nhân (Individualistic Cultures) đề cao tự do cá nhân và sự độc lập tự chủ."
+        "explanation": "Chính xác! Individualistic Cultures (nền văn hóa cá nhân chủ nghĩa) là nền văn hóa nơi con người đặc biệt coi trọng quyền tự do cá nhân và sự độc lập tự chủ của mỗi người."
       },
       {
         "text": "Collectivistic Cultures",
-        "explanation": "Vì sao sai: Văn hóa tập thể đề cao sự gắn kết cộng đồng và mục tiêu chung."
+        "explanation": "Sai vì văn hóa tập thể đặt sự hòa hợp và lợi ích của tập thể lên trên cá nhân."
       },
       {
         "text": "Uncertainty-Accepting Cultures",
-        "explanation": "Vì sao sai: Chấp nhận bất định liên quan đến mức độ mạo hiểm."
+        "explanation": "Sai vì đây là văn hóa chấp nhận sự bất định."
       },
       {
         "text": "Uncertainty-Rejecting Culture",
-        "explanation": "Vì sao sai: Né tránh bất định liên quan đến việc đặt ra nhiều quy định."
+        "explanation": "Sai vì đây là văn hóa né tránh sự bất định."
       }
     ]
   },
   {
     "id": 48,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Asian Business Etiquette",
     "question": "When the Chinese or Japanese enter a room, they generally enter in protocol order, which means ____________",
-    "hint": "Người có chức vị cao nhất sẽ bước vào trước.",
+    "hint": "Thứ tự nghi thức trong văn hóa doanh nghiệp Trung Quốc hay Nhật Bản: người có chức vụ cao nhất sẽ bước vào phòng đầu tiên.",
     "correctIndices": [
       2
     ],
-    "correctAnswer": 2,
     "options": [
       {
         "text": "the lowest-ranking person will enter first.",
-        "explanation": "Vì sao sai: Người cấp thấp đi trước là trái với nghi thức tôn ti trật tự Đông Á."
+        "explanation": "Sai vì người cấp thấp hơn không bao giờ bước vào trước cấp trên trong văn hóa nghi thức."
       },
       {
         "text": "the female person will enter first.",
-        "explanation": "Vì sao sai: Quy tắc 'Lady first' thuộc văn hóa phương Tây, không phải thứ bậc nghi thức Trung - Nhật."
+        "explanation": "Sai vì đây là thói quen của phương Tây, không phải thứ tự theo chức vụ của văn hóa Á Đông."
       },
       {
         "text": "the highest-ranking person will enter first.",
-        "explanation": "Chính xác! Trong văn hóa kinh doanh tôn ti thứ bậc của Trung Quốc và Nhật Bản, người có chức vụ cao nhất (highest-ranking) sẽ bước vào phòng đầu tiên."
+        "explanation": "Chính xác! Trong văn hóa kinh doanh của người Trung Quốc và Nhật Bản, protocol order (thứ tự nghi thức) yêu cầu người có cấp bậc/chức danh cao nhất (highest-ranking person) sẽ luôn là người dẫn đầu bước vào phòng họp."
       },
       {
         "text": "the male person will enter first.",
-        "explanation": "Vì sao sai: Thứ bậc quan trọng nhất là chức vị (ranking) chứ không thuần túy theo giới tính."
+        "explanation": "Sai vì yếu tố quyết định là cấp bậc/địa vị chứ không phải giới tính."
       }
     ]
   },
   {
     "id": 49,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Interpersonal Needs (Schutz)",
     "question": "According to Schutz, the three interpersonal needs are .............",
-    "hint": "3 nhu cầu liên cá nhân của Schutz: Tình cảm, Kiểm soát và Hòa nhập.",
+    "hint": "Theo mô hình FIRO của William Schutz, 3 nhu cầu giao tiếp liên cá nhân là: Tình cảm (affection), Kiểm soát (control), và Hòa nhập/Thuộc về (belonging/inclusion).",
     "correctIndices": [
       1
     ],
-    "correctAnswer": 1,
     "options": [
       {
         "text": "need for affection, need for trust, and need for belonging",
-        "explanation": "Vì sao sai: Bộ 3 của Schutz gồm Affection, Control, Inclusion (belonging)."
+        "explanation": "Sai vì mô hình của Schutz không có 'need for trust'."
       },
       {
         "text": "need for affection, need for control, and need for belonging/inclusion",
-        "explanation": "Chính xác! William Schutz xác định 3 nhu cầu liên cá nhân cốt lõi: Yêu thương (Affection), Kiểm soát (Control) và Hòa nhập/Gắn kết (Belonging/Inclusion)."
+        "explanation": "Chính xác! Theo nhà tâm lý học William Schutz (1966), ba nhu cầu giao tiếp liên cá nhân cơ bản (mô hình FIRO) là: Need for affection (nhu cầu tình cảm/yêu thương), Need for control (nhu cầu kiểm soát/chủ động) và Need for belonging/inclusion (nhu cầu hòa nhập/thuộc về nhóm)."
       },
       {
         "text": "need for power, need for trust, and need for control",
-        "explanation": "Vì sao sai: Không đúng phân loại lý thuyết Schutz."
+        "explanation": "Sai vì Schutz không phân loại theo 'need for power'."
       },
       {
         "text": "need for power, need for trust, and need for money",
-        "explanation": "Vì sao sai: Tiền bạc không nằm trong mô hình nhu cầu liên cá nhân Schutz."
+        "explanation": "Sai vì 'need for money' không phải nhu cầu tâm lý liên cá nhân trong mô hình này."
       }
     ]
   },
   {
     "id": 50,
-    "topic": "Effective Communication & Argumentation",
+    "topic": "Values & Beliefs",
     "question": ".................... are core concepts and ideas of what we consider good or bad, right or wrong, or what is worth the sacrifice.",
-    "hint": "Quan niệm cốt lõi về đúng/sai, tốt/xấu và đáng hy sinh là Values.",
+    "hint": "Những quan niệm cốt lõi về điều tốt/xấu, đúng/sai, hoặc đáng để hy sinh gọi là các giá trị (Values).",
     "correctIndices": [
       0
     ],
-    "correctAnswer": 0,
     "options": [
       {
         "text": "Values",
-        "explanation": "Chính xác! Giá trị (Values) là những quan niệm cốt lõi về điều tốt hay xấu, đúng hay sai, hoặc điều gì đáng để hy sinh."
+        "explanation": "Chính xác! Values (các giá trị) là những quan niệm cốt lõi định hình nên điều mà chúng ta cho là tốt hay xấu, đúng hay sai, hoặc điều gì đáng giá để ta cống hiến và hy sinh."
       },
       {
         "text": "Attitude",
-        "explanation": "Vì sao sai: Thái độ là phản ứng thích hay không thích nhất thời đối với một sự việc."
+        "explanation": "Sai vì thái độ là phản ứng yêu thích hay phản đối một đối tượng cụ thể."
       },
       {
         "text": "Beliefs",
-        "explanation": "Vì sao sai: Niềm tin là quan niệm về điều gì là đúng sự thật hay sai sự thật."
+        "explanation": "Sai vì niềm tin là những ý niệm ta tin là có thực."
       },
       {
         "text": "No correct answer",
-        "explanation": "Vì sao sai: Values là đáp án hoàn toàn chính xác."
+        "explanation": "Sai vì Values là định nghĩa hoàn toàn chính xác."
       }
     ]
   }
 ];
 
-window.QUIZ_16_QUESTIONS = QUIZ_16_QUESTIONS;
-window.QUIZ16_DATA = QUIZ_16_QUESTIONS;
+if (typeof window !== "undefined") {
+  window.QUIZ_16_QUESTIONS = QUIZ_16_QUESTIONS;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = { QUIZ_16_QUESTIONS };
+}
