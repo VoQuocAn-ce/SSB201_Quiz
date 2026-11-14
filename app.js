@@ -6,6 +6,7 @@
   const homeView = document.getElementById("homeView");
   const quizView = document.getElementById("quizView");
   const summaryView = document.getElementById("summaryView");
+  const studyView = document.getElementById("studyView");
   const quizGrid = document.getElementById("quizGrid");
 
   const headerTitle = document.getElementById("headerTitle");
@@ -14,6 +15,7 @@
   const progressTrack = document.getElementById("progressTrack");
   const progressFill = document.getElementById("progressFill");
   const navButtonText = document.getElementById("navButtonText");
+  const btnStudyModeTop = document.getElementById("btnStudyModeTop");
 
   const toggleShuffleQuestions = document.getElementById("toggleShuffleQuestions");
   const toggleShuffleOptions = document.getElementById("toggleShuffleOptions");
@@ -21,6 +23,7 @@
   const qCounter = document.getElementById("qCounter");
   const qTopic = document.getElementById("qTopic");
   const btnToggleHint = document.getElementById("btnToggleHint");
+  const btnPeekCurrentAnswer = document.getElementById("btnPeekCurrentAnswer");
   const hintBox = document.getElementById("hintBox");
   const hintText = document.getElementById("hintText");
   const questionText = document.getElementById("questionText");
@@ -49,10 +52,33 @@
   const btnReviewAll = document.getElementById("btnReviewAll");
   const btnRestartQuiz = document.getElementById("btnRestartQuiz");
   const btnSummaryHome = document.getElementById("btnSummaryHome");
+  const btnStudyFromSummary = document.getElementById("btnStudyFromSummary");
+
+  // Study Mode DOM references
+  const studyQuizIcon = document.getElementById("studyQuizIcon");
+  const studyQuizTitle = document.getElementById("studyQuizTitle");
+  const studyQuizDesc = document.getElementById("studyQuizDesc");
+  const btnStudyBackHome = document.getElementById("btnStudyBackHome");
+  const btnStudyStartQuiz = document.getElementById("btnStudyStartQuiz");
+  const btnStudyStartQuizBottom = document.getElementById("btnStudyStartQuizBottom");
+
+  const studySearchInput = document.getElementById("studySearchInput");
+  const btnClearStudySearch = document.getElementById("btnClearStudySearch");
+  const btnResetStudySearch = document.getElementById("btnResetStudySearch");
+  const toggleStudyOnlyCorrect = document.getElementById("toggleStudyOnlyCorrect");
+  const toggleStudyCollapseHints = document.getElementById("toggleStudyCollapseHints");
+  const studyMasteredText = document.getElementById("studyMasteredText");
+
+  const studyJumpList = document.getElementById("studyJumpList");
+  const studyQuestionsContainer = document.getElementById("studyQuestionsContainer");
+  const studyEmptyState = document.getElementById("studyEmptyState");
+  const btnStudyScrollTop = document.getElementById("btnStudyScrollTop");
+  const btnFloatingTop = document.getElementById("btnFloatingTop");
 
   // Application state
   let store = loadStore();
   let activeQuiz = null; // { id, title, subtitle, questions: [...], currentIndex, answers: { [qIndex]: chosenOptIndex }, hintsShown: {} }
+  let currentStudyQuiz = null;
 
   function loadStore() {
     try {
@@ -63,12 +89,15 @@
           const legacy = Array.isArray(parsed.wrongQuestionIds) ? parsed.wrongQuestionIds : [];
           parsed.wrongQuestionKeys = legacy.map((id) => `quiz1-full:${id}`);
         }
+        if (!Array.isArray(parsed.masteredQuestionKeys)) {
+          parsed.masteredQuestionKeys = [];
+        }
         return parsed;
       }
     } catch (_) {
       // Ignore malformed storage
     }
-    return { sessions: {}, wrongQuestionKeys: [] };
+    return { sessions: {}, wrongQuestionKeys: [], masteredQuestionKeys: [] };
   }
 
   function saveStore() {
@@ -147,15 +176,27 @@
     homeView.classList.toggle("hidden", viewName !== "home");
     quizView.classList.toggle("hidden", viewName !== "quiz");
     summaryView.classList.toggle("hidden", viewName !== "summary");
+    if (studyView) studyView.classList.toggle("hidden", viewName !== "study");
 
     const inSession = viewName === "quiz" || viewName === "summary";
-    quizTopActions.classList.toggle("hidden", !inSession);
+    const inStudy = viewName === "study";
+    quizTopActions.classList.toggle("hidden", !inSession && !inStudy);
     progressTrack.classList.toggle("hidden", !inSession);
+
+    if (inStudy) {
+      btnOpenNav.classList.add("hidden");
+      if (btnStudyModeTop) btnStudyModeTop.classList.add("hidden");
+    } else {
+      btnOpenNav.classList.remove("hidden");
+      if (btnStudyModeTop) btnStudyModeTop.classList.toggle("hidden", viewName !== "quiz");
+    }
 
     if (viewName === "home") {
       headerTitle.textContent = "SSB201 - Cute Quiz Studio";
       headerSubtitle.textContent = "Chọn bài Quiz để bắt đầu ôn tập cùng gợi ý & giải thích chi tiết";
       renderHome();
+    } else if (viewName === "study") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   }
 
@@ -186,13 +227,28 @@
       });
     }
 
+    const masteredKeys = new Set(store.masteredQuestionKeys || []);
+
     cards.forEach((item) => {
       const savedSession = store.sessions[item.id];
       const stats = savedSession ? computeSessionStats(savedSession) : null;
       const hasProgress = stats && stats.answered > 0;
 
+      const totalQ = item.questions.length;
+      let masteredInQuiz = 0;
+      item.questions.forEach((q, idx) => {
+        const qId = q.id !== undefined ? q.id : (idx + 1);
+        if (masteredKeys.has(`${item.id}:${qId}`)) {
+          masteredInQuiz++;
+        }
+      });
+
       const card = document.createElement("article");
       card.className = "quiz-card";
+
+      const masteredBadgeHtml = masteredInQuiz > 0
+        ? `<span class="stat-mastered" style="display:inline-flex; align-items:center; gap:4px; font-size:12px; font-weight:800; color:#065F46; background:#D1FAE5; border:1px solid #6EE7B7; border-radius:999px; padding:2px 8px;">🔖 Đã thuộc: ${masteredInQuiz}/${totalQ}</span>`
+        : "";
 
       const statsHtml = hasProgress
         ? `
@@ -200,11 +256,13 @@
             <span>Đã làm: <strong>${stats.answered}/${stats.total}</strong></span>
             <span class="stat-ok">✓ ${stats.correct} đúng</span>
             <span class="stat-err">✗ ${stats.wrong} sai</span>
+            ${masteredBadgeHtml}
           </div>
         `
         : `
           <div class="quiz-stats-mini">
-            <span>✨ Chưa bắt đầu • Có gợi ý &amp; giải thích tiếng Việt</span>
+            <span>✨ Có gợi ý &amp; giải thích tiếng Việt</span>
+            ${masteredBadgeHtml}
           </div>
         `;
 
@@ -223,6 +281,9 @@
             <button type="button" class="btn-start" data-action="start">
               <span>${hasProgress ? "▶ Tiếp tục làm" : "🌸 Bắt đầu làm Quiz"}</span>
             </button>
+            <button type="button" class="btn-card-study" data-action="study" title="Xem trước toàn bộ đáp án và lời giải của đề này để học">
+              <span>📖 Xem đáp án</span>
+            </button>
             ${
               hasProgress
                 ? `<button type="button" class="btn-reset-mini" data-action="reset" title="Làm lại từ đầu">Làm lại</button>`
@@ -238,6 +299,10 @@
         } else {
           startNewQuiz(item);
         }
+      });
+
+      card.querySelector('[data-action="study"]').addEventListener("click", () => {
+        openStudyView(item);
       });
 
       const resetBtn = card.querySelector('[data-action="reset"]');
@@ -318,6 +383,14 @@
     hintBox.classList.toggle("hidden", !hintVisible);
     btnToggleHint.classList.toggle("active", hintVisible);
     hintText.innerHTML = `<strong>Gợi ý:</strong> ${escapeHtml(q.hint)}`;
+
+    // Peek answer state
+    if (btnPeekCurrentAnswer) {
+      btnPeekCurrentAnswer.disabled = isAnswered;
+      btnPeekCurrentAnswer.title = isAnswered
+        ? "Câu hỏi này đã được trả lời"
+        : "Hiện ngay đáp án chính xác và lời giải cho câu này";
+    }
 
     // Question text (preserve line breaks)
     questionText.innerHTML = escapeHtml(q.question).replace(/\n/g, "<br />");
@@ -510,9 +583,376 @@
       .replace(/'/g, "&#39;");
   }
 
+  // ==========================================
+  // Study & Preview Answers Mode Logic
+  // ==========================================
+  function openStudyView(quizItem) {
+    if (!quizItem) return;
+    currentStudyQuiz = quizItem;
+
+    headerTitle.textContent = "SSB201 - Chế Độ Học & Xem Trước Đáp Án";
+    headerSubtitle.textContent = `Xem toàn bộ đáp án và lời giải chi tiết của ${quizItem.title}`;
+
+    if (studyQuizIcon) studyQuizIcon.textContent = quizItem.icon || "🌸";
+    if (studyQuizTitle) studyQuizTitle.textContent = `${quizItem.title}`;
+    if (studyQuizDesc) {
+      studyQuizDesc.textContent = quizItem.description || "Xem toàn bộ câu hỏi, đáp án chính xác và lời giải chi tiết từng phương án bằng tiếng Việt để ghi nhớ kiến thức trước khi làm bài thi.";
+    }
+
+    if (studySearchInput) studySearchInput.value = "";
+    if (btnClearStudySearch) btnClearStudySearch.classList.add("hidden");
+    if (toggleStudyOnlyCorrect) toggleStudyOnlyCorrect.checked = false;
+    if (toggleStudyCollapseHints) toggleStudyCollapseHints.checked = false;
+
+    showView("study");
+    renderStudyView();
+
+    if (window.CuteMascot && typeof window.CuteMascot.say === "function") {
+      window.CuteMascot.say(`Bé Thỏ đang cùng bạn xem đáp án đề ${quizItem.title} nè! Chúc bạn học thuộc thật nhanh và nhớ thật lâu nhé! 🌸✨`);
+    }
+  }
+
+  function renderStudyView() {
+    if (!currentStudyQuiz || !Array.isArray(currentStudyQuiz.questions)) return;
+
+    const questions = currentStudyQuiz.questions;
+    const total = questions.length;
+    const quizId = currentStudyQuiz.id;
+    const masteredKeys = new Set(store.masteredQuestionKeys || []);
+
+    // 1. Render Quick Jump Bar
+    if (studyJumpList) {
+      studyJumpList.innerHTML = "";
+      questions.forEach((q, idx) => {
+        const qId = q.id !== undefined ? q.id : (idx + 1);
+        const uniqueKey = `${quizId}:${qId}`;
+        const isMastered = masteredKeys.has(uniqueKey);
+
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = `study-jump-pill ${isMastered ? "is-mastered" : ""}`;
+        pill.dataset.idx = String(idx);
+        pill.textContent = String(idx + 1);
+        pill.title = `Nhảy đến câu ${idx + 1}${isMastered ? " (Đã thuộc)" : ""}`;
+
+        pill.addEventListener("click", () => {
+          const target = document.getElementById(`study-q-${idx}`);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+            target.style.transition = "box-shadow 0.3s ease, border-color 0.3s ease";
+            target.style.borderColor = "#F472B6";
+            target.style.boxShadow = "0 0 0 3px #F472B6, 0 12px 32px rgba(216, 92, 132, 0.25)";
+            setTimeout(() => {
+              target.style.boxShadow = "";
+              target.style.borderColor = "";
+            }, 1400);
+          }
+        });
+
+        studyJumpList.appendChild(pill);
+      });
+    }
+
+    // 2. Render Questions List
+    if (studyQuestionsContainer) {
+      studyQuestionsContainer.innerHTML = "";
+
+      questions.forEach((q, idx) => {
+        const qId = q.id !== undefined ? q.id : (idx + 1);
+        const uniqueKey = `${quizId}:${qId}`;
+        const isMastered = masteredKeys.has(uniqueKey);
+
+        const correctList = Array.isArray(q.correctIndices)
+          ? q.correctIndices
+          : (typeof q.correctAnswer === "number" ? [q.correctAnswer] : []);
+
+        const card = document.createElement("article");
+        card.className = `study-q-card ${isMastered ? "is-mastered" : ""}`;
+        card.id = `study-q-${idx}`;
+        card.dataset.idx = String(idx);
+        card.dataset.topic = (q.topic || "").toLowerCase();
+        card.dataset.question = (q.question || "").toLowerCase();
+
+        // Card Header
+        const headerDiv = document.createElement("div");
+        headerDiv.className = "study-q-header";
+        headerDiv.innerHTML = `
+          <div class="study-q-title-wrap">
+            <span class="study-q-number">CÂU ${idx + 1} / ${total}</span>
+            <span class="topic-pill">🌸 ${escapeHtml(q.topic || "SSB201")}</span>
+            <span class="badge-mastered ${isMastered ? "" : "hidden"}">✓ Đã thuộc</span>
+          </div>
+          <button type="button" class="btn-master-toggle ${isMastered ? "active" : ""}" title="Đánh dấu đã thuộc câu này">
+            <span>${isMastered ? "✓ Đã thuộc" : "○ Đánh dấu đã thuộc"}</span>
+          </button>
+        `;
+
+        // Mastered Toggle Listener
+        const toggleBtn = headerDiv.querySelector(".btn-master-toggle");
+        const masteredBadge = headerDiv.querySelector(".badge-mastered");
+        toggleBtn.addEventListener("click", () => {
+          const currentSet = new Set(store.masteredQuestionKeys || []);
+          let nowMastered = false;
+          if (currentSet.has(uniqueKey)) {
+            currentSet.delete(uniqueKey);
+            nowMastered = false;
+          } else {
+            currentSet.add(uniqueKey);
+            nowMastered = true;
+          }
+          store.masteredQuestionKeys = Array.from(currentSet);
+          saveStore();
+
+          // Update UI
+          card.classList.toggle("is-mastered", nowMastered);
+          toggleBtn.classList.toggle("active", nowMastered);
+          toggleBtn.querySelector("span").textContent = nowMastered ? "✓ Đã thuộc" : "○ Đánh dấu đã thuộc";
+          masteredBadge.classList.toggle("hidden", !nowMastered);
+
+          // Update Jump Pill
+          const pill = studyJumpList.querySelector(`[data-idx="${idx}"]`);
+          if (pill) {
+            pill.classList.toggle("is-mastered", nowMastered);
+            pill.title = `Nhảy đến câu ${idx + 1}${nowMastered ? " (Đã thuộc)" : ""}`;
+          }
+
+          // Update Stats
+          updateStudyMasteredCount();
+
+          if (nowMastered && window.CuteMascot && typeof window.CuteMascot.say === "function") {
+            window.CuteMascot.say(`Đã thuộc câu ${idx + 1} rồi nè! Cố lên bạn ơi! 🌸✨`);
+          }
+        });
+
+        card.appendChild(headerDiv);
+
+        // Question Text
+        const qText = document.createElement("div");
+        qText.className = "study-q-text";
+        qText.innerHTML = escapeHtml(q.question).replace(/\n/g, "<br />");
+        card.appendChild(qText);
+
+        // Hint Box
+        if (q.hint) {
+          const hintEl = document.createElement("div");
+          hintEl.className = "study-hint-box";
+          hintEl.innerHTML = `
+            <span class="study-hint-icon">💡</span>
+            <div><strong>Gợi ý:</strong> ${escapeHtml(q.hint)}</div>
+          `;
+          card.appendChild(hintEl);
+        }
+
+        // Options List
+        const optContainer = document.createElement("div");
+        optContainer.className = "study-options-list";
+
+        let optionsSearchText = "";
+
+        q.options.forEach((opt, optIdx) => {
+          const isCorrect = correctList.includes(optIdx);
+          const letter = LETTERS[optIdx] || String(optIdx + 1);
+          optionsSearchText += " " + (opt.text || "") + " " + (opt.explanation || "");
+
+          const optDiv = document.createElement("div");
+          optDiv.className = `study-opt-item ${isCorrect ? "is-correct" : "is-wrong"}`;
+
+          optDiv.innerHTML = `
+            <div class="study-opt-header">
+              <div class="study-opt-title">
+                <span class="option-letter ${isCorrect ? "correct" : "wrong"}">${letter}</span>
+                <span class="study-opt-text">${escapeHtml(opt.text)}</span>
+              </div>
+              ${
+                isCorrect
+                  ? `<span class="status-badge badge-correct">✓ ĐÁP ÁN ĐÚNG</span>`
+                  : `<span class="status-badge badge-wrong">✕ Lựa chọn sai</span>`
+              }
+            </div>
+            <div class="study-opt-explanation ${isCorrect ? "correct-exp" : "wrong-exp"}">
+              ${
+                isCorrect
+                  ? `<strong>💡 Giải thích vì sao đúng:</strong> `
+                  : `<strong>Vì sao sai:</strong> `
+              }${escapeHtml(opt.explanation)}
+            </div>
+          `;
+
+          optContainer.appendChild(optDiv);
+        });
+
+        card.dataset.options = optionsSearchText.toLowerCase();
+        card.appendChild(optContainer);
+        studyQuestionsContainer.appendChild(card);
+      });
+    }
+
+    updateStudyMasteredCount();
+    filterStudyQuestions();
+  }
+
+  function updateStudyMasteredCount() {
+    if (!currentStudyQuiz || !Array.isArray(currentStudyQuiz.questions)) return;
+    const questions = currentStudyQuiz.questions;
+    const total = questions.length;
+    const quizId = currentStudyQuiz.id;
+    const masteredKeys = new Set(store.masteredQuestionKeys || []);
+
+    let masteredCount = 0;
+    questions.forEach((q, idx) => {
+      const qId = q.id !== undefined ? q.id : (idx + 1);
+      if (masteredKeys.has(`${quizId}:${qId}`)) {
+        masteredCount++;
+      }
+    });
+
+    const pct = total > 0 ? Math.round((masteredCount / total) * 100) : 0;
+    if (studyMasteredText) {
+      studyMasteredText.innerHTML = `Đã thuộc: <strong>${masteredCount}</strong> / ${total} câu (${pct}%)`;
+    }
+  }
+
+  function filterStudyQuestions() {
+    if (!studyQuestionsContainer) return;
+    const query = (studySearchInput ? studySearchInput.value : "").trim().toLowerCase();
+    const onlyCorrect = toggleStudyOnlyCorrect ? toggleStudyOnlyCorrect.checked : false;
+    const collapseHints = toggleStudyCollapseHints ? toggleStudyCollapseHints.checked : false;
+
+    if (btnClearStudySearch) {
+      btnClearStudySearch.classList.toggle("hidden", query.length === 0);
+    }
+
+    const cards = studyQuestionsContainer.querySelectorAll(".study-q-card");
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const qText = card.dataset.question || "";
+      const optText = card.dataset.options || "";
+      const topicText = card.dataset.topic || "";
+
+      const matches = !query || qText.includes(query) || optText.includes(query) || topicText.includes(query);
+      card.classList.toggle("is-hidden", !matches);
+      if (matches) visibleCount++;
+
+      // Options list only-correct toggle
+      const optList = card.querySelector(".study-options-list");
+      if (optList) {
+        optList.classList.toggle("only-correct", onlyCorrect);
+      }
+
+      // Hints toggle
+      const hintBox = card.querySelector(".study-hint-box");
+      if (hintBox) {
+        hintBox.classList.toggle("hidden", collapseHints);
+      }
+    });
+
+    if (studyEmptyState) {
+      studyEmptyState.classList.toggle("hidden", visibleCount > 0);
+    }
+  }
+
+  function startQuizFromStudy() {
+    if (!currentStudyQuiz) return;
+    const item = currentStudyQuiz;
+    const saved = store.sessions[item.id];
+    const stats = saved ? computeSessionStats(saved) : null;
+    if (stats && stats.answered > 0 && !item.isWrongReview) {
+      resumeQuiz(item.id);
+    } else {
+      startNewQuiz(item);
+    }
+  }
+
   // Event listeners
   btnBackHome.addEventListener("click", () => showView("home"));
   btnSummaryHome.addEventListener("click", () => showView("home"));
+
+  if (studySearchInput) studySearchInput.addEventListener("input", filterStudyQuestions);
+  if (btnClearStudySearch) {
+    btnClearStudySearch.addEventListener("click", () => {
+      studySearchInput.value = "";
+      filterStudyQuestions();
+      studySearchInput.focus();
+    });
+  }
+  if (btnResetStudySearch) {
+    btnResetStudySearch.addEventListener("click", () => {
+      if (studySearchInput) studySearchInput.value = "";
+      if (toggleStudyOnlyCorrect) toggleStudyOnlyCorrect.checked = false;
+      if (toggleStudyCollapseHints) toggleStudyCollapseHints.checked = false;
+      filterStudyQuestions();
+    });
+  }
+  if (toggleStudyOnlyCorrect) toggleStudyOnlyCorrect.addEventListener("change", filterStudyQuestions);
+  if (toggleStudyCollapseHints) toggleStudyCollapseHints.addEventListener("change", filterStudyQuestions);
+
+  if (btnStudyBackHome) btnStudyBackHome.addEventListener("click", () => showView("home"));
+  if (btnStudyScrollTop) {
+    btnStudyScrollTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  if (btnFloatingTop) {
+    window.addEventListener(
+      "scroll",
+      () => {
+        const scrolled = window.scrollY > 300;
+        btnFloatingTop.classList.toggle("hidden", !scrolled);
+      },
+      { passive: true }
+    );
+    btnFloatingTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+  if (btnStudyStartQuiz) btnStudyStartQuiz.addEventListener("click", startQuizFromStudy);
+  if (btnStudyStartQuizBottom) btnStudyStartQuizBottom.addEventListener("click", startQuizFromStudy);
+
+  if (btnStudyModeTop) {
+    btnStudyModeTop.addEventListener("click", () => {
+      if (!activeQuiz) return;
+      const catalogMatch = QUIZ_CATALOG.find((c) => c.id === activeQuiz.id) || {
+        id: activeQuiz.id,
+        title: activeQuiz.title,
+        description: activeQuiz.subtitle,
+        icon: "🌸",
+        questions: activeQuiz.questions
+      };
+      openStudyView(catalogMatch);
+    });
+  }
+
+  if (btnPeekCurrentAnswer) {
+    btnPeekCurrentAnswer.addEventListener("click", () => {
+      if (!activeQuiz) return;
+      const idx = activeQuiz.currentIndex;
+      if (typeof activeQuiz.answers[idx] === "number") return;
+      const q = activeQuiz.questions[idx];
+      const correctOptIdx = q.options.findIndex((o) => o.isCorrect);
+      if (correctOptIdx >= 0) {
+        selectOption(correctOptIdx);
+        if (window.CuteMascot && typeof window.CuteMascot.say === "function") {
+          window.CuteMascot.say("Đây là đáp án chính xác và lời giải chi tiết nè! Bạn ghi nhớ để lần sau làm đúng nhé! 🌸✨");
+        }
+      }
+    });
+  }
+
+  if (btnStudyFromSummary) {
+    btnStudyFromSummary.addEventListener("click", () => {
+      if (!activeQuiz) return;
+      const catalogMatch = QUIZ_CATALOG.find((c) => c.id === activeQuiz.id) || {
+        id: activeQuiz.id,
+        title: activeQuiz.title,
+        description: activeQuiz.subtitle,
+        icon: "🌸",
+        questions: activeQuiz.questions
+      };
+      openStudyView(catalogMatch);
+    });
+  }
 
   btnToggleHint.addEventListener("click", () => {
     if (!activeQuiz) return;

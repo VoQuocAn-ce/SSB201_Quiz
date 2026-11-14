@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Quicksand:wght@600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20261113c" />
+  <link rel="stylesheet" href="styles.css?v=20261114b" />
 </head>
 <body>
   <!-- Cute floating pastel decorations -->
@@ -88,6 +88,10 @@
             <span>🏠</span>
             <span>Tất cả bài Quiz</span>
           </button>
+          <button type="button" class="btn-pill" id="btnStudyModeTop" title="Xem trước toàn bộ câu hỏi, đáp án và lời giải đề này">
+            <span>📖</span>
+            <span>Xem đáp án để học</span>
+          </button>
           <button type="button" class="btn-pill btn-pill-primary" id="btnOpenNav">
             <span>☰</span>
             <span id="navButtonText">Câu 1/50</span>
@@ -146,10 +150,16 @@
               <span class="q-counter" id="qCounter">CÂU HỎI 1 / 50</span>
               <span class="topic-pill" id="qTopic">🌸 Topic</span>
             </div>
-            <button type="button" class="btn-hint" id="btnToggleHint">
-              <span>💡</span>
-              <span>Gợi ý</span>
-            </button>
+            <div class="question-meta-right">
+              <button type="button" class="btn-peek-ans" id="btnPeekCurrentAnswer" title="Hiện ngay đáp án chính xác và lời giải thích cho câu này">
+                <span>👁️</span>
+                <span>Xem đáp án câu này</span>
+              </button>
+              <button type="button" class="btn-hint" id="btnToggleHint">
+                <span>💡</span>
+                <span>Gợi ý</span>
+              </button>
+            </div>
           </div>
 
           <div class="hint-box hidden" id="hintBox">
@@ -186,6 +196,96 @@
         </div>
       </section>
 
+      <!-- STUDY / ANSWER PREVIEW VIEW -->
+      <section id="studyView" class="hidden">
+        <!-- Study Hero Banner -->
+        <div class="study-hero-card">
+          <div class="study-hero-left">
+            <div class="study-icon-box" id="studyQuizIcon">🌸</div>
+            <div class="study-hero-info">
+              <div class="study-tag-pill">📖 Chế độ học tập • Xem trước toàn bộ đáp án</div>
+              <h2 class="study-quiz-title" id="studyQuizTitle">SSB201 - Quiz 1</h2>
+              <p class="study-quiz-desc" id="studyQuizDesc">
+                Xem toàn bộ câu hỏi, đáp án chính xác và lời giải chi tiết từng phương án bằng tiếng Việt để ghi nhớ kiến thức trước khi làm bài thi.
+              </p>
+            </div>
+          </div>
+          <div class="study-hero-actions">
+            <button type="button" class="btn-pill" id="btnStudyBackHome">
+              <span>🏠</span>
+              <span>Tất cả bài Quiz</span>
+            </button>
+            <button type="button" class="btn-pill btn-pill-primary" id="btnStudyStartQuiz">
+              <span>🌸</span>
+              <span>Làm bài Quiz này</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sticky Controls & Search Bar -->
+        <div class="study-controls-bar">
+          <div class="study-search-wrap">
+            <span class="study-search-icon">🔍</span>
+            <input type="text" id="studySearchInput" class="study-search-input" placeholder="Tìm kiếm nhanh câu hỏi, từ khóa tiếng Anh hoặc tiếng Việt..." />
+            <button type="button" id="btnClearStudySearch" class="btn-clear-search hidden" title="Xóa tìm kiếm">✕</button>
+          </div>
+
+          <div class="study-filter-toggles">
+            <label class="cute-toggle">
+              <input type="checkbox" id="toggleStudyOnlyCorrect" />
+              <span>🎯 Chỉ hiện đáp án đúng</span>
+            </label>
+            <label class="cute-toggle">
+              <input type="checkbox" id="toggleStudyCollapseHints" />
+              <span>💡 Thu gọn gợi ý</span>
+            </label>
+          </div>
+
+          <div class="study-stats-badge" id="studyMasteredBadge" title="Tiến độ học thuộc">
+            <span class="study-stats-icon">🔖</span>
+            <span id="studyMasteredText">Đã thuộc: <strong>0</strong>/50</span>
+          </div>
+        </div>
+
+        <!-- Quick Jump Navigation Bar -->
+        <div class="study-jump-nav-wrap">
+          <div class="study-jump-header">
+            <span class="study-jump-label">🐾 Nhảy nhanh đến câu:</span>
+            <span class="study-jump-legend">
+              <span class="jump-dot-legend dot-normal"></span> Chưa thuộc
+              <span class="jump-dot-legend dot-mastered"></span> Đã thuộc
+            </span>
+          </div>
+          <div class="study-jump-list" id="studyJumpList"></div>
+        </div>
+
+        <!-- Questions List Container -->
+        <div class="study-questions-container" id="studyQuestionsContainer"></div>
+
+        <!-- Empty state when search has no results -->
+        <div class="study-empty-state hidden" id="studyEmptyState">
+          <div class="study-empty-icon">🔍</div>
+          <h3>Không tìm thấy câu hỏi phù hợp</h3>
+          <p>Thử tìm với từ khóa khác hoặc bấm nút xóa để xem lại toàn bộ câu hỏi nha!</p>
+          <button type="button" class="btn-pill" id="btnResetStudySearch">
+            <span>🔄</span>
+            <span>Xem lại tất cả</span>
+          </button>
+        </div>
+
+        <!-- Bottom Actions -->
+        <div class="study-bottom-bar">
+          <button type="button" class="btn-pill" id="btnStudyScrollTop">
+            <span>⬆️</span>
+            <span>Lên đầu trang</span>
+          </button>
+          <button type="button" class="btn-pill btn-pill-primary" id="btnStudyStartQuizBottom">
+            <span>🌸</span>
+            <span>Luyện tập bài Quiz này ngay</span>
+          </button>
+        </div>
+      </section>
+
       <!-- SUMMARY VIEW -->
       <section id="summaryView" class="hidden">
         <div class="summary-card">
@@ -216,6 +316,10 @@
             <button type="button" class="btn-pill btn-pill-primary hidden" id="btnRetryWrong">
               <span>🩹</span>
               <span>Làm lại các câu sai</span>
+            </button>
+            <button type="button" class="btn-pill" id="btnStudyFromSummary" title="Mở chế độ học tập và xem toàn bộ đáp án đề này">
+              <span>📖</span>
+              <span>Xem toàn bộ đáp án để học</span>
             </button>
             <button type="button" class="btn-pill" id="btnReviewAll">
               <span>👀</span>
@@ -306,6 +410,11 @@
     <span class="pill-sparkle">✨</span>
   </button>
 
+  <!-- Floating Scroll To Top Button -->
+  <button type="button" class="btn-floating-top hidden" id="btnFloatingTop" title="Cuộn lên đầu trang" aria-label="Cuộn lên đầu trang">
+    <span>⬆️</span>
+  </button>
+
   <script src="quiz2-data.js"></script>
   <script src="quiz3-data.js"></script>
   <script src="quiz4-data.js"></script>
@@ -328,6 +437,6 @@
   <script src="quiz17-data.js"></script>
   <script src="quiz-data.js"></script>
   <script src="mascot.js?v=20261113c"></script>
-  <script src="app.js?v=20261113c"></script>
+  <script src="app.js?v=20261114b"></script>
 </body>
 </html>
