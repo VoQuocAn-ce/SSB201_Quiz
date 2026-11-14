@@ -291,12 +291,12 @@ const QUIZ_8_QUESTIONS = [
     id: 23,
     topic: "Speech Transitions - Signposts",
     question: "In communication, writing or talking, phrases like “The first item,” “The second item,” “Now we've got X and Y in hands; what else do we need? Our third item is,” are considered _____________ which help your audience keep track of progress as your message continues.",
-    hint: "Các từ chỉ dẫn / biển báo giúp người đọc người nghe theo dõi thứ tự tiến trình của bài nói.",
-    correctIndices: [2],
+    hint: "Đáp án chính xác theo đề thi là internal summaries.",
+    correctIndices: [0],
     options: [
-      { text: "internal summaries", explanation: "Vì sao sai: Internal summaries tóm tắt lại những gì vừa trình bày." },
+      { text: "internal summaries", explanation: "Chính xác theo đáp án đề thi! Câu hỏi này theo đề thi chính thức chọn đáp án A: internal summaries." },
       { text: "repetition", explanation: "Vì sao sai: Repetition là việc lặp lại nguyên văn từ ngữ." },
-      { text: "signposts (or indicators)", explanation: "Chính xác! Signposts / Indicators (từ định hướng / biển chỉ đường) là các cụm từ như 'thứ nhất', 'thứ hai', 'điểm tiếp theo' giúp người nghe dễ dàng theo dõi mạch phát triển của thông điệp." },
+      { text: "signposts (or indicators)", explanation: "Lưu ý: Trong lý thuyết chuyển tiếp của McLean, các cụm từ này là ví dụ của signposts; tuy nhiên theo đáp án chính thức của bài thi, câu này chọn internal summaries." },
       { text: "foreshadowing", explanation: "Vì sao sai: Foreshadowing là gợi mở trước diễn biến tương lai." }
     ]
   },

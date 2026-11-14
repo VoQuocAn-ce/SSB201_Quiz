@@ -123,13 +123,13 @@ const QUIZ_12_QUESTIONS = [
   },
   {
     id: 10,
-    topic: "Styles of Language - Colloquial",
+    topic: "Styles of Language - Casual Language",
     question: ".................. involves everyday words and expressions in a familiar group context, such as conversations with family or close friends.",
-    hint: "Khẩu ngữ / Ngôn ngữ thông tục hàng ngày dùng trong gia đình hoặc bạn bè thân thiết.",
-    correctIndices: [0],
+    hint: "Ngôn ngữ thường ngày, thân mật dùng với gia đình và bạn bè thân thiết.",
+    correctIndices: [1],
     options: [
-      { text: "Colloquial language", explanation: "Chính xác! Ngôn ngữ khẩu ngữ / thông tục (Colloquial language) bao gồm các từ ngữ và cách diễn đạt thân mật hàng ngày, thích hợp trong bối cảnh gia đình hoặc giữa những người bạn thân." },
-      { text: "Casual language", explanation: "Vì sao sai: Casual language là văn phong thoải mái nói chung, nhưng định nghĩa chuẩn xác trong giáo trình là Colloquial language." },
+      { text: "Colloquial language", explanation: "Vì sao sai: Colloquial language là khẩu ngữ/tiếng địa phương mang sắc thái vùng miền văn hóa; trong khi định nghĩa chuẩn của câu hỏi này trong đề thi là Casual language." },
+      { text: "Casual language", explanation: "Chính xác! Casual language (ngôn ngữ thân mật/thông thường) sử dụng từ ngữ và cách diễn đạt hằng ngày trong bối cảnh quen thuộc như trò chuyện với gia đình hoặc bạn bè thân." },
       { text: "Internal communications", explanation: "Vì sao sai: Truyền thông nội bộ công ty." },
       { text: "External communications", explanation: "Vì sao sai: Truyền thông với bên ngoài tổ chức." }
     ]

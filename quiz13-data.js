@@ -460,12 +460,12 @@ window.SSB201_QUIZ13 = {
       "question": "________________ communication involves sending a single message to a group. It allows us to communicate our message to a large number of people.",
       "options": [
         { "text": "Intrapersonal", "explanation": "Vì sao sai: Intrapersonal là giao tiếp với chính bản thân." },
-        { "text": "Public", "explanation": "Chính xác! Giao tiếp công cộng (Public communication) là việc truyền tải một thông điệp từ một cá nhân đến một nhóm hoặc đám đông khán giả." },
-        { "text": "Mass", "explanation": "Vì sao sai: Mass communication gửi thông điệp tới công chúng vô danh qua các phương tiện truyền thông đại chúng quy mô lớn." },
+        { "text": "Public", "explanation": "Lưu ý: Mặc dù câu này thường mô tả Public communication, nhưng đáp án chính thức theo đề thi là Mass." },
+        { "text": "Mass", "explanation": "Chính xác theo đáp án đề thi! Câu hỏi này theo đề thi chọn đáp án C: Mass communication." },
         { "text": "Interpersonal", "explanation": "Vì sao sai: Interpersonal thường diễn ra giữa 2 cá nhân." }
       ],
-      "correctIndices": [1],
-      "hint": "Một người nói trực tiếp trước một nhóm/đám đông người nghe trong một không gian."
+      "correctIndices": [2],
+      "hint": "Đáp án chính xác theo đề thi là Mass communication."
     },
     {
       "id": 37,

@@ -1040,15 +1040,15 @@ const QUIZ_16_QUESTIONS = [
     "id": 39,
     "topic": "Effective Communication & Argumentation",
     "question": "In communication, writing or talking, phrases like “The first item,” “The second item,” “Now we’ve got X and Y in hands; what else do we need? Our third item is,” are considered ____________ which help your audience keep track of progress as your message continues.",
-    "hint": "Biển chỉ dẫn (signposts) chỉ điểm thứ nhất, thứ hai, thứ ba...",
+    "hint": "Đáp án chính xác theo đề thi là internal summaries.",
     "correctIndices": [
-      2
+      0
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 0,
     "options": [
       {
         "text": "internal summaries",
-        "explanation": "Vì sao sai: Tóm tắt nội bộ giúp hệ thống lại các điểm đã trình bày."
+        "explanation": "Chính xác theo đáp án đề thi! Câu hỏi này theo đề thi chính thức chọn đáp án A: internal summaries."
       },
       {
         "text": "repetition",
@@ -1056,7 +1056,7 @@ const QUIZ_16_QUESTIONS = [
       },
       {
         "text": "signposts (or indicators)",
-        "explanation": "Chính xác! Biển chỉ dẫn (signposts/indicators) định hướng và báo hiệu vị trí tiếp theo để người nghe dễ theo dõi tiến trình bài nói."
+        "explanation": "Lưu ý: Trong lý thuyết chuyển tiếp của McLean, các cụm từ này là ví dụ của signposts; tuy nhiên theo đáp án chính thức của bài thi, câu này chọn internal summaries."
       },
       {
         "text": "foreshadowing",

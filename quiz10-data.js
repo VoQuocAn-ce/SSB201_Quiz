@@ -313,12 +313,12 @@ const QUIZ_10_QUESTIONS = [
     id: 25,
     topic: "Contexts of Communication - Public",
     question: "___________ communication involves sending a single message to a group. It allows us to communicate our message to a large number of people.",
-    hint: "Giao tiếp công chúng gửi một thông điệp đến một nhóm đông người trong cùng một không gian.",
-    correctIndices: [1],
+    hint: "Đáp án chính xác theo đề thi là Mass communication.",
+    correctIndices: [2],
     options: [
       { text: "Intrapersonal", explanation: "Vì sao sai: Giao tiếp nội tâm là tự giao tiếp với chính mình." },
-      { text: "Public", explanation: "Chính xác! Giao tiếp trước công chúng (Public communication) là việc truyền một thông điệp duy nhất tới một nhóm đông người cùng một lúc." },
-      { text: "Mass", explanation: "Vì sao sai: Giao tiếp đại chúng (Mass communication) sử dụng các phương tiện truyền thông phát sóng đến lượng khán giả phân tán vô danh khổng lồ." },
+      { text: "Public", explanation: "Lưu ý: Mặc dù câu này thường mô tả Public communication, nhưng đáp án chính thức theo đề thi là Mass." },
+      { text: "Mass", explanation: "Chính xác theo đáp án đề thi! Câu hỏi này theo đề thi chọn đáp án C: Mass communication." },
       { text: "Interpersonal", explanation: "Vì sao sai: Giao tiếp liên cá nhân diễn ra giữa hai người (hoặc nhóm rất nhỏ)." }
     ]
   },

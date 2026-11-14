@@ -542,16 +542,16 @@ window.SSB201_QUIZ15 = {
     },
     {
       "id": 43,
-      "topic": "Verbal Communication - Colloquial Language",
+      "topic": "Verbal Communication - Casual Language",
       "question": "................... involves everyday words and expressions in a familiar group context, such as conversations with family or close friends.",
       "options": [
-        { "text": "Colloquial language", "explanation": "Chính xác! Khẩu ngữ (Colloquial language) dùng từ ngữ thân mật, gần gũi trong đời sống hàng ngày với gia đình, người thân." },
-        { "text": "Casual language", "explanation": "Vì sao sai: Không phải thuật ngữ chuyên môn tiêu chuẩn ở đây." },
+        { "text": "Colloquial language", "explanation": "Vì sao sai: Colloquial language là khẩu ngữ/tiếng địa phương mang sắc thái vùng miền văn hóa; trong khi định nghĩa chuẩn của câu hỏi này trong đề thi là Casual language." },
+        { "text": "Casual language", "explanation": "Chính xác! Casual language (ngôn ngữ thân mật/thông thường) sử dụng từ ngữ và cách diễn đạt hằng ngày trong bối cảnh quen thuộc như trò chuyện với gia đình hoặc bạn bè thân." },
         { "text": "Internal communications", "explanation": "Vì sao sai: Truyền thông nội bộ." },
         { "text": "External communications", "explanation": "Vì sao sai: Truyền thông đối ngoại." }
       ],
-      "correctIndices": [0],
-      "hint": "Khẩu ngữ thân mật thường nhật."
+      "correctIndices": [1],
+      "hint": "Ngôn ngữ thường ngày, thân mật dùng với gia đình và bạn bè thân thiết."
     },
     {
       "id": 44,
