@@ -204,11 +204,12 @@
     quizGrid.innerHTML = "";
 
     // Build list of available quizzes + optional wrong-answer review card
-    const cards = [...QUIZ_CATALOG];
+    const cards = QUIZ_CATALOG.filter((c) => !c.hidden);
     const wrongKeys = Array.isArray(store.wrongQuestionKeys) ? store.wrongQuestionKeys : [];
     const wrongQuestions = [];
     wrongKeys.forEach((key) => {
       const [quizId, qIdStr] = String(key).split(":");
+      if (quizId && quizId.startsWith("quiz-seb")) return; // Tạm ẩn câu hỏi SEB trong ngân hàng câu sai
       const orig = findOriginalQuestion(quizId, Number(qIdStr));
       if (orig) {
         wrongQuestions.push({ ...orig, sourceQuizId: quizId });

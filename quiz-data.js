@@ -1277,6 +1277,7 @@ const QUIZ_CATALOG = [
   },
   {
     id: "quiz-seb1",
+    hidden: true,
     title: "SSB201 - Quiz SEB 1",
     shortTitle: "Quiz SEB 1",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB1 (Câu 1 – 50)",
@@ -1286,6 +1287,7 @@ const QUIZ_CATALOG = [
   },
   {
     id: "quiz-seb2",
+    hidden: true,
     title: "SSB201 - Quiz SEB 2",
     shortTitle: "Quiz SEB 2",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB2 (Câu 1 – 50)",
@@ -1295,6 +1297,7 @@ const QUIZ_CATALOG = [
   },
   {
     id: "quiz-seb3",
+    hidden: true,
     title: "SSB201 - Quiz SEB 3",
     shortTitle: "Quiz SEB 3",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB3 (Câu 1 – 50)",
@@ -1421,6 +1424,7 @@ const QUIZ_CATALOG = [
   },
   {
     id: "quiz-seb4",
+    hidden: true,
     title: "SSB201 - Quiz SEB 4",
     shortTitle: "Quiz SEB 4",
     subtitle: "50 câu hỏi trắc nghiệm từ thư mục Quiz_SEB4 (Câu 1 – 50)",
