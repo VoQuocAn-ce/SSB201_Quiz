@@ -126,12 +126,12 @@ const QUIZ_9_QUESTIONS = [
     id: 10,
     topic: "Public Speaking & Media",
     question: "The President John F. Kennedy's famous statement, “Ask not what your country can do for you, but what you can do for your country.”, is a ____________",
-    hint: "Một câu trích dẫn ngắn gọn, đắt giá, dễ nhớ và thường được truyền thông trích dẫn nhiều lần.",
-    correctIndices: [2],
+    hint: "Đáp án chính xác theo đề thi là quote (trích dẫn).",
+    correctIndices: [0],
     options: [
-      { text: "quote", explanation: "Vì sao sai: Dù đây là câu trích dẫn nhưng trong thuật ngữ truyền thông nó là một ví dụ kinh điển về 'sound bite'." },
+      { text: "quote", explanation: "Chính xác theo đáp án đề thi! Câu nói bất hủ của Tổng thống Kennedy được tính điểm là quote (trích dẫn)." },
       { text: "slogan", explanation: "Vì sao sai: Slogan là khẩu hiệu quảng cáo hoặc phong trào." },
-      { text: "sound bite", explanation: "Chính xác! Sound bite là một câu nói ngắn gọn, súc tích, ấn tượng, hoàn hảo để trích dẫn trên các phương tiện truyền thông." },
+      { text: "sound bite", explanation: "Lưu ý: Mặc dù câu nói này mang tính chất một sound bite kinh điển, nhưng đáp án chính thức theo đề thi là quote." },
       { text: "motto", explanation: "Vì sao sai: Motto là phương châm sống." }
     ]
   },

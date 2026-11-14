@@ -896,15 +896,15 @@ const QUIZ_17_QUESTIONS = [
     "id": 33,
     "topic": "Global Culture & Design Thinking",
     "question": "The President John F. Kennedy's famous statement, “Ask not what your country can do for you, ask what you can do for your country.”, is a ______________",
-    "hint": "Đoạn trích phát ngôn ngắn gọn, truyền cảm hứng trên truyền thông là sound bite.",
+    "hint": "Đáp án chính xác theo đề thi là quotes (trích dẫn).",
     "correctIndices": [
-      0
+      3
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 3,
     "options": [
       {
         "text": "sound bite",
-        "explanation": "Chính xác! Câu nói bất hủ của Tổng thống Kennedy là ví dụ tiêu biểu cho một 'sound bite' — đoạn phát biểu ngắn gọn, đanh thép và dễ nhớ được ghi dấu trên truyền thông."
+        "explanation": "Lưu ý: Mặc dù câu nói này mang tính chất một sound bite kinh điển, nhưng đáp án chính thức theo đề thi là quotes."
       },
       {
         "text": "slogan",
@@ -916,7 +916,7 @@ const QUIZ_17_QUESTIONS = [
       },
       {
         "text": "quotes",
-        "explanation": "Vì sao sai: Trong phân loại bài học về truyền thông ngắn gọn, đây là ví dụ kinh điển cho sound bite."
+        "explanation": "Chính xác theo đáp án đề thi! Câu nói bất hủ của Tổng thống Kennedy được tính điểm là quotes (trích dẫn)."
       }
     ]
   },

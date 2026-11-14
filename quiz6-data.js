@@ -787,12 +787,12 @@ const QUIZ_6_QUESTIONS = [
     id: 33,
     topic: "Memorable Soundbites",
     question: "The President John F. Kennedy’s famous statement, “Ask not what your country can do for you, but what you can do for your country.”, is a _______________",
-    hint: "Câu nói ngắn gọn, đắt giá và vang dội của Tổng thống JFK trong bài diễn văn nhậm chức là ví dụ kinh điển cho soundbite.",
-    correctIndices: [3],
+    hint: "Đáp án chính xác theo đề thi là quotes (trích dẫn).",
+    correctIndices: [2],
     options: [
       {
         text: "slogan",
-        explanation: "Vì sao sai: Slogan là khẩu hiệu thương mại hoặc chiến dịch, còn câu phát biểu của JFK trong diễn văn chính trị là soundbite."
+        explanation: "Vì sao sai: Slogan là khẩu hiệu thương mại hoặc chiến dịch, không phải trích dẫn phát biểu."
       },
       {
         text: "memory",
@@ -800,11 +800,11 @@ const QUIZ_6_QUESTIONS = [
       },
       {
         text: "quotes",
-        explanation: "Vì sao sai: Dù là lời trích dẫn, trong phân loại chiến lược truyền thông của McLean, câu phát biểu cô đọng nổi tiếng này là ví dụ tiêu biểu cho 'sound bite'."
+        explanation: "Chính xác theo đáp án đề thi! Câu nói bất hủ của Tổng thống JFK được phân loại là một câu trích dẫn nổi tiếng (quotes)."
       },
       {
         text: "sound bite",
-        explanation: "Chính xác! Câu nói bất hủ của Tổng thống JFK trong diễn văn nhậm chức năm 1961 là một sound bite kinh điển: cô đọng, sắc sảo và đi vào lịch sử truyền thông."
+        explanation: "Lưu ý: Mặc dù câu nói này mang tính chất một sound bite kinh điển, nhưng đáp án chính thức theo đề thi là quotes."
       }
     ]
   },
@@ -937,24 +937,24 @@ const QUIZ_6_QUESTIONS = [
     id: 39,
     topic: "Intercultural Nonverbal Factors",
     question: "What may have an impact on the success of intercultural communication encounters?",
-    hint: "Diện mạo bên ngoài (trang phục, phong thái chỉn chu) tác động mạnh tới ấn tượng và thành công khi gặp gỡ liên văn hóa.",
-    correctIndices: [0],
+    hint: "Vị trí và địa vị (Position and status) tác động mạnh mẽ đến thứ tự đón tiếp và thành bại của các cuộc gặp gỡ liên văn hóa.",
+    correctIndices: [3],
     options: [
       {
         text: "Appearance",
-        explanation: "Chính xác! Theo sách Chaney & Martin, Ngoại hình và trang phục (Appearance) có tác động rất lớn đến sự thành bại trong các cuộc tiếp xúc liên văn hóa."
+        explanation: "Vì sao sai: Ngoại hình chỉ là yếu tố hỗ trợ bên ngoài; theo đáp án chuẩn đề thi SSB201, yếu tố trọng tâm là Position and status."
       },
       {
         text: "Language skills",
-        explanation: "Vì sao sai: Dù ngoại ngữ có vai trò, trong câu hỏi về phi ngôn ngữ và ấn tượng ban đầu của Chaney & Martin, Appearance là yếu tố trực quan tác động lập tức."
+        explanation: "Vì sao sai: Kỹ năng ngôn ngữ hỗ trợ giao tiếp, nhưng đáp án chuẩn theo bài thi là Position and status."
       },
       {
         text: "Family status",
-        explanation: "Vì sao sai: Tình trạng gia đình không phải yếu tố nhận diện ban đầu."
+        explanation: "Vì sao sai: Tình trạng gia đình không phải yếu tố quyết định trong tiếp xúc kinh doanh quốc tế."
       },
       {
         text: "Position and status",
-        explanation: "Vì sao sai: Địa vị là kết quả chức danh, còn yếu tố quan sát trực diện là ngoại hình."
+        explanation: "Chính xác! Theo đáp án chuẩn đề thi SSB201, vị trí và địa vị (Position and status) tác động mạnh mẽ đến cách xưng hô, thứ tự đón tiếp và sự thành bại của các cuộc gặp gỡ liên văn hóa."
       }
     ]
   },

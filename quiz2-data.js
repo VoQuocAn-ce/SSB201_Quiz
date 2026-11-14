@@ -705,6 +705,31 @@ const QUIZ_2_QUESTIONS = [
   },
   {
     id: 30,
+    topic: "Self-Reflection & Performance",
+    question: "A mental review of the task and your performance is often called ........",
+    hint: "Tự nhìn nhận, đánh giá lại trong tâm trí về nhiệm vụ và sự thể hiện/hiệu quả của bản thân gọi là reflection (suy ngẫm/soi chiếu).",
+    correctIndices: [0],
+    options: [
+      {
+        text: "reflection",
+        explanation: "Chính xác! Theo giáo trình McLean, reflection (suy ngẫm/tự soi chiếu) là quá trình tự xem xét và đánh giá lại trong tâm trí về nhiệm vụ đã thực hiện và mức độ hoàn thành/kết quả của bản thân."
+      },
+      {
+        text: "feedback",
+        explanation: "Feedback là thông tin phản hồi từ người khác hoặc kết quả bên ngoài, không phải sự tự xem xét đánh giá trong nội tâm."
+      },
+      {
+        text: "response",
+        explanation: "Response là phản ứng hoặc câu trả lời đối với một thông điệp/kích thích."
+      },
+      {
+        text: "checking",
+        explanation: "Checking chỉ là kiểm tra rà soát thông thường, không phải thuật ngữ tự ngẫm/đánh giá lại trải nghiệm cá nhân."
+      }
+    ]
+  },
+  {
+    id: 31,
     topic: "Media Interviews",
     question: "What are the Interview Preparation Factors for media interviews?",
     hint: "4 yếu tố chuẩn bị phỏng vấn truyền thông theo Bảng Table 15.1 giáo trình Scott McLean: Topic, Time, Format, và Background.",
@@ -729,7 +754,7 @@ const QUIZ_2_QUESTIONS = [
     ]
   },
   {
-    id: 31,
+    id: 32,
     topic: "Ceremonial Speaking",
     question: "............ are formal expressions of goodwill, appreciation, or calls for group attention to an issue or person in a public setting, often followed by synchronous consumption of beverages.",
     hint: "Lời chúc mừng/nâng ly ('consumption of beverages') trang trọng nơi công cộng.",
@@ -754,9 +779,9 @@ const QUIZ_2_QUESTIONS = [
     ]
   },
   {
-    id: 32,
+    id: 33,
     topic: "Persuasive Language",
-    question: "A word, sound, or image that arouses an emotional response in the audience is called _______________",
+    question: "A word, sound, or image that arouses an emotional response in the audience is called _____________",
     hint: "Lời kêu gọi cảm xúc (appeal to emotion) dùng từ ngữ, âm thanh hoặc hình ảnh khơi gợi cảm xúc của khán giả.",
     correctIndices: [0],
     options: [
@@ -779,7 +804,7 @@ const QUIZ_2_QUESTIONS = [
     ]
   },
   {
-    id: 33,
+    id: 34,
     topic: "Group Communication",
     question: "A group communication in action around a defined agenda, at a set time, for an established duration is defined as ......",
     hint: "Giao tiếp nhóm theo một chương trình nghị sự (agenda) rõ ràng, vào thời gian ấn định và thời lượng cụ thể: cuộc họp (meeting).",
@@ -800,27 +825,6 @@ const QUIZ_2_QUESTIONS = [
       {
         text: "a teamwork",
         explanation: "Teamwork là sự hợp tác làm việc nhóm nói chung."
-      }
-    ]
-  },
-  {
-    id: 34,
-    topic: "Presentation Design",
-    question: "A thesis statement should be.........",
-    hint: "Câu luận điểm chính của bài nói phải ngắn gọn và cụ thể.",
-    correctIndices: [2],
-    options: [
-      {
-        text: "a specific sentence capturing the central idea of your speech.",
-        explanation: "Thiếu tính 'short' (ngắn gọn) theo chuẩn định nghĩa."
-      },
-      {
-        text: "a long, specific sentence capturing the central idea of your speech.",
-        explanation: "Sai vì thesis statement không nên dài."
-      },
-      {
-        text: "a short, specific sentence capturing the central idea of your speech.",
-        explanation: "Chính xác! Thesis statement là một câu ngắn gọn, cụ thể nêu bật ý tưởng trung tâm của bài thuyết trình."
       }
     ]
   },

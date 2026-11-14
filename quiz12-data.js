@@ -563,13 +563,13 @@ const QUIZ_12_QUESTIONS = [
     id: 44,
     topic: "Factors in Intercultural Communication",
     question: "What may have an impact on the success of intercultural communication encounters?",
-    hint: "Kỹ năng ngôn ngữ là chìa khóa then chốt tác động trực tiếp đến thành công của giao tiếp liên văn hóa.",
-    correctIndices: [1],
+    hint: "Vị trí và địa vị (Position and status) tác động mạnh mẽ đến thứ tự đón tiếp và thành bại của các cuộc gặp gỡ liên văn hóa.",
+    correctIndices: [3],
     options: [
-      { text: "Appearance", explanation: "Vì sao sai: Ngoại hình chỉ tạo ấn tượng ban đầu, không mang tính quyết định sự thấu hiểu thông điệp." },
-      { text: "Language skills", explanation: "Chính xác! Kỹ năng ngôn ngữ (Language skills) là yếu tố mang tính quyết định trực tiếp đến sự chuẩn xác và thành công của mọi cuộc tiếp xúc giao tiếp liên văn hóa." },
+      { text: "Appearance", explanation: "Vì sao sai: Ngoại hình chỉ là yếu tố hỗ trợ bên ngoài." },
+      { text: "Language skills", explanation: "Vì sao sai: Kỹ năng ngôn ngữ hỗ trợ giao tiếp, nhưng đáp án chuẩn của đề thi là Position and status." },
       { text: "Family status", explanation: "Vì sao sai: Tình trạng gia đình không quyết định hiệu quả giao tiếp quốc tế." },
-      { text: "Position and status", explanation: "Vì sao sai: Địa vị ảnh hưởng đến nghi thức nhưng không thay thế được khả năng truyền đạt ngôn ngữ." }
+      { text: "Position and status", explanation: "Chính xác! Theo đáp án chuẩn đề thi SSB201, vị trí và địa vị (Position and status) tác động trực tiếp đến nghi thức, mức độ tôn trọng và thành công của cuộc tiếp xúc liên văn hóa." }
     ]
   },
   {

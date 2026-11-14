@@ -443,13 +443,13 @@ const QUIZ_10_QUESTIONS = [
     id: 35,
     topic: "Media Communication - Sound Bite",
     question: "The President John F. Kennedy's famous statement, “Ask not what your country can do for you, but what you can do for your country.”, is a ____________",
-    hint: "Một câu trích dẫn ngắn gọn, đắt giá, ấn tượng trên sóng truyền thông được gọi là sound bite.",
-    correctIndices: [3],
+    hint: "Đáp án chính xác theo đề thi là quotes (trích dẫn).",
+    correctIndices: [2],
     options: [
       { text: "slogan", explanation: "Vì sao sai: Slogan là khẩu hiệu quảng bá thương hiệu hoặc chính dịch ngắn." },
       { text: "memory", explanation: "Vì sao sai: Ký ức không phải thuật ngữ truyền thông." },
-      { text: "quotes", explanation: "Vì sao sai: Quotes là trích dẫn nói chung, nhưng trong thuật ngữ truyền thông và báo chí đây là điển hình của sound bite." },
-      { text: "sound bite", explanation: "Chính xác! Câu nói bất hủ của JFK là một ví dụ kinh điển về 'Sound bite' - một đoạn phát biểu ngắn gọn, đanh thép, dễ nhớ, được thiết kế hoàn hảo để truyền thông phát đi phát lại." }
+      { text: "quotes", explanation: "Chính xác theo đáp án đề thi! Câu nói bất hủ của JFK được tính điểm là quotes (trích dẫn)." },
+      { text: "sound bite", explanation: "Lưu ý: Mặc dù câu nói này mang tính chất một sound bite kinh điển, nhưng đáp án chính thức theo đề thi là quotes." }
     ]
   },
   {
