@@ -8,9 +8,9 @@ window.SSB201_QUIZ13 = {
       "topic": "Design Thinking - Empathize",
       "question": "To empathize, we immerse, which means .........",
       "options": [
-        { "text": "we observe users in the context of their lives", "explanation": "Vì sao sai: Đây là định nghĩa của hoạt động \"observe\" (quan sát), không phải \"immerse\"." },
-        { "text": "we interact and interview users", "explanation": "Vì sao sai: Tương tác và phỏng vấn người dùng là hoạt động \"engage\", không phải \"immerse\"." },
-        { "text": "we see and hear from user", "explanation": "Vì sao sai: Nghe và nhìn từ người dùng thuộc về quan sát/phỏng vấn." },
+        { "text": "the foundation of a human-centered design process", "explanation": "Vì sao sai: Đây là định nghĩa chung của toàn bộ bước Empathize, không phải riêng hoạt động \"immerse\"." },
+        { "text": "we view users and their behavior in the context of their lives", "explanation": "Vì sao sai: Đây là định nghĩa của hoạt động \"observe\" (quan sát), không phải \"immerse\"." },
+        { "text": "we interact with and interview users through both scheduled and short intercept encounters", "explanation": "Vì sao sai: Tương tác và phỏng vấn người dùng là hoạt động \"engage\", không phải \"immerse\"." },
         { "text": "we experience what our user experiences", "explanation": "Chính xác! \"Immerse\" (đắm mình/trải nghiệm thực tế) trong giai đoạn Empathize nghĩa là ta trực tiếp trải nghiệm những gì người dùng trải qua để thấu cảm sâu sắc." }
       ],
       "correctIndices": [3],
@@ -19,12 +19,12 @@ window.SSB201_QUIZ13 = {
     {
       "id": 2,
       "topic": "Intercultural Communication - Cultural Dimensions",
-      "question": "......... means “People value individual freedom and personal independence”.",
+      "question": "......... means “ People value individual freedom and personal independence”.",
       "options": [
         { "text": "Individualistic Cultures", "explanation": "Chính xác! Văn hóa chủ nghĩa cá nhân (Individualistic Cultures) đề cao tự do cá nhân, quyền tự quyết và tính độc lập." },
-        { "text": "Explicit-rule Cultures", "explanation": "Vì sao sai: Explicit-rule cultures là nền văn hóa quy tắc rõ ràng, minh bạch, không định nghĩa về tự do cá nhân." },
-        { "text": "Implicit-rule Cultures", "explanation": "Vì sao sai: Implicit-rule cultures là nền văn hóa quy tắc ngầm định." },
-        { "text": "Collectivist Cultures", "explanation": "Vì sao sai: Collectivist Cultures (văn hóa tập thể) đề cao sự gắn kết nhóm và lợi ích cộng đồng hơn tự do cá nhân." }
+        { "text": "Collectivistic Cultures", "explanation": "Vì sao sai: Collectivistic Cultures (văn hóa tập thể) đề cao sự gắn kết nhóm và lợi ích cộng đồng hơn tự do cá nhân." },
+        { "text": "Uncertainty-Accepting Cultures", "explanation": "Vì sao sai: Uncertainty-Accepting Cultures là nền văn hóa chấp nhận sự bất định và rủi ro." },
+        { "text": "Uncertainty-Rejecting Culture", "explanation": "Vì sao sai: Uncertainty-Rejecting Culture là nền văn hóa né tránh sự bất định, thích quy tắc rõ ràng." }
       ],
       "correctIndices": [0],
       "hint": "Thuật ngữ chỉ nền văn hóa nơi quyền lợi, tự do và độc lập của từng cá nhân được đặt lên hàng đầu."
@@ -36,8 +36,8 @@ window.SSB201_QUIZ13 = {
       "options": [
         { "text": "libel", "explanation": "Chính xác! Phỉ báng hoặc bôi nhọ danh dự người khác dưới dạng chữ viết/văn bản được gọi là \"libel\" (bôi nhọ bằng văn bản)." },
         { "text": "slander", "explanation": "Vì sao sai: Slander là hành vi phỉ báng bằng lời nói (spoken defamation), không phải chữ viết." },
-        { "text": "negative words", "explanation": "Vì sao sai: Negative words chỉ là từ ngữ mang tính tiêu cực nói chung." },
-        { "text": "bad words", "explanation": "Vì sao sai: Bad words là từ ngữ thô tục/xấu, không phải thuật ngữ pháp lý chỉ hành vi bôi nhọ." }
+        { "text": "complaint", "explanation": "Vì sao sai: Complaint chỉ là lời phàn nàn, khiếu nại thông thường." },
+        { "text": "Feedback", "explanation": "Vì sao sai: Feedback là thông tin phản hồi trong giao tiếp." }
       ],
       "correctIndices": [0],
       "hint": "Phân biệt giữa libel (văn bản) và slander (lời nói)."
@@ -48,9 +48,9 @@ window.SSB201_QUIZ13 = {
       "question": "Schutz defines people who seek limited interaction as .............",
       "options": [
         { "text": "underpersonals", "explanation": "Chính xác! Theo Will Schutz, người có nhu cầu tình cảm/tương tác xã hội thấp và né tránh việc gắn kết gần gũi gọi là \"underpersonals\"." },
+        { "text": "personal individual.", "explanation": "Vì sao sai: Personal individual là người duy trì sự cân bằng lành mạnh về nhu cầu gắn kết." },
         { "text": "overpersonals", "explanation": "Vì sao sai: Overpersonals là những người khao khát tương tác quá mức và luôn tìm kiếm sự chú ý/yêu mến." },
-        { "text": "personal individuals", "explanation": "Vì sao sai: Personal individuals là người duy trì sự cân bằng lành mạnh về nhu cầu gắn kết." },
-        { "text": "autocrats", "explanation": "Vì sao sai: Autocrat liên quan đến nhu cầu kiểm soát (control), người luôn muốn nắm quyền lãnh đạo." }
+        { "text": "autocrats", "explanation": "Vì sao sai: Autocrats liên quan đến nhu cầu kiểm soát (control), người luôn muốn nắm quyền lãnh đạo." }
       ],
       "correctIndices": [0],
       "hint": "Tiền tố \"under-\" thể hiện mức độ tương tác thấp, hạn chế hơn mức bình thường."
@@ -60,23 +60,23 @@ window.SSB201_QUIZ13 = {
       "topic": "Interpersonal Communication - Schutz",
       "question": "According to Schutz, the person who strikes a healthy balance of need for affection is called ________________",
       "options": [
-        { "text": "an underpersonal", "explanation": "Vì sao sai: Underpersonal là người né tránh sự thân mật, tương tác hạn chế." },
+        { "text": "a democrat", "explanation": "Vì sao sai: Democrat là người có nhu cầu kiểm soát (control) ở mức cân bằng." },
         { "text": "an overpersonal", "explanation": "Vì sao sai: Overpersonal là người đòi hỏi tình cảm và tương tác quá mức." },
-        { "text": "a personal individual", "explanation": "Chính xác! Personal individual là người đạt trạng thái cân bằng lành mạnh, thoải mái khi ở gần gũi người khác nhưng cũng thoải mái khi ở một mình." },
-        { "text": "an abdicrat", "explanation": "Vì sao sai: Abdicrat là kiểu người từ bỏ kiểm soát trong nhu cầu kiểm soát (control)." }
+        { "text": "a personal individual", "explanation": "Chính xác! Personal individual là người đạt trạng thái cân bằng lành mạnh về nhu cầu tình cảm (affection)." },
+        { "text": "a social person", "explanation": "Vì sao sai: Social person là người đạt sự cân bằng trong nhu cầu hòa nhập (inclusion/belonging)." }
       ],
       "correctIndices": [2],
-      "hint": "Người có sự cân bằng khỏe mạnh giữa việc gần gũi và độc lập theo lý thuyết của Schutz."
+      "hint": "Người có sự cân bằng khỏe mạnh về nhu cầu tình cảm (affection) theo lý thuyết của Schutz."
     },
     {
       "id": 6,
       "topic": "Business Writing - Message Structure",
       "question": "At the end of the message, your .................... should provide the audience with a sense of closure by summarizing your main points and relating them to the overall topic.",
       "options": [
-        { "text": "body", "explanation": "Vì sao sai: Thân bài (body) dùng để trình bày chi tiết các luận điểm." },
+        { "text": "attention statement", "explanation": "Vì sao sai: Câu thu hút sự chú ý (attention statement) nằm ở phần đầu tiên." },
         { "text": "introduction", "explanation": "Vì sao sai: Mở bài (introduction) dùng để giới thiệu chủ đề ở đầu thông điệp." },
         { "text": "conclusion", "explanation": "Chính xác! Kết luận (conclusion) nằm ở cuối thông điệp, tóm tắt các điểm chính và tạo sự trọn vẹn (sense of closure)." },
-        { "text": "attention statement", "explanation": "Vì sao sai: Câu thu hút sự chú ý (attention statement) nằm ở phần đầu tiên." }
+        { "text": "residual message", "explanation": "Vì sao sai: Residual message là thông điệp đọng lại trong tâm trí người nghe sau khi bài nói kết thúc." }
       ],
       "correctIndices": [2],
       "hint": "Phần kết thúc của một thông điệp giúp tóm tắt ý chính và đem lại cảm giác hoàn tất."
@@ -86,10 +86,9 @@ window.SSB201_QUIZ13 = {
       "topic": "Effective Argumentation - GASCAP/T",
       "question": "The “G” in Effective Argumentation Strategies: GASCAP/T means ............ (Fulkerson, 1996).",
       "options": [
-        { "text": "Global", "explanation": "Vì sao sai: G không phải là Global trong mô hình GASCAP/T." },
+        { "text": "Great", "explanation": "Vì sao sai: Great không nằm trong mô hình GASCAP/T." },
         { "text": "Generalization", "explanation": "Chính xác! Chữ G trong GASCAP/T là Generalization (Khái quát hóa - lập luận từ các ví dụ cụ thể để suy ra quy luật chung)." },
-        { "text": "Generally", "explanation": "Vì sao sai: Đây là trạng từ, không phải tên chiến lược lập luận." },
-        { "text": "Goal", "explanation": "Vì sao sai: Goal là mục tiêu, không nằm trong các chữ viết tắt của GASCAP/T." }
+        { "text": "General", "explanation": "Vì sao sai: Thuật ngữ chuẩn trong mô hình của Fulkerson là danh từ Generalization." }
       ],
       "correctIndices": [1],
       "hint": "GASCAP/T gồm: Generalization, Analogy, Sign, Cause, Authority, Principle, Testimony."
@@ -99,10 +98,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Intercultural Communication - Greetings",
       "question": "A kiss or hug is considered ____________ as a form of greeting in the U.S., in other countries it is customary.",
       "options": [
-        { "text": "polite", "explanation": "Vì sao sai: Trong bối cảnh kinh doanh tại Mỹ, ôm hôn không được coi là lịch sự mà có thể bị xem là xâm phạm không gian cá nhân." },
-        { "text": "customary", "explanation": "Vì sao sai: Ở Mỹ, bắt tay mới là tập quán thông thường (customary)." },
-        { "text": "inappropriate", "explanation": "Chính xác! Ở Mỹ, trong môi trường công sở/giao tiếp thông thường với người mới gặp, ôm hôn bị xem là không phù hợp (inappropriate); bắt tay mới là chuẩn mực." },
-        { "text": "acceptable", "explanation": "Vì sao sai: Ôm hôn không được chấp nhận rộng rãi trong giao dịch làm ăn tại Mỹ." }
+        { "text": "appropriate", "explanation": "Vì sao sai: Trong bối cảnh kinh doanh tại Mỹ, ôm hôn không được coi là phù hợp." },
+        { "text": "important", "explanation": "Vì sao sai: Không chính xác với chuẩn mực giao tiếp công sở tại Mỹ." },
+        { "text": "inappropriate", "explanation": "Chính xác! Ở Mỹ, trong môi trường công sở/giao tiếp thông thường, ôm hôn bị xem là không phù hợp (inappropriate); bắt tay mới là chuẩn mực." },
+        { "text": "popular", "explanation": "Vì sao sai: Bắt tay mới là hình thức chào hỏi phổ biến tại Mỹ." }
       ],
       "correctIndices": [2],
       "hint": "Trong môi trường công sở tại Mỹ, việc ôm hoặc hôn khi chào hỏi thường bị coi là thiếu phù hợp, vượt quá ranh giới riêng tư."
@@ -112,10 +111,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Intercultural Communication - Etiquette",
       "question": "Why color of clothing is also a consideration in some countries?",
       "options": [
-        { "text": "Because color of clothing is a nonverbal signal of personal fashion.", "explanation": "Vì sao sai: Đây chỉ là góc độ thời trang cá nhân thông thường." },
-        { "text": "Because color of clothing helps the business communicator to be more professional.", "explanation": "Vì sao sai: Tính chuyên nghiệp chung không giải thích vì sao cần kiêng kỵ màu ở các quốc gia khác nhau." },
-        { "text": "Because color of clothing is an important requirement for any business trip.", "explanation": "Vì sao sai: Không phải mọi chuyến đi đều có quy định cứng nhắc về màu sắc trang phục." },
-        { "text": "Because in some cultures color has strong associations.", "explanation": "Chính xác! Ở nhiều nền văn hóa, màu sắc mang ý nghĩa biểu tượng sâu sắc (ví dụ: màu trắng/đen gắn liền với tang tóc, màu đỏ gắn với may mắn hoặc kiêng kỵ trong nghi lễ)." }
+        { "text": "Because in some cultures people do not like colors.", "explanation": "Vì sao sai: Mọi nền văn hóa đều sử dụng màu sắc." },
+        { "text": "Because in some cultures people like colorful clothes.", "explanation": "Vì sao sai: Không giải thích được lý do phải cân nhắc kiêng kỵ màu sắc." },
+        { "text": "Because in some cultures people only like black and white colors.", "explanation": "Vì sao sai: Nhận định hoàn toàn sai thực tế." },
+        { "text": "Because in some cultures color has strong associations.", "explanation": "Chính xác! Ở nhiều nền văn hóa, màu sắc mang ý nghĩa liên tưởng biểu tượng rất mạnh (ví dụ: tang tóc, hoàng gia, may mắn...)." }
       ],
       "correctIndices": [3],
       "hint": "Mỗi nền văn hóa đều gán các ý nghĩa tinh thần, tín ngưỡng hoặc biểu tượng mạnh mẽ cho từng màu sắc."
@@ -125,10 +124,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Conflict Management",
       "question": "Which statement is NOT correct?",
       "options": [
-        { "text": "Conflict is universal.", "explanation": "Vì sao đúng về mặt lý thuyết: Xung đột là một hiện tượng phổ quát tồn tại ở mọi mối quan hệ và tổ chức." },
-        { "text": "Conflict can be productive or destructive.", "explanation": "Vì sao đúng về mặt lý thuyết: Xung đột có thể thúc đẩy sáng tạo (productive) hoặc phá hoại (destructive)." },
-        { "text": "Conflict can always be resolved.", "explanation": "Chính xác câu KHÔNG đúng! Không phải xung đột nào cũng có thể giải quyết dứt điểm hoàn toàn (một số xung đột cần được quản lý - manage, sống chung, hoặc không thể dung hòa)." },
-        { "text": "Conflict is a normal part of the human experience.", "explanation": "Vì sao đúng về mặt lý thuyết: Xung đột là một phần tất yếu bình thường trong trải nghiệm con người." }
+        { "text": "Conflict is not a sign of a poor relationship.", "explanation": "Vì sao sai: Đây là nhận định ĐÚNG; xung đột vẫn xảy ra trong các mối quan hệ lành mạnh." },
+        { "text": "Conflict cannot be avoided.", "explanation": "Vì sao sai: Đây là nhận định ĐÚNG; xung đột là điều không thể tránh khỏi trong giao tiếp." },
+        { "text": "Conflict can always be resolved.", "explanation": "Chính xác câu KHÔNG đúng! Không phải xung đột nào cũng có thể giải quyết dứt điểm hoàn toàn." },
+        { "text": "Conflict is not always bad.", "explanation": "Vì sao sai: Đây là nhận định ĐÚNG; xung đột xử lý tốt sẽ giúp hiểu nhau hơn." }
       ],
       "correctIndices": [2],
       "hint": "Tìm câu khẳng định mang tính tuyệt đối hóa phi thực tế về khả năng giải quyết xung đột."
@@ -138,10 +137,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Intercultural Communication - Global Business Etiquette",
       "question": "Do not expect to conduct business in Europe during ____________ as this is considered the vacation month, and many people close their businesses during this time.",
       "options": [
-        { "text": "October", "explanation": "Vì sao sai: Tháng 10 là thời điểm làm việc bình thường ở châu Âu." },
-        { "text": "September", "explanation": "Vì sao sai: Tháng 9 bắt đầu năm học mới và mùa làm việc bận rộn." },
-        { "text": "August", "explanation": "Chính xác! Tháng 8 (August) là kỳ nghỉ hè truyền thống của người châu Âu (đặc biệt là Pháp, Ý, Tây Ban Nha), hầu hết doanh nghiệp đều đóng cửa nghỉ lễ." },
-        { "text": "November", "explanation": "Vì sao sai: Tháng 11 các doanh nghiệp vẫn hoạt động bình thường." }
+        { "text": "January", "explanation": "Vì sao sai: Tháng 1 là thời điểm làm việc đầu năm ở châu Âu." },
+        { "text": "June", "explanation": "Vì sao sai: Tháng 6 các doanh nghiệp châu Âu vẫn hoạt động bình thường." },
+        { "text": "August", "explanation": "Chính xác! Tháng 8 (August) là kỳ nghỉ hè truyền thống của người châu Âu, nhiều doanh nghiệp đóng cửa nghỉ lễ." },
+        { "text": "December", "explanation": "Vì sao sai: Tháng 12 chỉ nghỉ lễ Giáng sinh vào cuối tháng." }
       ],
       "correctIndices": [2],
       "hint": "Tháng hè cao điểm khi người dân châu Âu nghỉ phép hàng năm."
@@ -151,23 +150,23 @@ window.SSB201_QUIZ13 = {
       "topic": "Verbal Communication - Language Styles",
       "question": ".................. involves everyday words and expressions in a familiar group context, such as conversations with family or close friends.",
       "options": [
-        { "text": "Colloquial language", "explanation": "Chính xác! Ngôn ngữ khẩu ngữ (Colloquial language) là từ ngữ và cách diễn đạt thông tục hàng ngày trong ngữ cảnh thân mật với gia đình, bạn bè." },
-        { "text": "Jargon", "explanation": "Vì sao sai: Jargon là thuật ngữ chuyên ngành trong một nghề nghiệp cụ thể." },
-        { "text": "Slang", "explanation": "Vì sao sai: Slang là tiếng lóng, thường mang tính trào lưu theo nhóm tuổi hoặc thời điểm ngắn hạn." },
-        { "text": "Cliché", "explanation": "Vì sao sai: Cliché là những cụm từ sáo rỗng bị lạm dụng quá nhiều." }
+        { "text": "Colloquial language", "explanation": "Vì sao sai: Colloquial language trong giáo trình nhấn mạnh vào văn phong hội thoại sử dụng tiếng lóng và cụm từ vùng miền." },
+        { "text": "Casual language", "explanation": "Chính xác! Casual language (ngôn ngữ thân mật/thông thường) gồm các từ ngữ và cách diễn đạt hằng ngày trong bối cảnh quen thuộc như gia đình hoặc bạn bè thân thiết." },
+        { "text": "Internal communications", "explanation": "Vì sao sai: Internal communications là giao tiếp nội bộ trong tổ chức." },
+        { "text": "External communications", "explanation": "Vì sao sai: External communications là giao tiếp đối ngoại." }
       ],
-      "correctIndices": [0],
-      "hint": "Khẩu ngữ thường ngày dùng trong giao tiếp gia đình, bạn bè thân thiết."
+      "correctIndices": [1],
+      "hint": "Ngôn ngữ thân mật thường ngày (Casual language) dùng trong giao tiếp gia đình, bạn bè thân thiết."
     },
     {
       "id": 13,
       "topic": "Forms of Communication",
       "question": "...............communication normally involves two people, and can range from intimate and very personal to formal and impersonal.",
       "options": [
-        { "text": "Intrapersonal", "explanation": "Vì sao sai: Intrapersonal là giao tiếp nội tâm (với chính bản thân một người)." },
+        { "text": "Group", "explanation": "Vì sao sai: Group communication thường gồm từ 3 đến 8 người." },
         { "text": "Interpersonal", "explanation": "Chính xác! Giao tiếp liên cá nhân (Interpersonal communication) thường diễn ra giữa 2 người, từ thân mật đến trang trọng." },
-        { "text": "Public", "explanation": "Vì sao sai: Public communication là giao tiếp công cộng từ một người tới một nhóm khán giả lớn." },
-        { "text": "Mass", "explanation": "Vì sao sai: Mass communication là truyền thông đại chúng qua phương tiện phát sóng/báo chí." }
+        { "text": "Mass", "explanation": "Vì sao sai: Mass communication là truyền thông đại chúng tới số lượng lớn khán giả." },
+        { "text": "Intrapersonal", "explanation": "Vì sao sai: Intrapersonal là giao tiếp nội tâm (với chính bản thân một người)." }
       ],
       "correctIndices": [1],
       "hint": "Giao tiếp giữa hai cá nhân với nhau (tiền tố Inter-)."
@@ -178,9 +177,9 @@ window.SSB201_QUIZ13 = {
       "question": "When you create a message, it is often helpful to think of it as having five parts:",
       "options": [
         { "text": "Attention statement; Introduction; Body; Conclusion; Residual message", "explanation": "Chính xác! 5 thành phần chuẩn của một thông điệp gồm: Attention statement (gây chú ý), Introduction (mở đầu), Body (thân bài), Conclusion (kết luận), và Residual message (thông điệp đọng lại)." },
-        { "text": "Attention statement; Introduction; Body; Summary; Residual message", "explanation": "Vì sao sai: Mô hình chuẩn dùng \"Conclusion\", không phải Summary." },
-        { "text": "Attention statement; Headline; Body; Conclusion; Residual message", "explanation": "Vì sao sai: Headline thuộc tiêu đề báo chí/quảng cáo, không phải 5 phần chuẩn." },
-        { "text": "Attention statement; Introduction; Contents; Conclusion; Residual message", "explanation": "Vì sao sai: Dùng \"Contents\" thay cho \"Body\" là không chính xác theo thuật ngữ sách giáo khoa." }
+        { "text": "Introduction; Body; Conclusion; Bonus; Residual message", "explanation": "Vì sao sai: Thiếu Attention statement và thừa Bonus." },
+        { "text": "Attention statement; Analyzing situation; Body; Conclusion; Residual message", "explanation": "Vì sao sai: Thay Introduction bằng Analyzing situation là sai." },
+        { "text": "Attention statement; Introduction; Body; Analyzing situation; Residual message", "explanation": "Vì sao sai: Thay Conclusion bằng Analyzing situation là sai." }
       ],
       "correctIndices": [0],
       "hint": "5 phần kinh điển: Gây chú ý, Giới thiệu, Thân bài, Kết luận và Thông điệp đọng lại."
@@ -190,10 +189,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Negative News - Legal Considerations",
       "question": "Which is NOT correct, when communicating bad news, to avoid legal problems?",
       "options": [
-        { "text": "Avoid positive language or behavior.", "explanation": "Chính xác! Lời khuyên \"Tránh dùng ngôn ngữ hoặc hành vi tích cực\" là SAI. Trong truyền đạt tin tiêu cực, ta vẫn phải giữ thái độ lịch sự, chuyên nghiệp và tích cực nhằm giữ mối quan hệ tốt." },
-        { "text": "Avoid abusive language or behavior.", "explanation": "Vì sao đúng: Tránh ngôn ngữ lăng mạ/xúc phạm để không bị kiện tụng." },
-        { "text": "Avoid contradictions and absolutes.", "explanation": "Vì sao đúng: Tránh mâu thuẫn và các từ ngữ tuyệt đối hóa để tránh chịu trách nhiệm pháp lý ngoài ý muốn." },
-        { "text": "Avoid confusion or misinterpretation.", "explanation": "Vì sao đúng: Cần truyền đạt rõ ràng, tránh gây hiểu lầm hoặc mơ hồ." }
+        { "text": "Avoid positive language or behavior.", "explanation": "Chính xác! Lời khuyên \"Tránh dùng ngôn ngữ hoặc hành vi tích cực\" là SAI. Trong truyền đạt tin tiêu cực, ta vẫn cần duy trì thái độ lịch sự, tôn trọng và tích cực." },
+        { "text": "Avoid contradictions and absolutes.", "explanation": "Vì sao sai: Đây là nguyên tắc ĐÚNG để tránh mâu thuẫn và các từ ngữ tuyệt đối hóa gây rủi ro pháp lý." },
+        { "text": "Avoid confusion or misinterpretation.", "explanation": "Vì sao sai: Đây là nguyên tắc ĐÚNG để truyền đạt rõ ràng, tránh hiểu lầm." },
+        { "text": "Maintain respect and privacy.", "explanation": "Vì sao sai: Đây là nguyên tắc ĐÚNG để tôn trọng quyền riêng tư của người nhận." }
       ],
       "correctIndices": [0],
       "hint": "Việc tránh cư xử lịch sự hoặc tránh ngôn từ tích cực là hoàn toàn phản tác dụng khi truyền đạt tin xấu."
@@ -203,10 +202,10 @@ window.SSB201_QUIZ13 = {
       "topic": "Special Occasion Speaking - Toasts",
       "question": "............... are formal expressions of goodwill, appreciation, or calls for group attention to an issue or person in a public setting, often followed by synchronous consumption of beverages.",
       "options": [
-        { "text": "Roasts", "explanation": "Vì sao sai: Roasts là bài diễn văn trêu đùa, chọc ghẹo hài hước tôn vinh ai đó." },
-        { "text": "Tributes", "explanation": "Vì sao sai: Tributes là bài diễn văn tri ân, không đi kèm với hành động cùng nâng ly uống đồ uống." },
+        { "text": "Gala dinners", "explanation": "Vì sao sai: Gala dinners là tên bữa tiệc tối trang trọng, không phải lời phát biểu chúc rượu." },
+        { "text": "Conference", "explanation": "Vì sao sai: Conference là hội nghị." },
         { "text": "Toasts", "explanation": "Chính xác! Nâng ly chúc mừng (Toasts) là hình thức bày tỏ thiện chí trang trọng, sau đó mọi người cùng đồng loạt nâng ly uống đồ uống." },
-        { "text": "Media Interviews", "explanation": "Vì sao sai: Phỏng vấn truyền thông không liên quan đến nghi thức nâng ly." }
+        { "text": "Roasts", "explanation": "Vì sao sai: Roasts là bài diễn văn trêu đùa hài hước tôn vinh nhân vật chính." }
       ],
       "correctIndices": [2],
       "hint": "Nghi thức chúc mừng thường đi kèm với việc mọi người cùng nâng ly uống mừng."
