@@ -484,7 +484,7 @@ const QUIZ_7_QUESTIONS = [
   {
     id: 38,
     topic: "Communication Messages",
-    question: "The ....................... message that stays with your audience well after the communication is finished, is an important part of your message. Ask yourself of the following: • What do I want my listeners or readers to remember? • What information do I want the audience to retain or act upon? • What do I want the audience to do?",
+    question: "The ....................... message that stays with your audience well after the communication is finished, is an important part of your message. Ask yourself of the following: • What do I want my listeners or readers to remember? • What information do I want to have the audience to retain or act upon? • What do I want the audience to do?",
     hint: "Thông điệp đọng lại trong tâm trí khán giả rất lâu sau khi bài thuyết trình kết thúc.",
     correctIndices: [3],
     options: [
