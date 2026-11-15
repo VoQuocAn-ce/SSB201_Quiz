@@ -164,26 +164,26 @@ const QUIZ_6_QUESTIONS = [
   },
   {
     id: 8,
-    topic: "Design Thinking - Prototyping",
+    topic: "Design Thinking - Testing",
     question: "During the Design Thinking Process, “Fail, fix, test, repeat” will be in which mode?",
-    hint: "Vòng tròn 'thất bại, sửa chữa, kiểm thử, lặp lại' diễn ra trực tiếp trên mẫu thử nguyên mẫu.",
-    correctIndices: [2],
+    hint: "Giai đoạn kiểm thử (Test) với chu trình 'Fail, fix, test, repeat' để học hỏi từ lỗi sai và cải tiến giải pháp.",
+    correctIndices: [1],
     options: [
       {
         text: "Define",
-        explanation: "Vì sao sai: Define là giai đoạn xác định phát biểu vấn đề cốt lõi."
+        explanation: "Vì sao sai: Define là giai đoạn xác định và phát biểu vấn đề cốt lõi cần giải quyết."
       },
       {
         text: "Test",
-        explanation: "Vì sao sai: Dù có chữ test, quy trình 'Fail, fix, test, repeat' là triết lý thực hành gắn liền với việc tạo và tinh chỉnh mẫu thử (Prototype)."
+        explanation: "Chính xác! Trong Design Thinking, phương châm 'Fail, fix, test, repeat' (thất bại, sửa chữa, kiểm thử, lặp lại) là trọng tâm của giai đoạn Test nhằm liên tục kiểm tra và thu thập phản hồi để hoàn thiện sản phẩm."
       },
       {
         text: "Prototype",
-        explanation: "Chính xác! Trong Design Thinking, phương châm 'Fail, fix, test, repeat' (thất bại sớm để sửa nhanh) là bản chất của giai đoạn Prototype (Tạo mẫu thử nghiệm)."
+        explanation: "Vì sao sai: Prototype là giai đoạn hiện thực hóa ý tưởng thành mẫu thử cụ thể (Getting ideas into the physical world), còn chu trình lặp lại 'Fail, fix, test, repeat' được thực hiện ở chế độ Test."
       },
       {
         text: "Empathize",
-        explanation: "Vì sao sai: Empathize là giai đoạn thấu cảm tìm hiểu nhu cầu người dùng."
+        explanation: "Vì sao sai: Empathize là giai đoạn đầu nhằm thấu cảm, tìm hiểu nhu cầu và trải nghiệm của người dùng."
       }
     ]
   },
