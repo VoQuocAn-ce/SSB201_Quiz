@@ -20,14 +20,14 @@ const QUIZ_8_QUESTIONS = [
   },
   {
     id: 2,
-    topic: "Communication Messages",
+    topic: "Persuasive Language",
     question: "A word, sound, or image that arouses an emotional response in the audience is called ____________",
-    hint: "Một từ ngữ, âm thanh hoặc hình ảnh kích hoạt phản ứng cảm xúc mạnh mẽ ở người nghe.",
-    correctIndices: [2],
+    hint: "Lời kêu gọi cảm xúc (appeal to emotion) dùng từ ngữ, âm thanh hoặc hình ảnh khơi gợi phản ứng cảm xúc của khán giả.",
+    correctIndices: [0],
     options: [
-      { text: "an appeal to emotion", explanation: "Vì sao sai: Appeal to emotion là phương pháp/lối ngụy biện đánh vào cảm xúc, không phải từ vựng gọi chung một từ/hình ảnh kích hoạt." },
+      { text: "an appeal to emotion", explanation: "Chính xác! Theo giáo trình McLean, an appeal to emotion (lời kêu gọi cảm xúc / эмоциональный trigger) là một từ ngữ, âm thanh hoặc hình ảnh khơi dậy phản ứng cảm xúc nơi khán giả." },
       { text: "a viral message", explanation: "Vì sao sai: Viral message là thông điệp lan truyền nhanh chóng trên mạng." },
-      { text: "a trigger", explanation: "Chính xác! Trigger (từ/hình ảnh kích hoạt) là một từ ngữ, âm thanh hoặc hình ảnh khơi gợi phản ứng cảm xúc tức thì ở khán giả." },
+      { text: "a trigger", explanation: "Vì sao sai: Trigger được định nghĩa là từ/âm thanh/hình ảnh kích hoạt một hoạt động, sự kiện hoặc tương tác ('causes an activity, precipitates an event or interaction')." },
       { text: "a social message", explanation: "Vì sao sai: Social message là thông điệp xã hội." }
     ]
   },
